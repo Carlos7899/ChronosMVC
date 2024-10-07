@@ -28,3 +28,4 @@ C:\ChronosMVC\obj\Debug\net8.0\refint\ChronosMVC.dll
 C:\ChronosMVC\obj\Debug\net8.0\ChronosMVC.pdb
 C:\ChronosMVC\obj\Debug\net8.0\ChronosMVC.genruntimeconfig.cache
 C:\ChronosMVC\obj\Debug\net8.0\ref\ChronosMVC.dll
+C:\ChronosMVC\obj\Debug\net8.0\ChronosMVC.sourcelink.json
