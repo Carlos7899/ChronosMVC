@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\ChronosMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/ChronosMVC/Views/Home/CadastroView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ChronosMVC/Views/Home/Candidaturas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW5kaWRhdHVyYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

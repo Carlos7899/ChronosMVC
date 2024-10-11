@@ -1,121 +1,151 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="text-center">
-    <h1 class="display-4"></h1>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@{ ViewData["Title"] = "Home Page"; }</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-family: 'Arial', sans-serif;
+        }
 
-<div class="card text-bg-dark">
-    <img src="https://www.galiciaeducacao.com.br/wp-content/uploads/2022/10/Capa-Blog-etapas-da-negociacao.jpg"
-        style="height: 400px;">
-    <div class="card-img-overlay">
-        <div class="card" style="width: 370px; height: 330px; display: flex;">
-            <div class="card-body">
+        .hero-section {
+            position: relative;
+            height: 400px;
+            background-image: url('https://www.galiciaeducacao.com.br/wp-content/uploads/2022/10/Capa-Blog-etapas-da-negociacao.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-card h5 {
+            font-size: 28px;
+            color: #007bff;
+        }
+
+        .login-card input {
+            margin-bottom: 15px;
+        }
+
+        .cards-section {
+            margin-top: 50px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section com imagem -->
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <div class="login-card text-dark">
                 <h5 class="card-title">Login</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Entre com sua conta da Chronos</h6>
-                <input type="text" placeholder="Email" style="width: 300px;">
-                <br><br>
-                <input type="password" placeholder="Senha" style="width: 300px;">
-                <br><br>
-                <a href="https://www.youtube.com/watch?v=qIPqbUyM2VI">Esqueci a senha?</a>
-                <br>
-                <p>Ainda não faz parte do Chronos?<a href="https://www.youtube.com/watch?v=cu9EYHjohp0">Cadastre-se</a>
-                </p>
-                <button class="btn btn-primary" type="button">Entrar</button>
+                <h6 class="card-subtitle mb-3 text-muted">Entre com sua conta da Chronos</h6>
+                <input type="text" class="form-control" placeholder="Email">
+                <input type="password" class="form-control" placeholder="Senha">
+                <a href="#" class="text-primary">Esqueci a senha?</a><br>
+                <p class="mt-2">Ainda não faz parte do Chronos? <a href="#" class="text-primary">Cadastre-se</a></p>
+                <button class="btn btn-primary w-100">Entrar</button>
             </div>
         </div>
     </div>
-</div>
 
-<div class="ColorContainer" style="background-color: blue;">
-    <div class="container" style="display: flex; justify-content: center; align-items: center;">
-        <div class="Quemsomos">
-            <h2 style="font-size: 50px; color: rgb(255, 230, 0);">Quem Somos?</h2>
-            <h3 style="font-size: 28px; color: white; padding-top: 20px;">A Blumenau é uma startup revolucionaria
-                fundada neste ano, dedicada a promover a reinserção de
-                ex-presidiarios na sociedade. Por meio de um aplicativo inovador, nossa missão é proporcionar
-                oportunidades de emprego e reintegração social para aqueles que buscam reconstruir suas vidas após o
-                periodo de encarceramento.
-                <br> <br>
-                Com um sistema cuidadosamente desenvolvido, conectamos empresas comprometidas com a inclusão social a
-                talentos únicos e capacitados, oferecendo una plataforma de recrutamento e seleção que valoriza a
-                diversidade e a resiliência. No Blumenau, acreditamos no poder da segunda chance e no potencial
-                transformador da oportunidade, construindo juntos um futuro mais justo e inclusivo.</h1>
-        </div>
-        <img src="https://img.freepik.com/fotos-gratis/escritorio-elegante-e-aconchegante_23-2149548666.jpg">
-    </div>
-</div>
-
-<div class="conjunto" style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
-
-    <div class="card" style="max-width: 18rem; height: 370px;">
-        <img src="https://cdn.pixabay.com/photo/2024/01/23/18/55/ai-generated-8528080_640.jpg" class="card-img-top"
-            alt="...">
-        <div class="card-body">
-            <h5 class="card-title">reintegração</h5>
-            <p class="card-text">Chronos facilita a sua volta ao mercado de trablaho como egresso. Cadastre-se agora e
-                comece a sua jornada</p>
+    <!-- Quem Somos -->
+    <div class="ColorContainer py-5" style="background-color: #007bff;">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="display-4">Quem Somos?</h2>
+                    <p class="lead" style="font-size: 30px;">A Blumenau é uma startup inovadora que se dedica à reinserção de ex-presidentes na sociedade. Acreditamos no poder da transformação e na importância de proporcionar uma segunda chance. Nosso aplicativo conecta empresas que valorizam a inclusão social a talentos únicos, criando oportunidades reais de emprego e reintegração. Junte-se a nós nessa missão de reconstruir vidas e fortalecer comunidades!</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://img.freepik.com/fotos-gratis/escritorio-elegante-e-aconchegante_23-2149548666.jpg" class="img-fluid rounded" alt="Imagem do Escritório">
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="card" style="max-width: 18rem; margin-left: 80px; margin-right: 80px; height: 370px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe3m4bNLSaRT5bSJHDDkGUFnMgrcQBZ1ydCg&s"
-            class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">empregos</h5>
-            <p class="card-text">Nosso site te conecta com empresas que valoriza a experiencia profissional</p>
+    <!-- Cards Section -->
+    <div class="container cards-section text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2024/01/23/18/55/ai-generated-8528080_640.jpg"
+                        class="card-img-top" alt="Reintegração">
+                    <div class="card-body">
+                        <h5 class="card-title">Reintegração</h5>
+                        <p class="card-text">Chronos facilita sua volta ao mercado de trabalho como egresso. Cadastre-se agora e comece sua jornada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe3m4bNLSaRT5bSJHDDkGUFnMgrcQBZ1ydCg&s"
+                        class="card-img-top" alt="Empregos">
+                    <div class="card-body">
+                        <h5 class="card-title">Empregos</h5>
+                        <p class="card-text">Conectamos você com empresas que valorizam sua experiência profissional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMOrtoLfy8_khYpfdNDMdsz62EHHpWg_Svw&s"
+                        class="card-img-top" alt="Confiança">
+                    <div class="card-body">
+                        <h5 class="card-title">Confiança</h5>
+                        <p class="card-text">O Chronos é um aliado confiável na reinserção, oferecendo apoio e ferramentas para o sucesso dos egressos.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="card" style="max-width: 18rem; height: 370px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMOrtoLfy8_khYpfdNDMdsz62EHHpWg_Svw&s"
-            class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">confiaça</h5>
-            <p class="card-text">o chronos é um aliado confiavel na reinserção, oferecendo apoio e ferramentas para que
-                o e3greesso alcacem seus objetivos.</p>
-        </div>
-    </div>
-</div>
-
-<div class="conjuto2" style="margin-top: 100px;">
-    <div class="card text-bg-dark">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ24H9_yAKpfR9rc2HmSLaC6IArv5sNfSO7oQ&s"
-            style="height: 400px;">
-        <div class="card-img-overlay">
-            <h5 class="card-title" style="color: rgb(255, 230, 0); font-size: 50px;">Oportunidade</h5>
-            <p class="card-text" style="font-size: 30px;">Chronos te oferece a oportunidade de reencontrar um lugar
-                seguro e acolhedor para trilhar seu futuro</p>
-        </div>
-    </div>
-
-    <div class="card text-bg-dark" style="display: flex; justify-content: right;">
-        <img src="https://www.griferelogios.com.br/wp-content/uploads/2015/02/Fique-por-dentro-de-todas-as-funcoes-de-um-relogio-de-pulso.jpg"
-            style="height: 400px;">
-        <div class="card-img-overlay">
-            <h5 class="card-title" style="color: rgb(255, 230, 0); font-size: 50px; display: flex; justify-content: right;">Conquistas</h5>
-            <p class="card-text" style="font-size: 30px; display: flex; justify-content: right;">O Chronos é a ponte que voce precisa para retomar sua
-                trajetoria profissional com confiança e esperança!</p>
-        </div>
-    </div>
-</div>
-
-<div class="footer" style="background-color: rgb(114, 114, 229); width: 100%; padding: 20px 0;">
-    <footer>
-        <div class="mandrake"></div>
-        <img src="#" style="width: 8%;">
-        <p style="display: flex; justify-content: center; color: rgb(0, 0, 0); font-size: 30px;">Blumenautcc@gmail.com
+    <br><br>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Blumenautcc@gmail.com</p>
+        <p>&copy; 2024 BLUMENAU. Todos os direitos reservados.</p>
+        <p>Siga-nos nas redes sociais: 
+            <a href="https://facebook.com" class="text-white">Facebook</a> |
+            <a href="https://instagram.com" class="text-white">Instagram</a>
         </p>
-        <p style="display: flex; justify-content: center; color: rgb(0, 0, 0);">&copy; 2024 BLUMENAU Todos os direitos
-            reservados.</p>
-        <p style="display: flex; justify-content: center; color: rgb(0, 0, 0);">Siga-nos nas redes sociais:
-            <a href="https://facebook.com" style="color: #000000; text-decoration: none;"><span
-                    class="badge text-bg-primary">facebook</span></a> |
-            <a href="https://instagram.com" style="color: #000000; text-decoration: none;"><span
-                    class="badge text-bg-dark">Instagram</span></a>
-        </p>
-    </footer>
-</div>
+    </div>
+
+</body>
+
+</html>
