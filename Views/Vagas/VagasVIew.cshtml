@@ -1,34 +1,66 @@
-<!--Namespace da classe de Modelo para esta view-->
-@model IEnumerable<ChronosMVC.Models.VagaModel> 
-<!--Inclua os TempData para Sucesso e Erro aqui, conforme exemplo na view de Autenticação-->
+@model IEnumerable<ChronosMVC.Models.VagaModel>
 
-@{ViewBag.Title = "Vagas"; }<!--Título da página para o navegador-->
+@{ ViewBag.Title = "Vagas"; }
 
-<h2>Vagas</h2><!--Título da página-->
+<!-- Container para centralizar o conteúdo -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Vagas Disponíveis</h2>
+    
+    <!-- Botão para criar nova vaga -->
+    <div class="text-end mb-3">
+        <a href="@Url.Action("Create")" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Criar Nova Vaga
+        </a>
+    </div>
 
-<p> <!--Links apontando para views na mesma pasta-->
+    <!-- Verificação de mensagens de sucesso ou erro -->
+    @if (TempData["Sucesso"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Sucesso"]
+        </div>
+    }
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Erro"]
+        </div>
+    }
 
- @Html.ActionLink("Criar Nova Vaga", "Create") 
-</p>
-<table class="table">
- <tr><!--Títulos das colunas da tabela--> 
- <th>@Html.DisplayNameFor(model => model.idVaga)</th> 
- <th>@Html.DisplayNameFor(model => model.nomeVaga)</th> 
- <th>@Html.DisplayNameFor(model => model.descricaoVaga)</th>
- <th>@Html.DisplayNameFor(model => model.DataCriacao)</th>
- <th></th>
- </tr>
-<!--Looping para escrever os dados na tabela-->
-
-@foreach (var item in Model) 
- { 
- <tr>
- <td>@Html.DisplayFor(modelItem => item.idVaga)</td>
- <td><!--Coluna para Links/botões-->
- @Html.ActionLink("Editar", "Edit", new { id = item.idVaga } ) | 
- @Html.ActionLink("Detalhes", "Details", new { id = item.idVaga }) | 
- @Html.ActionLink("Deletar", "Delete", new { id = item.idVaga }) 
- </td>
- </tr>
- } 
-</table>
+    <!-- Tabela de vagas -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.idVaga)</th>
+                    <th>@Html.DisplayNameFor(model => model.nomeVaga)</th>
+                    <th>@Html.DisplayNameFor(model => model.descricaoVaga)</th>
+                    <th>@Html.DisplayNameFor(model => model.DataCriacao)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.idVaga)</td>
+                        <td>@Html.DisplayFor(modelItem => item.nomeVaga)</td>
+                        <td>@Html.DisplayFor(modelItem => item.descricaoVaga)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DataCriacao)</td>
+                        <td>
+                            <a href="@Url.Action("Edit", new { id = item.idVaga })" class="btn btn-sm btn-warning">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-sm btn-info">
+                                <i class="fas fa-info-circle"></i> Detalhes
+                            </a>
+                            <a href="@Url.Action("Delete", new { id = item.idVaga })" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash-alt"></i> Deletar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,19 +1,40 @@
 @model ChronosMVC.Models.VagaModel
-@{
-    ViewBag.title = "Detalhes da vaga";
-}
-<h2>Detalhes da vaga</h2>
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>@Html.DisplayNameFor(model => model.idVaga)</dt>
-        <dt>@Html.DisplayFor(model => model.idVaga)</dt>
 
-        <dt>@Html.DisplayNameFor(model => model.nomeVaga)</dt>
-        <dt>@Html.DisplayFor(model => model.nomeVaga)</dt>
-    </dl>
+@{
+    ViewBag.Title = "Detalhes da Vaga";
+}
+
+<!-- Container para centralizar o conteúdo -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Detalhes da Vaga</h2>
+    
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Informações da Vaga</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.idVaga)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.idVaga)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.nomeVaga)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.nomeVaga)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.descricaoVaga)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.descricaoVaga)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DataCriacao)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DataCriacao)</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="text-end mt-4">
+        <a href="@Url.Action("Edit", new { id = Model.idVaga })" class="btn btn-warning">
+            <i class="fas fa-edit"></i> Editar
+        </a>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Retornar
+        </a>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.idVaga})
-    @Html.ActionLink("Retornar", "Index")
-</p>
