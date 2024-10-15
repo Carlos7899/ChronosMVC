@@ -18,6 +18,21 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Candidaturas()
+    {
+        return View();
+    }
+
+    public IActionResult Cadastro()
+    {
+        return View();
+    }
+
+    public IActionResult LoginView()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

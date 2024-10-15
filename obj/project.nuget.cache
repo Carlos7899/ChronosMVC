@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H7tZz+5eL374XKabZuLnDfojA8z+4ZS1fXpvPBImdPpZYezIjeJb9ehQAcqa8PkHCqEbrCTpDxi3WYHYtPAg6A==",
+  "dgSpecHash": "FFLGH50FOzrCfKMAy59NuFYAGCZQaH6R2z12KAYdVvSOWgAgydIpexnkygBGEocsaxsAFQJaAUp4gv/iyZ6rzA==",
   "success": true,
-  "projectFilePath": "C:\\ChronosMVC\\ChronosMVC.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\backup\\ChronosMVC\\ChronosMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Samsung\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,19 @@
+@model ChronosMVC.Models.VagaModel
+@{
+    ViewBag.title = "Detalhes da vaga";
+}
+<h2>Detalhes da vaga</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.idVaga)</dt>
+        <dt>@Html.DisplayFor(model => model.idVaga)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.nomeVaga)</dt>
+        <dt>@Html.DisplayFor(model => model.nomeVaga)</dt>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idVaga})
+    @Html.ActionLink("Retornar", "Index")
+</p>
