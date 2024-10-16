@@ -14,18 +14,19 @@
     </div>
 
     <!-- Verificação de mensagens de sucesso ou erro -->
-    @if (TempData["Sucesso"] != null)
+    @if (TempData["Mensagem"] != null)
     {
         <div class="alert alert-success">
-            @TempData["Sucesso"]
+            @TempData["Mensagem"]
         </div>
     }
-    @if (TempData["Erro"] != null)
+    @if (TempData["MensagemErro"] != null)
     {
         <div class="alert alert-danger">
-            @TempData["Erro"]
+            @TempData["MensagemErro"]
         </div>
     }
+
 
     <!-- Tabela de vagas -->
     <div class="table-responsive">

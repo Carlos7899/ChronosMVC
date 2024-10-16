@@ -9,63 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChronosMVC
 build_property.RootNamespace = ChronosMVC
-build_property.ProjectDir = C:\backup\ChronosMVC\
+build_property.ProjectDir = C:\API\ChronosMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\backup\ChronosMVC
+build_property.MSBuildProjectDirectory = C:\API\ChronosMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/backup/ChronosMVC/Views/Home/CadastroView.cshtml]
+[C:/API/ChronosMVC/Views/Home/CadastroView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb1ZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Home/Candidaturas.cshtml]
+[C:/API/ChronosMVC/Views/Home/Candidaturas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW5kaWRhdHVyYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Home/Index.cshtml]
+[C:/API/ChronosMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Home/LoginView.cshtml]
+[C:/API/ChronosMVC/Views/Home/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Home/Privacy.cshtml]
+[C:/API/ChronosMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]
+[C:/API/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXN1YWxpemFyY3VycmljdWxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Shared/Error.cshtml]
+[C:/API/ChronosMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/API/ChronosMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Vagas/Details.cshtml]
+[C:/API/ChronosMVC/Views/Vagas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Vagas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Vagas/VagasVIew.cshtml]
+[C:/API/ChronosMVC/Views/Vagas/VagasVIew.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcVmFnYXNWSWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/_ViewImports.cshtml]
+[C:/API/ChronosMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/_ViewStart.cshtml]
+[C:/API/ChronosMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/backup/ChronosMVC/Views/Shared/_Layout.cshtml]
+[C:/API/ChronosMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k4nnxg4vgy

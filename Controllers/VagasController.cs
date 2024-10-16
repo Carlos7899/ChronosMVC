@@ -14,30 +14,30 @@ namespace ChronosMVC.Controllers
 {
     public class VagasController : Controller
     {
-        public string uriBase = "http://localhost:5062/vagas/";
+        public string uriBase = "http://localhost:5027/api/Vaga/";
+
 
         [HttpGet]
         public async Task<ActionResult> IndexAsync()
         {
             try
             {
-                string uriComplementar = "GetAll";
+                string uriComplementar = "GetAll"; // Endpoint da API
                 HttpClient httpClient = new HttpClient();
-                string token = HttpContext.Session.GetString("SessionTokenUsuario");
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
                 HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
+                // Registre a resposta
+                Console.WriteLine(serialized); // Para depuração
+
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    List<VagaModel> listaTarefas = await Task.Run(() =>
-                        JsonConvert.DeserializeObject<List<VagaModel>>(serialized));
-
+                    List<VagaModel> listaTarefas = JsonConvert.DeserializeObject<List<VagaModel>>(serialized);
                     return View(listaTarefas);
                 }
                 else
-                    throw new System.Exception(serialized);
+                    throw new System.Exception($"Erro: {response.StatusCode} - {serialized}");
             }
             catch (System.Exception ex)
             {
@@ -45,6 +45,8 @@ namespace ChronosMVC.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+
 
         [HttpPost]
         public async Task<ActionResult> CreateAsync(VagaModel v)
@@ -73,12 +75,6 @@ namespace ChronosMVC.Controllers
                 TempData["MensagemErro"] = ex.Message;
                 return RedirectToAction("Create");
             }
-        }
-
-        [HttpGet]
-        public ActionResult Create()
-        {
-            return View();
         }
 
         [HttpGet]
@@ -197,9 +193,49 @@ namespace ChronosMVC.Controllers
 
 
 
+        [HttpGet]
+        private async Task<List<VagaModel>> ObterVagas()
+        {
+            try
+            {
+                string uriComplementar = "GetAll";
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenUsuario");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    return JsonConvert.DeserializeObject<List<VagaModel>>(serialized);
+                }
+                else
+                {
+                    throw new Exception(serialized);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return null; // Retorna nulo em caso de erro
+            }
+        }
 
 
 
+
+        public async Task<IActionResult> VagasView()
+        {
+            var model = await ObterVagas(); // Chame o método de forma assíncrona
+            return View(model ?? new List<VagaModel>()); // Garante que um modelo válido seja passado
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
 
 
 

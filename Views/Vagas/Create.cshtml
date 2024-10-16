@@ -1,0 +1,28 @@
+﻿@model ChronosMVC.Models.VagaModel
+
+@{
+    ViewBag.Title = "Criar Nova Vaga";
+}
+
+<h2>Criar Nova Vaga</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="nomeVaga"></label>
+        <input asp-for="nomeVaga" class="form-control" />
+        <span asp-validation-for="nomeVaga" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="descricaoVaga"></label>
+        <textarea asp-for="descricaoVaga" class="form-control"></textarea>
+        <span asp-validation-for="descricaoVaga" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>
