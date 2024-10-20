@@ -1,15 +1,23 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Adicione o serviço de sessão antes de construir o aplicativo
+// Adicione o serviço de sessão
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Tempo de expiração da sessão
-    options.Cookie.HttpOnly = true; // O cookie não pode ser acessado pelo JavaScript
-    options.Cookie.IsEssential = true; // Necessário para a sessão
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 // Adicione serviços ao contêiner
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
+
+// Adicione o serviço de autenticação
+builder.Services.AddAuthentication("YourCookieScheme")
+    .AddCookie("YourCookieScheme", options =>
+    {
+        options.LoginPath = "/Corporacao/LoginCorporacao"; // Caminho para a página de login
+    });
 
 var app = builder.Build();
 
@@ -28,6 +36,8 @@ app.UseRouting();
 // Habilite o uso de sessão
 app.UseSession();
 
+// Habilite a autenticação e autorização
+app.UseAuthentication(); // Coloque isso antes do UseAuthorization
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -18,12 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\API\ChronosMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/API/ChronosMVC/Views/Home/CadastroView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb1ZpZXcuY3NodG1s
+[C:/API/ChronosMVC/Views/Corporacao/CadastroCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xDYWRhc3Ryb0NvcnBvcmFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Corporacao/LoginCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xMb2dpbkNvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Home/Candidaturas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW5kaWRhdHVyYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Home/EscolherLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFc2NvbGhlckxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Home/Index.cshtml]
@@ -32,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/API/ChronosMVC/Views/Home/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/API/ChronosMVC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]

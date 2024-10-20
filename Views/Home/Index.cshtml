@@ -70,20 +70,13 @@
 
 <body>
 
-    <!-- Hero Section com imagem -->
-    <div class="hero-section">
-        <div class="hero-overlay">
-            <div class="login-card text-dark">
-                <h5 class="card-title">Login</h5>
-                <h6 class="card-subtitle mb-3 text-muted">Entre com sua conta da Chronos</h6>
-                <input type="text" class="form-control" placeholder="Email">
-                <input type="password" class="form-control" placeholder="Senha">
-                <a href="#" class="text-primary">Esqueci a senha?</a><br>
-                <p class="mt-2">Ainda não faz parte do Chronos? <a href="#" class="text-primary">Cadastre-se</a></p>
-                <button class="btn btn-primary w-100">Entrar</button>
-            </div>
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["MensagemSucesso"]
         </div>
-    </div>
+    }
+
 
     <!-- Quem Somos -->
     <div class="ColorContainer py-5" style="background-color: #007bff;">

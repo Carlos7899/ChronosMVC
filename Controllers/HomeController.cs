@@ -23,11 +23,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Cadastro()
-    {
-        return View();
-    }
-
     public IActionResult LoginView()
     {
         return View();
@@ -38,7 +33,12 @@ public class HomeController : Controller
         return View();
     }
 
-   
+    public IActionResult EscolherLogin()
+    {
+        return View();
+    }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

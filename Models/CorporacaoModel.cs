@@ -13,6 +13,8 @@ namespace ChronosMVC.Models
 
         public TipoCorporacao tipoCorporacao { get; set; }
         public string nomeCorporacao { get; set; } = string.Empty;
+
+        [EmailAddress]
         public string emailCorporacao { get; set; } = string.Empty;
         public string numeroCorporacao { get; set; } = string.Empty;
         public string descricaoCorporacao { get; set; } = string.Empty;
