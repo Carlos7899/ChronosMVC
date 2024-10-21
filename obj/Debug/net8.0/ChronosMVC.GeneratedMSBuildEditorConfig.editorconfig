@@ -9,71 +9,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChronosMVC
 build_property.RootNamespace = ChronosMVC
-build_property.ProjectDir = C:\API\ChronosMVC\
+build_property.ProjectDir = D:\bagunça\DSIII - Dangoto e Carlos\TCC\NOvo\ChronosMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\API\ChronosMVC
+build_property.MSBuildProjectDirectory = D:\bagunça\DSIII - Dangoto e Carlos\TCC\NOvo\ChronosMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/API/ChronosMVC/Views/Corporacao/CadastroCorporacao.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Corporacao/CadastroCorporacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xDYWRhc3Ryb0NvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Corporacao/LoginCorporacao.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Corporacao/LoginCorporacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xMb2dpbkNvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Home/Candidaturas.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Home/Candidaturas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW5kaWRhdHVyYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Home/EscolherLogin.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Home/EscolherLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFc2NvbGhlckxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Home/Index.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Home/LoginView.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Home/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXN1YWxpemFyY3VycmljdWxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Shared/Error.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Vagas/Create.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Vagas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Vagas/Details.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Vagas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Vagas/VagasVIew.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Vagas/VagasVIew.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcVmFnYXNWSWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/_ViewImports.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/_ViewStart.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Shared/_Layout.cshtml]
+[D:/bagunça/DSIII - Dangoto e Carlos/TCC/NOvo/ChronosMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k4nnxg4vgy

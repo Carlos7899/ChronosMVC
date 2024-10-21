@@ -56,7 +56,9 @@ namespace ChronosMVC.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, model.emailCorporacao),
-                    new Claim("Token", token) // Adicione o token como uma claim
+                    new Claim("Token", token), // Adicione o token como uma claim
+                    new Claim("idCorporacao", model.idCorporacao.ToString()), // Adicione o Id da Corporação
+                    new Claim(ClaimTypes.Role, "Corporacao") // Adicionando a role
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "login");
