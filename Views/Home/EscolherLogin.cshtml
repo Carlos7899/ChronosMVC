@@ -2,9 +2,22 @@
     ViewData["Title"] = "Escolher Tipo de Login";
 }
 
-<h2>Escolher Tipo de Login</h2>
+<h2 class="text-center mb-4">Escolher Tipo de Login</h2>
 
-<div class="btn-group-vertical">
-    <a class="btn btn-primary" asp-controller="Corporacao" asp-action="LoginCorporacao">Login Corporativo</a>
-    <a class="btn btn-secondary" asp-controller="Egresso" asp-action="LoginEgresso">Login Egresso</a>
+<div class="d-flex justify-content-center">
+    <div class="card mx-2" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="card-body text-center">
+            <h5 class="card-title">Login Corporativo</h5>
+            <p class="card-text">Entre na sua conta corporativa para gerenciar suas atividades e recursos de sua instituição.</p>
+            <a class="btn btn-primary btn-lg" asp-controller="Corporacao" asp-action="LoginCorporacao">Acessar</a>
+        </div>
+    </div>
+
+    <div class="card mx-2" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="card-body text-center">
+            <h5 class="card-title">Login Egresso</h5>
+            <p class="card-text">Entre na sua conta de egresso para acessar conteúdos exclusivos e benefícios.</p>
+            <a class="btn btn-secondary btn-lg" asp-controller="Egresso" asp-action="LoginEgresso">Acessar</a>
+        </div>
+    </div>
 </div>

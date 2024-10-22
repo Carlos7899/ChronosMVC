@@ -1,0 +1,151 @@
+﻿@page
+@model ChronosMVC.Models.EgressoModel
+@{
+    ViewBag.Title = "CadastroEgresso";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            flex: 1;
+            background: url('https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4') no-repeat center center;
+            background-size: cover;
+        }
+
+        .form-container {
+            flex: 1;
+            background-color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container"></div>
+
+        <div class="form-container">
+            <h2>Cadastrar-se</h2>
+            <hr />
+
+            @if (TempData["MensagemSucesso"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["MensagemSucesso"]
+                </div>
+            }
+
+            @if (TempData["MensagemErro"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["MensagemErro"]
+                </div>
+            }
+
+            @using (Html.BeginForm("RegistrarEgresso", "Egresso", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="emailEgresso">Email</label>
+                        <div class="col-md-6">
+                            @Html.EditorFor(model => model.emailEgresso, new { htmlAttributes = new { @class = "form-control", @id = "emailEgresso" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="PasswordString">Senha</label>
+                        <div class="col-md-6">
+                            @Html.PasswordFor(model => model.PasswordString, new { htmlAttributes = new { @class = "form-control", @id = "PasswordString" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-6">
+                            <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()" />
+                            <label for="show-password">Ver Senha</label>
+                        </div>
+                    </div>
+
+                    <br />
+                    <input type="submit" value="Registrar" class="btn btn-primary" />
+                    <br />
+                </div>
+            }
+
+            <p>
+                Já possui uma conta? <a href="/Egresso/LoginEgresso">Clique aqui para fazer login.</a>
+            </p>
+
+            <script>
+                function togglePasswordVisibility() {
+                    const passwordInput = document.getElementById('PasswordString');
+                    const showPasswordCheckbox = document.getElementById('show-password');
+                    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+                }
+            </script>
+        </div>
+    </div>
+</body>

@@ -38,7 +38,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Corporacao" asp-action="Logout">Logout</a>
+                            <a class="nav-link text-dark" href="#" onclick="confirmLogout(event)">Logout</a>
                         </li>
                     }
                     else
@@ -47,8 +47,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EscolherLogin">Login</a>
                         </li>
                     }
-
-                  
                 </div>
             </div>
         </nav>
@@ -59,11 +57,16 @@
         </main>
     </div>
 
-    <!--<footer class="border-top footer text-muted" style="display: flex; display: inline;">
-        <div class="container">
-            &copy; - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>-->
+    <script>
+        function confirmLogout(event) {
+            event.preventDefault();
+            const confirmation = confirm("Você realmente deseja fazer logout?");
+            if (confirmation) {
+                window.location.href = '@Url.Action("Logout", "Corporacao")';
+            }
+        }
+    </script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

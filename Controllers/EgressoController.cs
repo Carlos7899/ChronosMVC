@@ -1,37 +1,30 @@
 ﻿using ChronosMVC.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using static System.Net.Mime.MediaTypeNames;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.Xml;
-using System.Text.Unicode;
-using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using System.Text;
 
 namespace ChronosMVC.Controllers
 {
-    public class CorporacaoController : Controller
+    public class EgressoController : Controller
     {
         private readonly HttpClient _httpClient;
-        private readonly string apiUrl = "http://localhost:5027/api/Corporacao/";
+        private readonly string apiUrl = "http://localhost:5027/api/Egresso/";
 
-        public CorporacaoController(HttpClient httpClient)
+        public EgressoController(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
         [HttpGet]
-        public IActionResult LoginCorporacao()
+        public IActionResult LoginEgresso()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult CadastroCorporacao()
+        public IActionResult CadastroEgresso()
         {
             return View();
         }
@@ -39,9 +32,9 @@ namespace ChronosMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(CorporacaoModel model)
+        public async Task<IActionResult> LoginEgresso(EgressoModel model)
         {
-            var loginData = new { emailCorporacao = model.emailCorporacao, passwordString = model.PasswordString };
+            var loginData = new { emailEgresso = model.emailEgresso, passwordString = model.PasswordString };
             var json = JsonConvert.SerializeObject(loginData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -52,34 +45,33 @@ namespace ChronosMVC.Controllers
             {
                 var token = JsonConvert.DeserializeObject<TokenResponse>(responseContent).Token;
 
-                // Configure a claims identity
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, model.emailCorporacao),
-                    new Claim("Token", token), // Adicione o token como uma claim
-                    new Claim("idCorporacao", model.idCorporacao.ToString()), // Adicione o Id da Corporação
-                    new Claim(ClaimTypes.Role, "Corporacao") // Adicionando a role
+                    new Claim(ClaimTypes.Name, model.emailEgresso),
+                    new Claim("Token", token),
+                    new Claim("idEgresso", model.idEgresso.ToString()), 
+                    new Claim(ClaimTypes.Role, "Egresso") 
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "login");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                await HttpContext.SignInAsync(claimsPrincipal); // Autentica o usuário
+                await HttpContext.SignInAsync(claimsPrincipal); 
 
                 TempData["MensagemSucesso"] = "Login realizado com sucesso!";
                 return RedirectToAction("Index", "Home");
             }
 
             TempData["MensagemErro"] = $"Erro: {responseContent}";
-            return View("LoginCorporacao", model);
+            return View("LoginEgresso", model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RegistrarCorporacao(CorporacaoModel model)
+        public async Task<IActionResult> RegistrarEgresso(EgressoModel model)
         {
 
-            var registerData = new { emailCorporacao = model.emailCorporacao, passwordString = model.PasswordString };
+            var registerData = new { emailEgresso = model.emailEgresso, passwordString = model.PasswordString };
             var json = JsonConvert.SerializeObject(registerData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -89,27 +81,12 @@ namespace ChronosMVC.Controllers
             if (response.IsSuccessStatusCode)
             {
                 TempData["MensagemSucesso"] = "Registro realizado com sucesso!";
-                return RedirectToAction("LoginCorporacao"); // Redireciona para a página de login
+                return RedirectToAction("LoginEgresso"); 
             }
 
             TempData["MensagemErro"] = $"Erro: {responseContent}";
-            return View(model); // Retorna à view com os dados e mensagem de erro
+            return View(model); 
         }
-
-
-
-
-
-
-
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync(); 
-            TempData["MensagemSucesso"] = "Logout realizado com sucesso!";
-            return RedirectToAction("Index", "Home");
-        }
-
-
 
 
         public class TokenResponse

@@ -11,8 +11,6 @@ namespace ChronosMVC.Models
         public TipoEgresso tipoEgresso { get; set; }
         public string nomeEgresso { get; set; } = string.Empty;
 
-        [MinLength(6)]
-        [MaxLength(150)]
         [EmailAddress]
         public string emailEgresso { get; set; } = string.Empty;
         public string numeroEgresso { get; set; } = string.Empty;
