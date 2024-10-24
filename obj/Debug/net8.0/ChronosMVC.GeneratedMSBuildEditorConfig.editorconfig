@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\API\ChronosMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/API/ChronosMVC/Views/Corporacao/AdicionarDadosCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xBZGljaW9uYXJEYWRvc0NvcnBvcmFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Corporacao/CadastroCorporacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xDYWRhc3Ryb0NvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

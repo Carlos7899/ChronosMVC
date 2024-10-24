@@ -36,6 +36,20 @@ namespace ChronosMVC.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult AdicionarDadosCorporacao()
+        {
+            var id = User.FindFirst("idCorporacao")?.Value;
+
+            if (!string.IsNullOrEmpty(id))
+            {
+                var model = new CorporacaoModel { idCorporacao = int.Parse(id) };
+                return View(model);
+            }
+
+            TempData["MensagemErro"] = "Corporação não encontrada.";
+            return RedirectToAction("Index", "Home");
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -50,14 +64,17 @@ namespace ChronosMVC.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                var token = JsonConvert.DeserializeObject<TokenResponse>(responseContent).Token;
+                // Aqui, você deve deserializar a resposta da API para obter o ID da corporação
+                var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
+                var token = tokenResponse.Token;
+                var idCorporacao = tokenResponse.IdCorporacao; // Capturando o ID da corporação
 
                 // Configure a claims identity
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, model.emailCorporacao),
                     new Claim("Token", token), // Adicione o token como uma claim
-                    new Claim("idCorporacao", model.idCorporacao.ToString()), // Adicione o Id da Corporação
+                    new Claim("idCorporacao", idCorporacao.ToString()), // Use o ID capturado
                     new Claim(ClaimTypes.Role, "Corporacao") // Adicionando a role
                 };
 
@@ -74,6 +91,8 @@ namespace ChronosMVC.Controllers
             return View("LoginCorporacao", model);
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegistrarCorporacao(CorporacaoModel model)
@@ -89,15 +108,64 @@ namespace ChronosMVC.Controllers
             if (response.IsSuccessStatusCode)
             {
                 TempData["MensagemSucesso"] = "Registro realizado com sucesso!";
-                return RedirectToAction("LoginCorporacao"); // Redireciona para a página de login
+                return RedirectToAction("LoginCorporacao"); 
             }
 
             TempData["MensagemErro"] = $"Erro: {responseContent}";
-            return View(model); // Retorna à view com os dados e mensagem de erro
+            return View(model); 
         }
 
 
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AdicionarInformacoes(CorporacaoModel model)
+        {
+            // Certifique-se de que o idCorporacao está no modelo
+            if (model.idCorporacao <= 0)
+            {
+                TempData["MensagemErro"] = "ID da corporação não é válido.";
+                return View("AdicionarDadosCorporacao", model);
+            }
+
+            // Serializa o modelo para JSON
+            var json = JsonConvert.SerializeObject(model);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            // Envia o pedido para a API
+            var response = await _httpClient.PutAsync(apiUrl + "Put/" + model.idCorporacao, content);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            // Verifica se a resposta foi bem-sucedida
+            if (response.IsSuccessStatusCode)
+            {
+                // Se a resposta contiver um corpo, tente deserializá-lo
+                if (!string.IsNullOrEmpty(responseContent))
+                {
+                    try
+                    {
+                        var registeredCorporacao = JsonConvert.DeserializeObject<CorporacaoModel>(responseContent);
+                        TempData["idCorporacao"] = registeredCorporacao.idCorporacao;
+                        TempData["MensagemSucesso"] = "Informações atualizadas com sucesso!";
+                    }
+                    catch (JsonException ex)
+                    {
+                        // Se houver um erro ao deserializar, registre o erro
+                        TempData["MensagemErro"] = $"Erro ao processar a resposta: {ex.Message}";
+                    }
+                }
+                else
+                {
+                    TempData["MensagemSucesso"] = "Informações atualizadas com sucesso!";
+                }
+                return RedirectToAction("Index", "Home");
+            }
+
+            // Se a resposta não for bem-sucedida, registre o erro
+            TempData["MensagemErro"] = $"Erro: {responseContent}";
+            return View("AdicionarDadosCorporacao", model);
+        }
 
 
 
@@ -115,6 +183,8 @@ namespace ChronosMVC.Controllers
         public class TokenResponse
         {
             public string Token { get; set; }
+            public int IdCorporacao { get; set; } 
         }
+
     }
 }
