@@ -1,0 +1,94 @@
+﻿@page
+@using ChronosMVC.Models.Enums
+@model ChronosMVC.Models.Enderecos.EnderecoViewModel
+@{
+    ViewBag.Title = "CreateEnderecoCorporacao";
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<h2>Criar Endereço</h2>
+<hr />
+@using (Html.BeginForm("CreateLogradouro", "Enderecos", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+
+        <h4>Criar Logradouro</h4>
+        <div class="form-group">
+            <label class="control-label col-md-2">CEP</label>
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Logradouro.cepLogradouro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Logradouro.cepLogradouro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tipo de Logradouro</label>
+            <div class="col-md-6">
+                @Html.DropDownListFor(model => model.Logradouro.tipoLogradouro, new SelectList(Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoLogradouro)).Cast<TipoLogradouro>().Select(x => new { Value = (int)x, Text = x.ToString() }), "Value", "Text"), "Selecione", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Logradouro.tipoLogradouro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Bairro</label>
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Logradouro.bairroLogradouro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Logradouro.bairroLogradouro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Cidade</label>
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Logradouro.cidadeLogradouro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Logradouro.cidadeLogradouro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">UF</label>
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Logradouro.ufLogradouro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Logradouro.ufLogradouro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <h4>Criar Endereço da Corporação</h4>
+        <div class="form-group">
+            <label class="control-label col-md-2">Número</label>
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.CorporacaoEndereco.numeroCorporacaoEndereco, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CorporacaoEndereco.numeroCorporacaoEndereco, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Complemento</label>
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.CorporacaoEndereco.complementoCorporacaoEndereco, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CorporacaoEndereco.complementoCorporacaoEndereco, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Criar Endereço" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}

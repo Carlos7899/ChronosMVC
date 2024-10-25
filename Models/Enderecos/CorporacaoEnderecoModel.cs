@@ -17,7 +17,6 @@ namespace ChronosMVC.Models.Enderecos
         public string numeroCorporacaoEndereco { get; set; } = string.Empty;
         public string complementoCorporacaoEndereco { get; set; } = string.Empty;
 
-        // Revisar relacionamento, a corporação não pode aceitar um Logradouro que já pertence a alguem
         [NotMapped]
         [JsonIgnore]
         public CorporacaoModel? corporacao { get; set; }

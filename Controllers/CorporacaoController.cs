@@ -159,7 +159,7 @@ namespace ChronosMVC.Controllers
                 {
                     TempData["MensagemSucesso"] = "Informações atualizadas com sucesso!";
                 }
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("CreateEnderecoCorporacao", "Enderecos");
             }
 
             // Se a resposta não for bem-sucedida, registre o erro

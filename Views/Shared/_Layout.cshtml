@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,8 +8,44 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ChronosMVC.styles.css" asp-append-version="true" />
+
+    <style>
+        .nav-link {
+            position: relative;
+            padding-bottom: 5px; 
+        }
+
+        .footer {
+            background-color: #343a40;
+            padding: 40px 0; /* Adiciona padding em cima e embaixo */
+            color: #fff;
+            text-align: center;
+            width: 100%; /* Faz o footer ocupar 100% da largura */
+            position: relative; /* Permite que o footer se posicione corretamente */
+            bottom: 0; /* Fixa o footer na parte inferior */
+        }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 2px; 
+                background-color: black; 
+                transform: scaleX(0);
+                transform-origin: left; 
+                transition: transform 0.3s ease; 
+            }
+
+            .nav-link:hover::after {
+                transform: scaleX(1); 
+            }
+
+    </style>
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -35,6 +72,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Vagas" asp-action="VagasView">Vagas</a>
                         </li>
                     </ul>
+
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">
