@@ -24,11 +24,14 @@ namespace ChronosMVC.Controllers
             _httpClient = httpClient;
         }
 
+
+        #region Chama a view
         [HttpGet]
         public IActionResult LoginCorporacao()
         {
             return View();
         }
+        
 
         [HttpGet]
         public IActionResult CadastroCorporacao()
@@ -50,6 +53,12 @@ namespace ChronosMVC.Controllers
             TempData["MensagemErro"] = "Corporação não encontrada.";
             return RedirectToAction("Index", "Home");
         }
+        #endregion
+
+
+
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -170,6 +179,45 @@ namespace ChronosMVC.Controllers
 
 
 
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> DadosCorporacao()
+        {
+            var id = User.FindFirst("idCorporacao")?.Value;
+
+            if (string.IsNullOrEmpty(id))
+            {
+                TempData["MensagemErro"] = "Corporação não encontrada.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            var response = await _httpClient.GetAsync(apiUrl + "GetbyId/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(responseContent);
+
+               
+                if (apiResponse?.value != null)
+                {
+                    return View(apiResponse.value);
+                }
+                else
+                {
+                    TempData["MensagemErro"] = "Dados da corporação não encontrados.";
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            TempData["MensagemErro"] = "Erro ao buscar os dados da corporação.";
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(); 
@@ -178,6 +226,18 @@ namespace ChronosMVC.Controllers
         }
 
 
+
+
+
+
+
+
+
+        public class ApiResponse
+        {
+            public object result { get; set; }
+            public CorporacaoModel value { get; set; }
+        }
 
 
         public class TokenResponse

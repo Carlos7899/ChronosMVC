@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xDYWRhc3Ryb0NvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/API/ChronosMVC/Views/Corporacao/DadosCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xEYWRvc0NvcnBvcmFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Corporacao/LoginCorporacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xMb2dpbkNvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

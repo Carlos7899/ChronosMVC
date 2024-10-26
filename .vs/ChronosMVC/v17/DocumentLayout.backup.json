@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\API\\ChronosMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\enderecoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\enderecoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\enderecoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\enderecoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\enderecos\\createenderecocorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\enderecos\\createenderecocorporacao.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\enderecos\\createenderecocorporacao.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enderecos\\enderecoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,23 +130,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateEnderecoCorporacao.cshtml",
-              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
-              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
-              "RelativeToolTip": "Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAUwFoAAAASAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DadosCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\DadosCorporacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Corporacao\\DadosCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\DadosCorporacao.cshtml",
+              "RelativeToolTip": "Views\\Corporacao\\DadosCorporacao.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T19:33:05.053Z"
+              "WhenOpened": "2024-10-26T19:17:17.796Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "EgressoController.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\EgressoController.cs",
               "RelativeDocumentMoniker": "Controllers\\EgressoController.cs",
@@ -154,19 +159,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CorporacaoController.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\CorporacaoController.cs",
               "RelativeDocumentMoniker": "Controllers\\CorporacaoController.cs",
               "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\CorporacaoController.cs",
               "RelativeToolTip": "Controllers\\CorporacaoController.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAswIgAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAlwOkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:32:07.622Z"
+              "WhenOpened": "2024-10-18T16:32:07.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EnderecosController.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\EnderecosController.cs",
               "RelativeDocumentMoniker": "Controllers\\EnderecosController.cs",
@@ -174,12 +180,11 @@
               "RelativeToolTip": "Controllers\\EnderecosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T19:24:01.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T19:24:01.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "EnderecoViewModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\EnderecoViewModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\EnderecoViewModel.cs",
@@ -191,20 +196,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\API\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAiwFEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAADwv4AAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-16T16:41:29.536Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Corporacao\\LoginCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
+              "RelativeToolTip": "Views\\Corporacao\\LoginCorporacao.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T16:39:28.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "CreateEnderecoCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
+              "RelativeToolTip": "Views\\Enderecos\\CreateEnderecoCorporacao.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAUwFoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T19:33:05.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "CreateEnderecoCorporacao.cshtml.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Enderecos\\CreateEnderecoCorporacao.cshtml.cs",
               "RelativeDocumentMoniker": "Views\\Enderecos\\CreateEnderecoCorporacao.cshtml.cs",
@@ -216,19 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginCorporacao.cshtml",
-              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Corporacao\\LoginCorporacao.cshtml",
-              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
-              "RelativeToolTip": "Views\\Corporacao\\LoginCorporacao.cshtml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T16:39:28.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LogradouroModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\LogradouroModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\LogradouroModel.cs",
@@ -240,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CorporacaoEnderecoModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\CorporacaoEnderecoModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\CorporacaoEnderecoModel.cs",
@@ -252,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CursoEnderecoModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\CursoEnderecoModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\CursoEnderecoModel.cs",
@@ -264,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "TipoCorporacao.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enums\\TipoCorporacao.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\TipoCorporacao.cs",
@@ -276,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CorporacaoModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\CorporacaoModel.cs",
               "RelativeDocumentMoniker": "Models\\CorporacaoModel.cs",
@@ -288,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CadastroCorporacao.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\CadastroCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Corporacao\\CadastroCorporacao.cshtml",
@@ -300,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -312,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AdicionarDadosCorporacao.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
@@ -324,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "EgressoModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\EgressoModel.cs",
               "RelativeDocumentMoniker": "Models\\EgressoModel.cs",
@@ -336,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "CadastroEgresso.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Egresso\\CadastroEgresso.cshtml",
               "RelativeDocumentMoniker": "Views\\Egresso\\CadastroEgresso.cshtml",
@@ -348,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "LoginEgresso.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Egresso\\LoginEgresso.cshtml",
               "RelativeDocumentMoniker": "Views\\Egresso\\LoginEgresso.cshtml",
@@ -360,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -372,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "VagasVIew.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\VagasVIew.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\VagasVIew.cshtml",
@@ -384,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -396,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "VagasController.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\VagasController.cs",
               "RelativeDocumentMoniker": "Controllers\\VagasController.cs",
@@ -408,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "EscolherLogin.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Home\\EscolherLogin.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\EscolherLogin.cshtml",
@@ -420,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "VagaModel.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\VagaModel.cs",
               "RelativeDocumentMoniker": "Models\\VagaModel.cs",
@@ -432,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\Create.cshtml",
@@ -444,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -456,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -468,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
