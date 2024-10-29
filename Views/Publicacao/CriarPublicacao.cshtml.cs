@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ChronosMVC.Views.Enderecos
+namespace ChronosMVC.Views.Publicacao
 {
-    public class CreateEnderecoCorporacaoModel : PageModel
+    public class CriarPublicacaoModel : PageModel
     {
         public void OnGet()
         {

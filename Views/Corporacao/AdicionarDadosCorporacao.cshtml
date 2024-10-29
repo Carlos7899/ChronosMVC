@@ -8,79 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Informações</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-        }
-
-        .container {
-            display: flex;
-            width: 100vw;
-            height: 100vh;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-container {
-            flex: 1;
-            background: url('https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4') no-repeat center center;
-            background-size: cover;
-        }
-
-        .form-container {
-            flex: 1;
-            background-color: #fff;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #007BFF;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #333;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+   
 </head>
 
 <body>
@@ -118,12 +46,11 @@
 
                     <div class="form-group">
                         <label for="TipoCorporacao">Tipo da Corporação</label>
-                        <select asp-for="tipoCorporacao" class="form-control" id="TipoCorporacao">
-                            @foreach (var tipo in Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoCorporacao)).Cast<TipoCorporacao>())
-                            {
-                                <option value="@tipo">@tipo</option>
-                            }
-                        </select>
+                        @Html.DropDownListFor(model => model.tipoCorporacao,
+                                 new SelectList(Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoCorporacao)).Cast<TipoCorporacao>()
+                                 .Select(tipo => new { Value = (int)tipo, Text = tipo.ToString() }),
+                                 "Value", "Text"),
+                                 "Selecione o Tipo", new { @class = "form-control", @id = "TipoCorporacao" })
                     </div>
 
                     <div class="form-group">

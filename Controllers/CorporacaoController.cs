@@ -11,6 +11,7 @@ using System.Security.Cryptography.Xml;
 using System.Text.Unicode;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ChronosMVC.Controllers
 {
@@ -77,6 +78,8 @@ namespace ChronosMVC.Controllers
                 var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
                 var token = tokenResponse.Token;
                 var idCorporacao = tokenResponse.IdCorporacao; // Capturando o ID da corporação
+                Console.WriteLine($"ID da Corporação: {idCorporacao}"); // Adicione esta linha
+
 
                 // Configure a claims identity
                 var claims = new List<Claim>
@@ -168,7 +171,7 @@ namespace ChronosMVC.Controllers
                 {
                     TempData["MensagemSucesso"] = "Informações atualizadas com sucesso!";
                 }
-                return RedirectToAction("CreateEnderecoCorporacao", "Enderecos");
+                return RedirectToAction("DadosCorporacao", "Corporacao");
             }
 
             // Se a resposta não for bem-sucedida, registre o erro
@@ -218,11 +221,39 @@ namespace ChronosMVC.Controllers
 
 
 
-        public async Task<IActionResult> Logout()
+
+
+
+
+
+
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> EditarDadosCorporacao(int idCorporacao)
         {
-            await HttpContext.SignOutAsync(); 
-            TempData["MensagemSucesso"] = "Logout realizado com sucesso!";
-            return RedirectToAction("Index", "Home");
+            // Envia uma solicitação GET para a API para obter os dados da corporação com base no ID
+            var response = await _httpClient.GetAsync(apiUrl + "GetbyId/" + idCorporacao);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+
+                // Deserializa o JSON para ApiResponse
+                var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(responseContent);
+
+                // Verifica se o valor não é nulo
+                if (apiResponse?.value != null)
+                {
+                    // Retorna a view com os dados da corporação para edição
+                    return View("AdicionarDadosCorporacao", apiResponse.value);
+                }
+            }
+
+            TempData["MensagemErro"] = "Erro ao carregar os dados da corporação.";
+            return RedirectToAction("Index");
         }
 
 
@@ -230,6 +261,12 @@ namespace ChronosMVC.Controllers
 
 
 
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(); 
+            TempData["MensagemSucesso"] = "Logout realizado com sucesso!";
+            return RedirectToAction("Index", "Home");
+        }
 
 
 

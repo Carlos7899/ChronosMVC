@@ -1,16 +1,27 @@
 ﻿@model ChronosMVC.Models.CorporacaoModel
 
+
+
 <h2>Dados da Corporação</h2>
+
+<!-- Mini navegação -->
+<div class="mini-navegacao mb-3">
+    <a asp-action="MeusDados" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-link">Meus Dados</a>
+    <a asp-action="CreateEnderecoCorporacao" asp-controller="Endereco" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-link">Endereço</a>
+</div>
 
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Informações Pessoais</h5>
 
         <p>
+            <strong>Nome:</strong> @(Model.nomeCorporacao ?? "Não disponível")
+        </p>
+        <p>
             <strong>Email:</strong> @(Model.emailCorporacao ?? "Não disponível")
         </p>
         <p>
-            <strong>Data de Acesso:</strong> @(Model.DataAcesso?.ToString("dd/MM/yyyy") ?? "Não disponível")
+            <strong>Tipo Corporacção:</strong> @(Model.tipoCorporacao)
         </p>
         <p>
             <strong>CNPJ:</strong> @(Model.cnpjCorporacao ?? "Não disponível")
@@ -21,7 +32,13 @@
         <p>
             <strong>Descrição:</strong> @(Model.descricaoCorporacao ?? "Não disponível")
         </p>
+        <p>
+            <strong>Data de Acesso:</strong> @(Model.DataAcesso?.ToString("dd/MM/yyyy") ?? "Não disponível")
+        </p>
     </div>
 </div>
 
-<a href="@Url.Action("Editar", "Corporacao", new { id = Model.idCorporacao })" class="btn btn-primary">Editar</a>
+
+
+<a asp-action="EditarDadosCorporacao" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-primary">Editar</a>
+

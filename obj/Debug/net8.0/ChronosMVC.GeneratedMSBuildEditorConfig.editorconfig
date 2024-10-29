@@ -34,16 +34,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xMb2dpbkNvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/API/ChronosMVC/Views/Curriculo/Curriculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWxvXEN1cnJpY3Vsby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Egresso/CadastroEgresso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xDYWRhc3Ryb0VncmVzc28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Egresso/LoginEgresso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xMb2dpbkVncmVzc28uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/API/ChronosMVC/Views/Enderecos/CreateEnderecoCorporacao.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXENyZWF0ZUVuZGVyZWNvQ29ycG9yYWNhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Home/Candidaturas.cshtml]
@@ -60,6 +60,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/API/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXN1YWxpemFyY3VycmljdWxvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Publicacao/CriarPublicacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xDcmlhclB1YmxpY2FjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Publicacao/DetalhesPublicacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xEZXRhbGhlc1B1YmxpY2FjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Publicacao/ListarPublicacoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xMaXN0YXJQdWJsaWNhY29lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Shared/Error.cshtml]

@@ -1,28 +1,50 @@
 ﻿@model ChronosMVC.Models.VagaModel
 
 @{
-    ViewBag.Title = "Criar Nova Vaga";
+    ViewBag.Title = "Criar Vaga";
 }
 
-<h2>Criar Nova Vaga</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Criar Nova Vaga</h2>
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="nomeVaga"></label>
-        <input asp-for="nomeVaga" class="form-control" />
-        <span asp-validation-for="nomeVaga" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="descricaoVaga"></label>
-        <textarea asp-for="descricaoVaga" class="form-control"></textarea>
-        <span asp-validation-for="descricaoVaga" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Salvar</button>
-        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancelar</a>
-    </div>
-</form>
+    <!-- Verificação de mensagens de sucesso ou erro -->
+    @if (TempData["Mensagem"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Mensagem"]
+        </div>
+    }
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["MensagemErro"]
+        </div>
+    }
 
-<div>
-    <a asp-action="Index">Voltar para a lista</a>
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="nomeVaga" class="form-label">Nome da Vaga</label>
+            <input asp-for="nomeVaga" class="form-control" required />
+            <span asp-validation-for="nomeVaga" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="descricaoVaga" class="form-label">Descrição da Vaga</label>
+            <textarea asp-for="descricaoVaga" class="form-control" rows="4" required></textarea>
+            <span asp-validation-for="descricaoVaga" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DataVencimento" class="form-label">Data de Vencimento</label>
+            <input asp-for="DataVencimento" class="form-control" type="date" required />
+            <span asp-validation-for="DataVencimento" class="text-danger"></span>
+        </div>
+
+        <input type="hidden" asp-for="idCorporacao" value="@User.FindFirst("IdCorporacao")?.Value" />
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary">Criar Vaga</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
 </div>

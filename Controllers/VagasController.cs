@@ -53,25 +53,32 @@ namespace ChronosMVC.Controllers
         {
             try
             {
-                int idCorporacao = GetAuthenticatedCorporacaoId();
-                v.idCorporacao = idCorporacao; // Setando o idCorporacao
-                v.DataCriacao = DateTime.UtcNow; // Data de criação
-                v.DataVencimento = DateTime.UtcNow.AddDays(30); // Exemplo de vencimento
+                // Validação do modelo
+                if (!ModelState.IsValid)
+                {
+                    return View(v); // Retorna a mesma view com os dados preenchidos
+                }
+
+                // Obter o ID da corporação autenticada
+                v.idCorporacao = GetAuthenticatedCorporacaoId(); // Define o idCorporacao para a vaga
 
                 HttpClient httpClient = new HttpClient();
                 var content = new StringContent(JsonConvert.SerializeObject(v));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
+                // Enviar o POST para a API
                 HttpResponseMessage response = await httpClient.PostAsync(uriBase + "POST", content);
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
                 {
                     TempData["Mensagem"] = "Vaga criada com sucesso!";
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index"); // Redireciona para a página principal de vagas
                 }
                 else
+                {
                     throw new Exception(serialized);
+                }
             }
             catch (Exception ex)
             {
@@ -79,6 +86,7 @@ namespace ChronosMVC.Controllers
                 return View(v); // Retorna à view com os dados
             }
         }
+
 
 
 

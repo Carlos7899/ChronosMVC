@@ -1,0 +1,78 @@
+﻿@model ChronosMVC.Models.PublicacaoModel
+@{
+    ViewBag.Title = "Criar Publicação";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Publicação</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Criar Nova Publicação</h2>
+        <hr />
+
+        @if (TempData["MensagemSucesso"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["MensagemSucesso"]
+            </div>
+        }
+
+        @if (TempData["MensagemErro"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["MensagemErro"]
+            </div>
+        }
+
+        @using (Html.BeginForm("CriarPublicacao", "Publicacao", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="tituloPublicacao">Título da Publicação</label>
+                    @Html.EditorFor(model => model.títuloPublicacao, new { htmlAttributes = new { @class = "form-control", @id = "tituloPublicacao" } })
+                </div>
+
+                <div class="form-group">
+                    <label for="conteudoPublicacao">Conteúdo</label>
+                    @Html.TextAreaFor(model => model.conteudoPublicacao, new { htmlAttributes = new { @class = "form-control", @id = "conteudoPublicacao" } })
+                </div>
+
+                <div class="form-group">
+                    <label for="avaliacaoPublicacao">Avaliação (0 a 5)</label>
+                    @Html.EditorFor(model => model.avaliacaoPublicacao, new { htmlAttributes = new { @class = "form-control", @id = "avaliacaoPublicacao", @type = "number", @min = "0", @max = "5" } })
+                </div>
+
+                <div class="form-group">
+                    <label for="imagemPublicacao">Imagem da Publicação</label>
+                    <input type="file" class="form-control" id="imagemPublicacao" accept="image/*" onchange="convertToBase64()" required />
+                    <textarea id="imagemBase64" name="imagemPublicacao" class="form-control" rows="4" style="display:none;"></textarea>
+                </div>
+
+                <input type="hidden" asp-for="idCorporacao" value="@User.FindFirst("IdCorporacao")?.Value" />
+
+                <input type="submit" value="Criar Publicação" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+
+    <script>
+        function convertToBase64() {
+            const fileInput = document.getElementById('imagemPublicacao');
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+                document.getElementById('imagemBase64').value = reader.result.split(',')[1]; // Remove o prefixo "data:image/png;base64,"
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>

@@ -133,3 +133,5 @@ D:\bagunça\DSIII - Dangoto e Carlos\TCC\NOvo\ChronosMVC\obj\Debug\net8.0\refint
 D:\bagunça\DSIII - Dangoto e Carlos\TCC\NOvo\ChronosMVC\obj\Debug\net8.0\ChronosMVC.pdb
 D:\bagunça\DSIII - Dangoto e Carlos\TCC\NOvo\ChronosMVC\obj\Debug\net8.0\ChronosMVC.genruntimeconfig.cache
 D:\bagunça\DSIII - Dangoto e Carlos\TCC\NOvo\ChronosMVC\obj\Debug\net8.0\ref\ChronosMVC.dll
+C:\API\ChronosMVC\bin\Debug\net8.0\package-lock.json
+C:\API\ChronosMVC\bin\Debug\net8.0\package.json

@@ -1,6 +1,8 @@
-﻿using ChronosMVC.Models.Enums;
+﻿using ChronosMVC.Models.Curriculo;
+using ChronosMVC.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ChronosMVC.Models
 {
@@ -11,6 +13,7 @@ namespace ChronosMVC.Models
         public TipoEgresso tipoEgresso { get; set; }
         public string nomeEgresso { get; set; } = string.Empty;
 
+        [MaxLength(150)]
         [EmailAddress]
         public string emailEgresso { get; set; } = string.Empty;
         public string numeroEgresso { get; set; } = string.Empty;
@@ -27,5 +30,9 @@ namespace ChronosMVC.Models
 
         [NotMapped]
         public string? Token { get; set; }
+
+        [NotMapped]
+        [JsonIgnore]
+        public CurriculoModel? Curriculo { get; set; }
     }
 }

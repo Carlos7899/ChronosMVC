@@ -11,17 +11,18 @@
     <style>
         .nav-link {
             position: relative;
-            padding-bottom: 5px; 
+            padding-bottom: 5px;
+           
         }
 
         .footer {
             background-color: #343a40;
-            padding: 40px 0; /* Adiciona padding em cima e embaixo */
+            padding: 40px 0;
             color: #fff;
             text-align: center;
-            width: 100%; /* Faz o footer ocupar 100% da largura */
-            position: relative; /* Permite que o footer se posicione corretamente */
-            bottom: 0; /* Fixa o footer na parte inferior */
+            width: 100%;
+            position: relative;
+            bottom: 0;
         }
 
         .nav-link::after {
@@ -30,21 +31,30 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 2px; 
-            background-color: black; 
+            height: 2px;
+            background-color: black;
             transform: scaleX(0);
-            transform-origin: left; 
-            transition: transform 0.3s ease; 
+            transform-origin: left;
+            transition: transform 0.3s ease;
         }
 
         .nav-link:hover::after {
-            transform: scaleX(1); 
+            transform: scaleX(1);
         }
 
-        /* Nova classe para o espaçamento superior */
         .main {
-            margin-top: 70px; /* Ajuste conforme a altura da navbar */
+            margin-top: 70px;
         }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+            .navbar-toggler:focus {
+                outline: none;
+            }
+
      
     </style>
 </head>
@@ -53,21 +63,18 @@
     <header>
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <ul class="nav">  
+                <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Visualizarcurriculo">Currículo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Candidaturas">Candidaturas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Cursos</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Vagas" asp-action="VagasView">Vagas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Publicacao" asp-action="ListarPublicacoes">Publicações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Curriculo" asp-action="CurriculoView">Curriculo</a>
                     </li>
                 </ul>
 
@@ -84,13 +91,21 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Corporacao" asp-action="AdicionarDadosCorporacao">Adicionar Dados</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Corporacao" asp-action="DadosCorporacao">Meus Dados</a>
-                                </li>
+                                var idCorporacao = User.FindFirst("idCorporacao")?.Value;
+                                var idEgresso = User.FindFirst("idEgresso")?.Value;
 
+                                if (!string.IsNullOrEmpty(idCorporacao))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Corporacao" asp-action="DadosCorporacao">Meus Dados</a>
+                                    </li>
+                                }
+                                else if (!string.IsNullOrEmpty(idEgresso))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Egresso" asp-action="DadosEgresso">Meus Dados</a>
+                                    </li>
+                                }
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" href="#" onclick="confirmLogout(event)">Logout</a>
                                 </li>
@@ -100,7 +115,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EscolherLogin">Login</a>
                                 </li>
-                            }              
+                            }
                         </ul>
                     </div>
                 </div>
@@ -122,6 +137,25 @@
                 window.location.href = '@Url.Action("Logout", "Corporacao")';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var offcanvasNavbar = document.getElementById('offcanvasNavbar');
+            var bsOffcanvas = new bootstrap.Offcanvas(offcanvasNavbar);
+
+            // Verifica se o menu está aberto ao carregar a página
+            if (sessionStorage.getItem('offcanvasState') === 'open') {
+                bsOffcanvas.show();
+            }
+
+            // Armazena o estado do menu quando ele é aberto ou fechado
+            offcanvasNavbar.addEventListener('hidden.bs.offcanvas', function () {
+                sessionStorage.setItem('offcanvasState', 'closed');
+            });
+
+            offcanvasNavbar.addEventListener('shown.bs.offcanvas', function () {
+                sessionStorage.setItem('offcanvasState', 'open');
+            });
+        });
     </script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

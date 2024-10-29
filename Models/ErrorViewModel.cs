@@ -1,4 +1,4 @@
-namespace ChronosMVC.Models;
+﻿namespace ChronosMVC.Models;
 
 public class ErrorViewModel
 {

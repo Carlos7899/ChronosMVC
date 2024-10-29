@@ -1,6 +1,8 @@
 @model IEnumerable<ChronosMVC.Models.VagaModel>
 
-@{ ViewBag.Title = "Vagas"; }
+@{
+    ViewBag.Title = "Vagas";
+}
 
 <!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">
@@ -16,7 +18,6 @@
         </div>
     }
 
-
     <!-- Verificação de mensagens de sucesso ou erro -->
     @if (TempData["Mensagem"] != null)
     {
@@ -31,44 +32,35 @@
         </div>
     }
 
-
-    <!-- Tabela de vagas -->
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.idVaga)</th>
-                    <th>@Html.DisplayNameFor(model => model.nomeVaga)</th>
-                    <th>@Html.DisplayNameFor(model => model.descricaoVaga)</th>
-                    <th>@Html.DisplayNameFor(model => model.DataCriacao)</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.idVaga)</td>
-                        <td>@Html.DisplayFor(modelItem => item.nomeVaga)</td>
-                        <td>@Html.DisplayFor(modelItem => item.descricaoVaga)</td>
-                        <td>@Html.DisplayFor(modelItem => item.DataCriacao)</td>
-                        <td>
-                            @if (User.IsInRole("Corporacao") && User.FindFirst("IdCorporacao")?.Value == item.idCorporacao.ToString())
-                            {
-                                <a href="@Url.Action("Edit", new { id = item.idVaga })" class="btn btn-sm btn-warning">
-                                    <i class="fas fa-edit"></i> Editar
-                                </a>
-                                <a href="@Url.Action("Delete", new { id = item.idVaga })" class="btn btn-sm btn-danger">
-                                    <i class="fas fa-trash-alt"></i> Deletar
-                                </a>
-                            }
-                            <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-sm btn-info">
-                                <i class="fas fa-info-circle"></i> Detalhes
+    <!-- Cards de vagas -->
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.nomeVaga</h5>
+                        <p class="card-text">@item.descricaoVaga</p>
+                        <p class="card-text">
+                            <small class="text-muted">Criada em: @item.DataCriacao.ToString("dd/MM/yyyy")</small>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        @if (User.IsInRole("Corporacao") && User.FindFirst("IdCorporacao")?.Value == item.idCorporacao.ToString())
+                        {
+                            <a href="@Url.Action("Edit", new { id = item.idVaga })" class="btn btn-warning">
+                                <i class="fas fa-edit"></i> Editar
                             </a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                            <a href="@Url.Action("Delete", new { id = item.idVaga })" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i> Deletar
+                            </a>
+                        }
+                        <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-info">
+                            <i class="fas fa-info-circle"></i> Detalhes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
