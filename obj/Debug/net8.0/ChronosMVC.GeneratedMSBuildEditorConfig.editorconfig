@@ -38,8 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWxvXEN1cnJpY3Vsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/API/ChronosMVC/Views/Egresso/AdicionarDadosEgresso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xBZGljaW9uYXJEYWRvc0VncmVzc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Egresso/CadastroEgresso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xDYWRhc3Ryb0VncmVzc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Egresso/DadosEgresso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xEYWRvc0VncmVzc28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Egresso/LoginEgresso.cshtml]

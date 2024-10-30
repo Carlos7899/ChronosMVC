@@ -1,0 +1,39 @@
+﻿@model ChronosMVC.Models.EgressoModel
+
+<h2>Dados do Egresso</h2>
+
+<!-- Mini navegação -->
+<div class="mini-navegacao mb-3">
+    <a asp-action="MeusDados" asp-route-idEgresso="@Model.idEgresso" class="btn btn-link">Meus Dados</a>
+    <a asp-action="CreateEnderecoEgresso" asp-controller="Endereco" asp-route-idEgresso="@Model.idEgresso" class="btn btn-link">Endereço</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Informações Pessoais</h5>
+
+        <p>
+            <strong>Nome:</strong> @(Model.nomeEgresso ?? "Não disponível")
+        </p>
+        <p>
+            <strong>Email:</strong> @(Model.emailEgresso ?? "Não disponível")
+        </p>
+        <p>
+            <strong>Tipo Corporacção:</strong> @(Model.tipoEgresso)
+        </p>
+        <p>
+            <strong>CPF:</strong> @(Model.cpfEgresso ?? "Não disponível")
+        </p>
+        <p>
+            <strong>Telefone:</strong> @(Model.numeroEgresso ?? "Não disponível")
+        </p>
+        <p>
+            <strong>Data de Acesso:</strong> @(Model.DataAcesso?.ToString("dd/MM/yyyy") ?? "Não disponível")
+        </p>
+    </div>
+</div>
+
+
+
+<a asp-action="EditarDadosEgresso" asp-route-idEgresso="@Model.idEgresso" class="btn btn-primary">Editar</a>
+
