@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ChronosMVC.Models.CursoModel>
+
+@{
+    ViewData["Title"] = "Lista de Cursos";
+}
+
+<h1 class="text-center">Cursos</h1>
+
+<div class="container">
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            Não há cursos disponíveis.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var curso in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@curso.nomeCurso</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">ID: @curso.idCurso</h6>
+                            <p><strong>Descrição:</strong> @curso.descricaoCurso</p>
+                            <p><strong>Carga Horária:</strong> @curso.cargaHorariaCurso horas</p>
+                            <p><strong>Data Início:</strong> @curso.dataInicioCurso.ToString("dd/MM/yyyy")</p>
+                            <p><strong>Data Fim:</strong> @curso.dataFimCurso.ToString("dd/MM/yyyy")</p>
+                            <p><strong>Limite de Vagas:</strong> @(curso.limiteVagas.HasValue ? curso.limiteVagas.ToString() : "Sem limite")</p>
+                            <a asp-controller="Curso" asp-action="Details" asp-route-id="@curso.idCurso" class="btn btn-info">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

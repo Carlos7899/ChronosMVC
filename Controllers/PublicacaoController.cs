@@ -154,6 +154,146 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
+        #region Ação para listar as publicações da corporação autenticada
+        [HttpGet]
+        public async Task<IActionResult> MinhasPublicacoes()
+        {
+            try
+            {
+                // Obter o ID da corporação autenticada
+                var idCorporacao = GetAuthenticatedCorporacaoId();
+
+                // Chamar o método da API para obter as publicações
+                string uriComplementar = $"GetByCorporacao/{idCorporacao}";
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenUsuario");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                HttpResponseMessage response = await httpClient.GetAsync(apiUrl + uriComplementar);
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var publicacoes = JsonConvert.DeserializeObject<List<PublicacaoModel>>(serialized);
+                    if (publicacoes == null || !publicacoes.Any())
+                    {
+                        ViewBag.Mensagem = "Você ainda não tem publicações.";
+                    }
+                    return View(publicacoes);
+                }
+                else
+                {
+                    throw new Exception(serialized);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return RedirectToAction("ListarPublicacoes");
+            }
+        }
+        #endregion
+
+
+        #region Ação para deletar uma publicação
+        [HttpPost]
+        [ValidateAntiForgeryToken] // Adicione esta linha para proteção CSRF
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenUsuario");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                HttpResponseMessage response = await httpClient.DeleteAsync(apiUrl + $"Delete/{id}");
+                var responseContent = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    TempData["MensagemSucesso"] = "Publicação deletada com sucesso!";
+                }
+                else
+                {
+                    string errorResponse = await response.Content.ReadAsStringAsync();
+                    throw new Exception(errorResponse);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+
+            }
+
+        
+            return RedirectToAction("MinhasPublicacoes");
+        }
+        #endregion
+
+        #region Ação para editar uma publicação
+        [HttpGet]
+        public async Task<IActionResult> EditarPublicacao(int id)
+        {
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenUsuario");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                HttpResponseMessage response = await httpClient.GetAsync(apiUrl + $"GetbyId/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    string serialized = await response.Content.ReadAsStringAsync();
+                    var publicacao = JsonConvert.DeserializeObject<PublicacaoModel>(serialized);
+                    return View(publicacao);
+                }
+                else
+                {
+                    string errorResponse = await response.Content.ReadAsStringAsync();
+                    throw new Exception(errorResponse);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return RedirectToAction("MinhasPublicacoes");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditarPublicacao(PublicacaoModel publicacao)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    string serializedPublicacao = JsonConvert.SerializeObject(publicacao);
+                    var content = new StringContent(serializedPublicacao, Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await _httpClient.PutAsync(apiUrl + $"Put/{publicacao.idPublicacao}", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        TempData["MensagemSucesso"] = "Publicação editada com sucesso!";
+                        return RedirectToAction("MinhasPublicacoes");
+                    }
+                    else
+                    {
+                        string errorResponse = await response.Content.ReadAsStringAsync();
+                        throw new Exception(errorResponse);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TempData["MensagemErro"] = ex.Message;
+                }
+            }
+
+            return View(publicacao);
+        }
+        #endregion
+
+
 
     }
 }

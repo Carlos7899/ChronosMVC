@@ -11,6 +11,15 @@
 
 <body>
     <div class="container">
+        <nav class="nav justify-content-center mb-4">
+            @if (User.IsInRole("Corporacao"))
+            {
+                <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
+                <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
+                <a href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
+            }
+            <a class="nav-link" href="@Url.Action("PesquisarPublicacao", "Publicacao")">Pesquisar Publicação</a>
+        </nav>
         <h2>Criar Nova Publicação</h2>
         <hr />
 

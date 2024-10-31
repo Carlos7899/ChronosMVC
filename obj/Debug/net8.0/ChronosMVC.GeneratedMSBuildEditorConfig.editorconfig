@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWxvXEN1cnJpY3Vsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/API/ChronosMVC/Views/Curso/ListaCursos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cTGlzdGFDdXJzb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Egresso/AdicionarDadosEgresso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xBZGljaW9uYXJEYWRvc0VncmVzc28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,8 +82,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xEZXRhbGhlc1B1YmxpY2FjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/API/ChronosMVC/Views/Publicacao/EditarPublicacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xFZGl0YXJQdWJsaWNhY2FvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Publicacao/ListarPublicacoes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xMaXN0YXJQdWJsaWNhY29lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Publicacao/MinhasPublicacoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb1xNaW5oYXNQdWJsaWNhY29lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Shared/Error.cshtml]

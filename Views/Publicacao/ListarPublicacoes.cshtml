@@ -10,33 +10,25 @@
     }
 
     .container {
-        max-width: 800px;
+        max-width: 1200px;
         margin-top: 30px;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .post-card {
-        border-bottom: 1px solid #e6e6e6;
+        border: 1px solid #e6e6e6;
         padding: 20px;
         text-decoration: none;
         color: inherit;
         transition: background-color 0.2s, transform 0.2s;
         margin-bottom: 20px; /* Espaçamento entre os cards */
+        border-radius: 8px;
+        background-color: #ffffff;
     }
 
         .post-card:hover {
             background-color: #f9f9f9;
             transform: translateY(-2px);
         }
-
-    .post-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-    }
 
     .post-image {
         width: 50px;
@@ -88,44 +80,54 @@
         padding: 0.25rem 0.5rem;
     }
 </style>
+
 <div class="container">
     <h1 class="text-center mb-4">Publicações</h1>
-    @if (User.IsInRole("Corporacao"))
-    {
-        <div class="text-end mb-3">
-            <a href="@Url.Action("CriarPublicacao", "Publicacao")" class="btn btn-primary mb-3 w-100">Criar Publicação</a>
-        </div>
-    }
-    @foreach (var publicacao in Model)
-    {
-        <div class="post-card" onclick="location.href='@Url.Action("DetalhesPublicacao", "Publicacao", new { id = publicacao.idPublicacao })';" style="cursor:pointer;">
-            <div class="post-header">
-                <img src="default-profile-image.png" alt="User Image" class="post-image" />
-                <div>
-                    <div class="post-title">@publicacao.títuloPublicacao</div>
-                    <div class="avaliacao">Avaliação: @publicacao.avaliacaoPublicacao</div>
+
+    <!-- Navegação -->
+    <nav class="nav justify-content-center mb-4">
+        @if (User.IsInRole("Corporacao"))
+        {
+            <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
+            <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
+            <a href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
+        }
+        <a class="nav-link" href="@Url.Action("PesquisarPublicacao", "Publicacao")">Pesquisar Publicação</a>
+    </nav>
+
+  
+    <div class="row">
+        @foreach (var publicacao in Model)
+        {
+            <div class="col-md-4">
+                <div class="post-card" onclick="location.href='@Url.Action("DetalhesPublicacao", "Publicacao", new { id = publicacao.idPublicacao })';" style="cursor:pointer;">
+                    <div class="post-header">
+                        <img src="default-profile-image.png" alt="User Image" class="post-image" />
+                        <div>
+                            <div class="post-title">@publicacao.títuloPublicacao</div>
+                            <div class="avaliacao">Avaliação: @publicacao.avaliacaoPublicacao</div>
+                        </div>
+                    </div>
+                    <div class="post-body">@publicacao.conteudoPublicacao</div>
+                    @if (publicacao.imagemPublicacao != null && publicacao.imagemPublicacao.Length > 0)
+                    {
+                        var base64Image = Convert.ToBase64String(publicacao.imagemPublicacao);
+                        var imageSrc = $"data:image/png;base64,{base64Image}";
+                        <img src="@imageSrc" alt="Imagem da publicação" class="post-image-publicacao">
+                    }
+                    <div class="post-footer">
+                        <span>@publicacao.dataCriacaoPublicacao.ToString("dd/MM/yyyy")</span>
+                        <div class="interaction-buttons">
+                            <a asp-controller="Publicacao" asp-action="DetalhesPublicacao" asp-route-idPublicacao="@publicacao.idPublicacao" class="btn btn-info btn-sm">Ver Comentários</a>
+                            <span class="views">
+                                <i class="bi bi-eye"></i> @publicacao.numeroVisualizacoes Visualizações
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="post-body">@publicacao.conteudoPublicacao</div>
-            @if (publicacao.imagemPublicacao != null && publicacao.imagemPublicacao.Length > 0)
-            {
-                var base64Image = Convert.ToBase64String(publicacao.imagemPublicacao);
-                var imageSrc = $"data:image/png;base64,{base64Image}";
-                <img src="@imageSrc" alt="Imagem da publicação" class="post-image-publicacao">
-            }
-            <div class="post-footer">
-                <span>@publicacao.dataCriacaoPublicacao.ToString("dd/MM/yyyy")</span>
-                <div class="interaction-buttons">
-                    <button class="btn btn-outline-secondary btn-sm">
-                        <i class="bi bi-heart"></i> Curtir
-                    </button>
-                    <a asp-controller="Publicacao" asp-action="DetalhesPublicacao" asp-route-idPublicacao="@publicacao.idPublicacao" class="btn btn-info btn-sm">Ver Comentários</a>
-                    <span class="views">
-                        <i class="bi bi-eye"></i> @publicacao.numeroVisualizacoes Visualizações
-                    </span>
-                </div>
-            </div>
-        </div>
-    }
+        }
+    </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

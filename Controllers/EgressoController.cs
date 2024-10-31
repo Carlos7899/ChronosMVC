@@ -117,55 +117,56 @@ namespace ChronosMVC.Controllers
 
 
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AdicionarInformacoes(EgressoModel model)
         {
-            // Certifique-se de que o idCorporacao está no modelo
-            if (model.idEgresso <= 0)
+            // Verifica se o modelo é válido
+            if (!ModelState.IsValid)
             {
-                TempData["MensagemErro"] = "ID do Egresso não é válido.";
-                return View("AdicionarDadosEgresso", model);
+                // Inspecionar os erros de validação
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                foreach (var error in errors)
+                {
+                    Console.WriteLine(error.ErrorMessage); // Exibir no console para depuração
+                }
+
+                // Adicionar uma mensagem de erro geral
+                ModelState.AddModelError(string.Empty, "Por favor, corrija os erros abaixo.");
+
+                // Retorna à view com o modelo e erros
+                return View(model);
             }
 
-            // Serializa o modelo para JSON
+            // Serializa o modelo em JSON
             var json = JsonConvert.SerializeObject(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            // Envia o pedido para a API
-            var response = await _httpClient.PutAsync(apiUrl + "Put/" + model.idEgresso, content);
-            var responseContent = await response.Content.ReadAsStringAsync();
-
-            // Verifica se a resposta foi bem-sucedida
-            if (response.IsSuccessStatusCode)
+            try
             {
-                // Se a resposta contiver um corpo, tente deserializá-lo
-                if (!string.IsNullOrEmpty(responseContent))
-                {
-                    try
-                    {
-                        var registeredEgresso = JsonConvert.DeserializeObject<EgressoModel>(responseContent);
-                        TempData["idEgresso"] = registeredEgresso.idEgresso;
-                        TempData["MensagemSucesso"] = "Informações atualizadas com sucesso!";
-                    }
-                    catch (JsonException ex)
-                    {
-                        // Se houver um erro ao deserializar, registre o erro
-                        TempData["MensagemErro"] = $"Erro ao processar a resposta: {ex.Message}";
-                    }
-                }
-                else
+                // Faz a chamada PUT para a API
+                var response = await _httpClient.PutAsync(apiUrl + model.idEgresso, content);
+                var responseContent = await response.Content.ReadAsStringAsync();
+
+                // Verifica se a chamada foi bem-sucedida
+                if (response.IsSuccessStatusCode)
                 {
                     TempData["MensagemSucesso"] = "Informações atualizadas com sucesso!";
+                    return RedirectToAction("DadosEgresso");
                 }
-                return RedirectToAction("DadosEgresso", "Egresso");
+
+                TempData["MensagemErro"] = $"Erro ao atualizar informações: {responseContent}";
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = "Erro inesperado ao atualizar informações.";
+                Console.WriteLine($"Erro: {ex.Message}"); // Exibir erro no console
             }
 
-            // Se a resposta não for bem-sucedida, registre o erro
-            TempData["MensagemErro"] = $"Erro: {responseContent}";
-            return View("AdicionarDadosEgresso", model);
+            // Retorna à view com o modelo, para corrigir os erros
+            return View(model);
         }
-
 
 
 

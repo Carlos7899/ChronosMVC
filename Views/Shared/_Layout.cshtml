@@ -74,8 +74,18 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Publicacao" asp-action="ListarPublicacoes">Publicações</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Curriculo" asp-action="CurriculoView">Curriculo</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Curso" asp-action="ListaCursos">Cursos</a>
                     </li>
+                     @if (User.Identity.IsAuthenticated)
+                     {
+                            var idEgresso = User.FindFirst("idEgresso")?.Value;
+                            @if (!string.IsNullOrEmpty(idEgresso))
+                            {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Curriculo" asp-action="CurriculoView">Curriculo</a>
+                                    </li>
+                            }
+                     }
                 </ul>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -109,6 +119,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" href="#" onclick="confirmLogout(event)">Logout</a>
                                 </li>
+
+                                <!-- Exibindo o ID do usuário no canto inferior -->
+                                <div class="text-muted text-center" style="position: fixed; bottom: 10px; right: 10px;">
+                                    @if (!string.IsNullOrEmpty(idCorporacao))
+                                    {
+                                        <span>ID Corporacao: @idCorporacao</span>
+                                    }
+                                    else if (!string.IsNullOrEmpty(idEgresso))
+                                    {
+                                        <span>ID Egresso: @idEgresso</span>
+                                    }
+                                </div>
                             }
                             else
                             {
@@ -116,6 +138,7 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EscolherLogin">Login</a>
                                 </li>
                             }
+
                         </ul>
                     </div>
                 </div>

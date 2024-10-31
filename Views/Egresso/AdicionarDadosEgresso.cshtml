@@ -8,13 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Informações</title>
-
 </head>
 
 <body>
     <div class="container">
-        <div class="image-container"></div>
-
         <div class="form-container">
             <h2>Adicionar Informações do Egresso</h2>
             <hr />
@@ -40,30 +37,28 @@
                     <input type="hidden" asp-for="idEgresso" />
 
                     <div class="form-group">
-                        <label for="NomeCorporacao">Nome do Egresso</label>
+                        <label for="NomeEgresso">Nome do Egresso</label>
                         @Html.EditorFor(model => model.nomeEgresso, new { htmlAttributes = new { @class = "form-control", @id = "NomeEgresso" } })
                     </div>
 
                     <div class="form-group">
                         <label for="TipoEgresso">Tipo de Egresso</label>
                         @Html.DropDownListFor(model => model.tipoEgresso,
-                                 new SelectList(Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoEgresso)).Cast<TipoEgresso>()
+                                 new SelectList(Enum.GetValues(typeof(TipoEgresso)).Cast<TipoEgresso>()
                                  .Select(tipo => new { Value = (int)tipo, Text = tipo.ToString() }),
                                  "Value", "Text"),
                                  "Selecione o Tipo", new { @class = "form-control", @id = "TipoEgresso" })
                     </div>
 
                     <div class="form-group">
-                        <label for="NumeroCorporacao">Número de telefone</label>
+                        <label for="NumeroEgresso">Número de telefone</label>
                         @Html.EditorFor(model => model.numeroEgresso, new { htmlAttributes = new { @class = "form-control", @id = "NumeroEgresso" } })
                     </div>
 
                     <div class="form-group">
-                        <label for="CnpjCorporacao">CPF</label>
+                        <label for="CpfEgresso">CPF</label>
                         @Html.EditorFor(model => model.cpfEgresso, new { htmlAttributes = new { @class = "form-control", @id = "CpfEgresso" } })
                     </div>
-
-                   
 
                     <input type="submit" value="Salvar Informações" class="btn btn-primary" />
                 </div>
