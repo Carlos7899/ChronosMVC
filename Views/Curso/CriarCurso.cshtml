@@ -1,0 +1,76 @@
+﻿@model ChronosMVC.Models.CursoModel
+
+@{
+    ViewData["Title"] = "Criar Curso";
+}
+
+<h1 class="text-center">Criar Curso</h1>
+
+<!-- Barra de Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container">
+        <a class="navbar-brand" asp-controller="Curso" asp-action="ListaCursos">Cursos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Curso" asp-action="CriarCurso">Criar Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("CursosPorCorporacao", "Curso")">Meus Cursos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <form asp-action="CriarCurso" method="post">
+        <div class="form-group">
+            <label asp-for="nomeCurso" class="control-label"></label>
+            <input asp-for="nomeCurso" class="form-control" />
+            <span asp-validation-for="nomeCurso" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="descricaoCurso" class="control-label"></label>
+            <textarea asp-for="descricaoCurso" class="form-control"></textarea>
+            <span asp-validation-for="descricaoCurso" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="cargaHorariaCurso" class="control-label"></label>
+            <input asp-for="cargaHorariaCurso" type="number" class="form-control" />
+            <span asp-validation-for="cargaHorariaCurso" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="dataInicioCurso" class="control-label"></label>
+            <input asp-for="dataInicioCurso" type="date" class="form-control" />
+            <span asp-validation-for="dataInicioCurso" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="dataFimCurso" class="control-label"></label>
+            <input asp-for="dataFimCurso" type="date" class="form-control" />
+            <span asp-validation-for="dataFimCurso" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="limiteVagas" class="control-label"></label>
+            <input asp-for="limiteVagas" type="number" class="form-control" />
+            <span asp-validation-for="limiteVagas" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Criar Curso</button>
+        <a asp-controller="Curso" asp-action="ListaCursos" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

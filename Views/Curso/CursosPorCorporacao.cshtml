@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<ChronosMVC.Models.CursoModel>
 
 @{
-    ViewData["Title"] = "Lista de Cursos";
+    ViewData["Title"] = "Cursos da Corporação";
 }
 
-<h1 class="text-center">Cursos</h1>
+<h1 class="text-center">Cursos da Corporação</h1>
 
 <!-- Barra de Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
@@ -15,22 +15,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                @if (User.IsInRole("Corporacao"))
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Curso" asp-action="CriarCurso">Criar Curso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("CursosPorCorporacao", "Curso")">Meus Cursos</a>
-                    </li>
-                }
-               
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Curso" asp-action="CriarCurso">Criar Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("CursosPorCorporacao", "Curso")">Meus Cursos</a>
+                </li>
             </ul>
-            <!-- Formulário de Pesquisa -->
-            <form class="d-flex ms-auto" asp-controller="Curso" asp-action="PesquisarCursos" method="get">
-                <input class="form-control me-2" type="search" name="nomeCurso" placeholder="Pesquisar por nome do curso" aria-label="Pesquisar" required />
-                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-            </form>
         </div>
     </div>
 </nav>
@@ -39,7 +30,7 @@
     @if (Model == null || !Model.Any())
     {
         <div class="alert alert-info text-center">
-            Não há cursos disponíveis.
+            @ViewBag.Mensagem ?? "Não há cursos disponíveis."
         </div>
     }
     else
@@ -58,6 +49,10 @@
                             <p><strong>Data Fim:</strong> @curso.dataFimCurso.ToString("dd/MM/yyyy")</p>
                             <p><strong>Limite de Vagas:</strong> @(curso.limiteVagas.HasValue ? curso.limiteVagas.ToString() : "Sem limite")</p>
                             <a asp-controller="Curso" asp-action="Details" asp-route-id="@curso.idCurso" class="btn btn-info">Detalhes</a>
+                            <a asp-controller="Curso" asp-action="EditarCurso" asp-route-id="@curso.idCurso" class="btn btn-warning">Editar</a>
+                            <form asp-controller="Curso" asp-action="Delete" asp-route-id="@curso.idCurso" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar este curso?');">Deletar</button>
+                            </form>
                         </div>
                     </div>
                 </div>

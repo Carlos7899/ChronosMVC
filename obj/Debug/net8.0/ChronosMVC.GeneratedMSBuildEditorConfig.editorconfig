@@ -38,6 +38,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWxvXEN1cnJpY3Vsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/API/ChronosMVC/Views/Curso/CriarCurso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cQ3JpYXJDdXJzby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Curso/CursosPorCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cQ3Vyc29zUG9yQ29ycG9yYWNhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Curso/EditarCurso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cRWRpdGFyQ3Vyc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Curso/ListaCursos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cTGlzdGFDdXJzb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

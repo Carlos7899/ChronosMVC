@@ -1,0 +1,61 @@
+﻿@model ChronosMVC.Models.CursoModel
+
+@{
+    ViewData["Title"] = "Editar Curso";
+}
+
+<h1 class="text-center">Editar Curso</h1>
+
+<div class="container">
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger">@TempData["MensagemErro"]</div>
+    }
+    if (TempData["MensagemSucesso"] != null)
+    {
+    <div class="alert alert-success">@TempData["MensagemSucesso"]</div>
+    }
+
+    <form asp-action="EditarCurso" method="post">
+        <div class="mb-3">
+            <label asp-for="nomeCurso" class="form-label">Nome do Curso</label>
+            <input asp-for="nomeCurso" class="form-control" />
+            <span asp-validation-for="nomeCurso" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="descricaoCurso" class="form-label">Descrição do Curso</label>
+            <textarea asp-for="descricaoCurso" class="form-control"></textarea>
+            <span asp-validation-for="descricaoCurso" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="cargaHorariaCurso" class="form-label">Carga Horária (horas)</label>
+            <input asp-for="cargaHorariaCurso" type="number" class="form-control" />
+            <span asp-validation-for="cargaHorariaCurso" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="dataInicioCurso" class="form-label">Data de Início</label>
+            <input asp-for="dataInicioCurso" type="date" class="form-control" />
+            <span asp-validation-for="dataInicioCurso" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="dataFimCurso" class="form-label">Data de Fim</label>
+            <input asp-for="dataFimCurso" type="date" class="form-control" />
+            <span asp-validation-for="dataFimCurso" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="limiteVagas" class="form-label">Limite de Vagas</label>
+            <input asp-for="limiteVagas" type="number" class="form-control" />
+            <span asp-validation-for="limiteVagas" class="text-danger"></span>
+        </div>
+
+        <input type="hidden" asp-for="idCurso" />
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a asp-action="ListaCursos" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
