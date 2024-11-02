@@ -35,6 +35,18 @@
         <p>
             <strong>Data de Acesso:</strong> @(Model.DataAcesso?.ToString("dd/MM/yyyy") ?? "Não disponível")
         </p>
+        <div class="mb-3">
+            <strong>Foto da Corporação:</strong><br />
+            @if (Model.fotoPerfilCorporacao != null && Model.fotoPerfilCorporacao.Length > 0)
+            {
+                var base64Image = Convert.ToBase64String(Model.fotoPerfilCorporacao);
+                <img src="data:image/png;base64,@base64Image" alt="Foto da Corporação" style="max-width: 200px; max-height: 200px;" />
+            }
+            else
+            {
+                <img src="~/images/default-profile.png" alt="Imagem padrão" style="max-width: 200px; max-height: 200px;" />
+            }
+        </div>
     </div>
 </div>
 

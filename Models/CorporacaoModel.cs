@@ -17,6 +17,7 @@ namespace ChronosMVC.Models
         public string numeroCorporacao { get; set; } = string.Empty;
         public string descricaoCorporacao { get; set; } = string.Empty;
         public string cnpjCorporacao { get; set; } = string.Empty;
+        public byte[]? fotoPerfilCorporacao { get; set; }
 
 
         public byte[]? PasswordHash { get; set; }

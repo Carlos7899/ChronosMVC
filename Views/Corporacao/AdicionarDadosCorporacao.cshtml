@@ -8,13 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Informações</title>
-   
 </head>
 
 <body>
     <div class="container">
-        <div class="image-container"></div>
-
         <div class="form-container">
             <h2>Adicionar Informações da Corporação</h2>
             <hr />
@@ -33,11 +30,12 @@
                 </div>
             }
 
-            @using (Html.BeginForm("AdicionarInformacoes", "Corporacao", FormMethod.Post))
+            @using (Html.BeginForm("AdicionarInformacoes", "Corporacao", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
                 <div class="form-horizontal">
                     <input type="hidden" asp-for="idCorporacao" />
+                    <input type="hidden" id="imagemBase64" name="fotoPerfilCorporacao" />
 
                     <div class="form-group">
                         <label for="NomeCorporacao">Nome da Corporação</label>
@@ -68,9 +66,30 @@
                         @Html.TextAreaFor(model => model.descricaoCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "DescricaoCorporacao" } })
                     </div>
 
+                    <div class="form-group">
+                        <label for="fotoPerfilCorporacao">Foto da Corporação</label>
+                        <input type="file" class="form-control" id="fotoPerfilCorporacao" accept="image/*" onchange="convertToBase64()" />
+                    </div>
+
                     <input type="submit" value="Salvar Informações" class="btn btn-primary" />
                 </div>
             }
         </div>
     </div>
+
+    <script>
+        function convertToBase64() {
+            const fileInput = document.getElementById('fotoPerfilCorporacao');
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+                document.getElementById('imagemBase64').value = reader.result.split(',')[1]; 
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
