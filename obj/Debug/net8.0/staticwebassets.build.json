@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y3yPS0zpRiSC279RI396TqUorD8fxuMawiZOV9WwxRc=",
+  "Hash": "/CpD7ljGla5Cwif+VI2TDFl8Yeuk3q7VFUGzWNXh8fY=",
   "Source": "ChronosMVC",
   "BasePath": "_content/ChronosMVC",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\img\\imagemUsuario.png",
+      "SourceId": "ChronosMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "BasePath": "_content/ChronosMVC",
+      "RelativePath": "img/imagemUsuario.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\imagemUsuario.png"
     },
     {
       "Identity": "C:\\API\\ChronosMVC\\wwwroot\\js\\site.js",

@@ -4,6 +4,66 @@
     ViewBag.Title = "Vagas";
 }
 
+<!-- CSS para estilização -->
+<style>
+    .navbar {
+        margin-bottom: 20px;
+    }
+
+    .search-container {
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    .card {
+        transition: transform 0.2s;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+    .vaga-detail {
+        margin-top: 10px;
+    }
+</style>
+
+
+
+<!-- Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Vagas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                @if (User.IsInRole("Corporacao"))
+                {
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
+                </li>
+                }
+            </ul>
+            <!-- Formulário de Pesquisa -->
+            <form class="d-flex ms-auto" asp-controller="Curso" asp-action="PesquisarCursos" method="get">
+                <input class="form-control me-2" type="search" name="nome" placeholder="Pesquisar por nome do curso" aria-label="Pesquisar" required />
+                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
 <!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">
     <h2 class="text-center mb-4">Vagas Disponíveis</h2>
@@ -41,20 +101,16 @@
                     <div class="card-body">
                         <h5 class="card-title">@item.nomeVaga</h5>
                         <p class="card-text">@item.descricaoVaga</p>
-                        <p class="card-text">
-                            <small class="text-muted">Criada em: @item.DataCriacao.ToString("dd/MM/yyyy")</small>
-                        </p>
+                        <div class="vaga-detail">
+                            <strong>Responsabilidades:</strong> @item.responsabilidadesVaga<br />
+                            <strong>Benefícios:</strong> @item.beneficiosVaga<br />
+                            <strong>Salário:</strong> @item.salarioVaga<br />
+                            <strong>Cidade:</strong> @item.cidadeVaga<br />
+                            <strong>Criada em:</strong> @item.DataCriacao.ToString("dd/MM/yyyy")<br />
+                            <strong>Vencimento:</strong> @item.DataVencimento.ToString("dd/MM/yyyy")
+                        </div>
                     </div>
                     <div class="card-footer">
-                        @if (User.IsInRole("Corporacao") && User.FindFirst("IdCorporacao")?.Value == item.idCorporacao.ToString())
-                        {
-                            <a href="@Url.Action("Edit", new { id = item.idVaga })" class="btn btn-warning">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>
-                            <a href="@Url.Action("Delete", new { id = item.idVaga })" class="btn btn-danger">
-                                <i class="fas fa-trash-alt"></i> Deletar
-                            </a>
-                        }
                         <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-info">
                             <i class="fas fa-info-circle"></i> Detalhes
                         </a>

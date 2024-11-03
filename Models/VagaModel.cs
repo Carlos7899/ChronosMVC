@@ -15,6 +15,11 @@ namespace ChronosMVC.Models
         public string nomeVaga { get; set; } = string.Empty;
         public string descricaoVaga { get; set; } = string.Empty;
 
+        public string responsabilidadesVaga { get; set; } = string.Empty;
+        public string beneficiosVaga { get; set; } = string.Empty;
+        public string salarioVaga { get; set; } = string.Empty;
+        public string cidadeVaga { get; set; } = string.Empty;
+
 
         [DataType(DataType.Date)]
         public DateTime DataCriacao { get; set; } = DateTime.UtcNow;

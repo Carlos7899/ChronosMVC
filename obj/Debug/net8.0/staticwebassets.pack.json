@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\img\\imagemUsuario.png",
+      "PackagePath": "staticwebassets\\img\\imagemUsuario.png"
+    },
+    {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

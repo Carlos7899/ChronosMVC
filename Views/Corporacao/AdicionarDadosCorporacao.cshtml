@@ -1,79 +1,178 @@
 ﻿@using ChronosMVC.Models.Enums
 @model ChronosMVC.Models.CorporacaoModel
 @{
-    ViewBag.Title = "AdicionarDadosCorporacao";
+    ViewBag.Title = "Adicionar Dados da Corporação";
 }
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Informações</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Cor de fundo suave */
+        }
+
+        .image-upload {
+            position: relative;
+            display: inline-block;
+        }
+
+        .upload-label {
+            cursor: pointer;
+            display: inline-block; /* Garante que o rótulo se comporte como um bloco */
+            transition: transform 0.3s; /* Transição suave */
+        }
+
+            .upload-label:hover {
+                transform: scale(1.05); /* Leve aumento ao passar o mouse */
+            }
+
+        .img-circle {
+            width: 100px; /* Tamanho da imagem */
+            height: 100px;
+            border-radius: 50%; /* Torna a imagem redonda */
+            object-fit: cover; /* Mantém a proporção da imagem */
+            border: 2px solid #007bff; /* Borda azul ao redor da imagem */
+            transition: border-color 0.3s; /* Transição suave na cor da borda */
+        }
+
+            .img-circle:hover {
+                border-color: #0056b3; /* Cor da borda ao passar o mouse */
+            }
+
+        input[type="file"] {
+            display: none; /* Esconde o input de arquivo */
+        }
+
+        .container {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff; /* Fundo do container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border-radius: 10px; /* Borda arredondada do card */
+        }
+
+        .card-header {
+            background-color: #007bff; /* Cor de fundo do cabeçalho */
+            color: white; /* Cor do texto do cabeçalho */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .form-group label {
+            font-weight: bold; /* Deixar os rótulos em negrito */
+        }
+
+        .form-control {
+            border-radius: 5px; /* Arredondar os cantos dos campos de entrada */
+            border: 1px solid #ced4da; /* Borda padrão */
+            transition: border-color 0.3s; /* Transição suave na cor da borda */
+        }
+
+            .form-control:focus {
+                border-color: #007bff; /* Cor da borda ao focar */
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+            }
+
+        .btn-primary {
+            background-color: #007bff; /* Cor do botão */
+            border-color: #007bff; /* Cor da borda do botão */
+            transition: background-color 0.3s; /* Transição suave */
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3; /* Cor ao passar o mouse */
+                border-color: #0056b3; /* Cor da borda ao passar o mouse */
+            }
+
+        .alert {
+            border-radius: 5px; /* Arredondar cantos das mensagens */
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-container">
-            <h2>Adicionar Informações da Corporação</h2>
-            <hr />
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Adicionar Informações da Corporação</h2>
+            </div>
+            <div class="card-body">
+                <hr />
 
-            @if (TempData["MensagemSucesso"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["MensagemSucesso"]
-                </div>
-            }
+                @if (TempData["MensagemSucesso"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["MensagemSucesso"]
+                    </div>
+                }
 
-            @if (TempData["MensagemErro"] != null)
-            {
-                <div class="alert alert-danger">
-                    @TempData["MensagemErro"]
-                </div>
-            }
+                @if (TempData["MensagemErro"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["MensagemErro"]
+                    </div>
+                }
 
-            @using (Html.BeginForm("AdicionarInformacoes", "Corporacao", FormMethod.Post, new { enctype = "multipart/form-data" }))
-            {
-                @Html.AntiForgeryToken()
-                <div class="form-horizontal">
+                @using (Html.BeginForm("AdicionarInformacoes", "Corporacao", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
                     <input type="hidden" asp-for="idCorporacao" />
                     <input type="hidden" id="imagemBase64" name="fotoPerfilCorporacao" />
 
-                    <div class="form-group">
-                        <label for="NomeCorporacao">Nome da Corporação</label>
-                        @Html.EditorFor(model => model.nomeCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "NomeCorporacao" } })
-                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group text-center">
+                            <label for="fotoPerfilCorporacao" class="d-block">Foto da Corporação</label>
+                            <div class="image-upload">
+                                <label for="fotoPerfilCorporacao" class="upload-label">
+                                    <img id="profileImage" src="~/img/imagemUsuario.png" alt="Foto da Corporação" class="img-circle" />
+                                    <input type="file" id="fotoPerfilCorporacao" accept="image/*" onchange="convertToBase64()" />
+                                </label>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="TipoCorporacao">Tipo da Corporação</label>
-                        @Html.DropDownListFor(model => model.tipoCorporacao,
-                                 new SelectList(Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoCorporacao)).Cast<TipoCorporacao>()
-                                 .Select(tipo => new { Value = (int)tipo, Text = tipo.ToString() }),
-                                 "Value", "Text"),
-                                 "Selecione o Tipo", new { @class = "form-control", @id = "TipoCorporacao" })
-                    </div>
+                        <div class="form-group">
+                            <label for="NomeCorporacao">Nome da Corporação</label>
+                            @Html.EditorFor(model => model.nomeCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "NomeCorporacao", placeholder = "Digite o nome da corporação" } })
+                        </div>
 
-                    <div class="form-group">
-                        <label for="NumeroCorporacao">Número de telefone</label>
-                        @Html.EditorFor(model => model.numeroCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "NumeroCorporacao" } })
-                    </div>
+                        <div class="form-group">
+                            <label for="TipoCorporacao">Tipo da Corporação</label>
+                            @Html.DropDownListFor(model => model.tipoCorporacao,
+                                     new SelectList(Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoCorporacao)).Cast<TipoCorporacao>()
+                                     .Select(tipo => new { Value = (int)tipo, Text = tipo.ToString() }),
+                                     "Value", "Text"),
+                                     "Selecione o Tipo", new { @class = "form-control", @id = "TipoCorporacao" })
+                        </div>
 
-                    <div class="form-group">
-                        <label for="CnpjCorporacao">CNPJ</label>
-                        @Html.EditorFor(model => model.cnpjCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "CnpjCorporacao" } })
-                    </div>
+                        <div class="form-group">
+                            <label for="NumeroCorporacao">Número de telefone</label>
+                            @Html.EditorFor(model => model.numeroCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "NumeroCorporacao", placeholder = "Digite o número de telefone" } })
+                        </div>
 
-                    <div class="form-group">
-                        <label for="DescricaoCorporacao">Descrição</label>
-                        @Html.TextAreaFor(model => model.descricaoCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "DescricaoCorporacao" } })
-                    </div>
+                        <div class="form-group">
+                            <label for="CnpjCorporacao">CNPJ</label>
+                            @Html.EditorFor(model => model.cnpjCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "CnpjCorporacao", placeholder = "Digite o CNPJ" } })
+                        </div>
 
-                    <div class="form-group">
-                        <label for="fotoPerfilCorporacao">Foto da Corporação</label>
-                        <input type="file" class="form-control" id="fotoPerfilCorporacao" accept="image/*" onchange="convertToBase64()" />
-                    </div>
+                        <div class="form-group">
+                            <label for="DescricaoCorporacao">Descrição</label>
+                            @Html.TextAreaFor(model => model.descricaoCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "DescricaoCorporacao", placeholder = "Descreva a corporação", rows = "4" } })
+                        </div>
 
-                    <input type="submit" value="Salvar Informações" class="btn btn-primary" />
-                </div>
-            }
+                        <div class="text-center">
+                            <input type="submit" value="Salvar Informações" class="btn btn-primary" />
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
     </div>
 
@@ -84,7 +183,9 @@
             const reader = new FileReader();
 
             reader.onloadend = function () {
-                document.getElementById('imagemBase64').value = reader.result.split(',')[1]; 
+                const profileImage = document.getElementById('profileImage');
+                profileImage.src = reader.result; // Atualiza a imagem exibida
+                document.getElementById('imagemBase64').value = reader.result.split(',')[1];
             }
 
             if (file) {

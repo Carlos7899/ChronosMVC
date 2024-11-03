@@ -17,25 +17,19 @@
     .post-card {
         border: 1px solid #e6e6e6;
         padding: 20px;
-        text-decoration: none;
-        color: inherit;
-        transition: background-color 0.2s, transform 0.2s;
-        margin-bottom: 20px; /* Espaçamento entre os cards */
+        margin-bottom: 20px;
         border-radius: 8px;
         background-color: #ffffff;
+        transition: background-color 0.2s, transform 0.2s;
+        height: 350px; /* Altura fixa para os cards */
+        display: flex;
+        flex-direction: column; /* Permite o alinhamento vertical do conteúdo */
     }
 
         .post-card:hover {
             background-color: #f9f9f9;
             transform: translateY(-2px);
         }
-
-    .post-image {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 15px;
-    }
 
     .post-title {
         font-size: 1.2em;
@@ -44,9 +38,14 @@
     }
 
     .post-body {
-        font-size: 0.95em;
+        flex-grow: 1; /* Faz o corpo do post ocupar o espaço restante */
         color: #555;
         margin: 10px 0;
+        overflow: hidden; /* Esconde conteúdo que excede o espaço */
+        text-overflow: ellipsis; /* Adiciona "..." ao final se o texto for muito longo */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* Limita a 3 linhas de texto */
     }
 
     .post-footer {
@@ -64,7 +63,7 @@
 
     .post-image-publicacao {
         width: 100%;
-        max-height: 200px;
+        max-height: 150px; /* Limita a altura da imagem */
         object-fit: cover;
         border-radius: 8px;
         margin-top: 10px;
@@ -85,47 +84,53 @@
     <h1 class="text-center mb-4">Publicações</h1>
 
     <!-- Navegação -->
-    <nav class="nav justify-content-center mb-4">
-        @if (User.IsInRole("Corporacao"))
-        {
-            <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
-            <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
-            <a href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
-        }
-        <a class="nav-link" href="@Url.Action("PesquisarPublicacao", "Publicacao")">Pesquisar Publicação</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div class="container">
+            @if (User.IsInRole("Corporacao"))
+            {
+                <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
+                <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
+                <a class="nav-link" href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
+            }
+            <a class="nav-link" href="@Url.Action("PesquisarPublicacao", "Publicacao")">Pesquisar Publicação</a>
+        </div>
     </nav>
 
-  
     <div class="row">
-        @foreach (var publicacao in Model)
+        @if (Model == null || !Model.Any())
         {
-            <div class="col-md-4">
-                <div class="post-card" onclick="location.href='@Url.Action("DetalhesPublicacao", "Publicacao", new { id = publicacao.idPublicacao })';" style="cursor:pointer;">
-                    <div class="post-header">
-                        <img src="default-profile-image.png" alt="User Image" class="post-image" />
-                        <div>
+            <div class="alert alert-info text-center">
+                Não há publicações disponíveis.
+            </div>
+        }
+        else
+        {
+            @foreach (var publicacao in Model)
+            {
+                <div class="col-md-4">
+                    <div class="post-card" onclick="location.href='@Url.Action("DetalhesPublicacao", "Publicacao", new { id = publicacao.idPublicacao })';" style="cursor:pointer;">
+                        <div class="post-header">
                             <div class="post-title">@publicacao.títuloPublicacao</div>
-                            <div class="avaliacao">Avaliação: @publicacao.avaliacaoPublicacao</div>
                         </div>
-                    </div>
-                    <div class="post-body">@publicacao.conteudoPublicacao</div>
-                    @if (publicacao.imagemPublicacao != null && publicacao.imagemPublicacao.Length > 0)
-                    {
-                        var base64Image = Convert.ToBase64String(publicacao.imagemPublicacao);
-                        var imageSrc = $"data:image/png;base64,{base64Image}";
-                        <img src="@imageSrc" alt="Imagem da publicação" class="post-image-publicacao">
-                    }
-                    <div class="post-footer">
-                        <span>@publicacao.dataCriacaoPublicacao.ToString("dd/MM/yyyy")</span>
-                        <div class="interaction-buttons">
-                            <a asp-controller="Publicacao" asp-action="DetalhesPublicacao" asp-route-idPublicacao="@publicacao.idPublicacao" class="btn btn-info btn-sm">Ver Comentários</a>
-                            <span class="views">
-                                <i class="bi bi-eye"></i> @publicacao.numeroVisualizacoes Visualizações
-                            </span>
+                        <div class="post-body">@publicacao.conteudoPublicacao</div>
+                        @if (publicacao.imagemPublicacao != null && publicacao.imagemPublicacao.Length > 0)
+                        {
+                            var base64Image = Convert.ToBase64String(publicacao.imagemPublicacao);
+                            var imageSrc = $"data:image/png;base64,{base64Image}";
+                            <img src="@imageSrc" alt="Imagem da publicação" class="post-image-publicacao">
+                        }
+                        <div class="post-footer">
+                            <span>@publicacao.dataCriacaoPublicacao.ToString("dd/MM/yyyy")</span>
+                            <div class="interaction-buttons">
+                                <a asp-controller="Publicacao" asp-action="DetalhesPublicacao" asp-route-idPublicacao="@publicacao.idPublicacao" class="btn btn-info btn-sm">Ver Comentários</a>
+                                <span class="views">
+                                    <i class="bi bi-eye"></i> @publicacao.numeroVisualizacoes Visualizações
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         }
     </div>
 </div>

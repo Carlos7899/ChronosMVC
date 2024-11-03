@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http.Headers;
-using System.Net.Http;
-using ChronosMVC.Models;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using ChronosMVC.Models;
 
@@ -14,66 +12,64 @@ namespace ChronosMVC.Controllers
 {
     public class VagasController : Controller
     {
-        public string uriBase = "http://localhost:5027/api/Vaga/";
+        private readonly string uriBase = "http://localhost:5027/api/Vaga/";
 
 
+        //certo
+        #region Ação para listar todas as vagas
         [HttpGet]
-        public async Task<ActionResult> IndexAsync()
+        public async Task<ActionResult> VagasView()
         {
             try
             {
-                string uriComplementar = "GetAll"; // Endpoint da API
+                string uriComplementar = "GetAll";
                 HttpClient httpClient = new HttpClient();
-
                 HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
-                // Registre a resposta
-                Console.WriteLine(serialized); // Para depuração
-
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    List<VagaModel> listaTarefas = JsonConvert.DeserializeObject<List<VagaModel>>(serialized);
-                    return View(listaTarefas);
+                    var listaVagas = JsonConvert.DeserializeObject<List<VagaModel>>(serialized);
+                    return View(listaVagas);
                 }
                 else
-                    throw new System.Exception($"Erro: {response.StatusCode} - {serialized}");
+                    throw new Exception($"Erro: {response.StatusCode} - {serialized}");
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
                 return RedirectToAction("Index");
             }
         }
+        #endregion
 
 
-
-        [HttpPost]
-        public async Task<ActionResult> CreateAsync(VagaModel v)
+        #region Ação para listar as vagas da corporação autenticada
+        [HttpGet]
+        public async Task<IActionResult> VagasPorCorporacao()
         {
             try
             {
-                // Validação do modelo
-                if (!ModelState.IsValid)
-                {
-                    return View(v); // Retorna a mesma view com os dados preenchidos
-                }
-
                 // Obter o ID da corporação autenticada
-                v.idCorporacao = GetAuthenticatedCorporacaoId(); // Define o idCorporacao para a vaga
+                var idCorporacao = GetAuthenticatedCorporacaoId();
 
+                // Chamar o método da API para obter as vagas
+                string uriComplementar = $"GetByCorporacao/{idCorporacao}";
                 HttpClient httpClient = new HttpClient();
-                var content = new StringContent(JsonConvert.SerializeObject(v));
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                string token = HttpContext.Session.GetString("SessionTokenUsuario");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                // Enviar o POST para a API
-                HttpResponseMessage response = await httpClient.PostAsync(uriBase + "POST", content);
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
-                if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    TempData["Mensagem"] = "Vaga criada com sucesso!";
-                    return RedirectToAction("Index"); // Redireciona para a página principal de vagas
+                    var vagas = JsonConvert.DeserializeObject<List<VagaModel>>(serialized);
+                    if (vagas == null || !vagas.Any())
+                    {
+                        ViewBag.Mensagem = "Você ainda não tem vagas.";
+                    }
+                    return View(vagas);
                 }
                 else
                 {
@@ -83,48 +79,94 @@ namespace ChronosMVC.Controllers
             catch (Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return View(v); // Retorna à view com os dados
+                return RedirectToAction("Index"); // Redireciona para a página inicial de vagas
             }
         }
+        #endregion
 
-
-
-
-        private int GetAuthenticatedCorporacaoId()
+        //certo
+        #region Ação para criar uma nova vaga
+        [HttpGet]
+        public ActionResult Create()
         {
-            var idClaim = User.Claims.FirstOrDefault(c => c.Type == "idCorporacao");
-            if (idClaim != null && int.TryParse(idClaim.Value, out int idCorporacao))
-            {
-                return idCorporacao;
-            }
-
-            throw new Exception("Usuário não autenticado ou id da corporação não encontrado.");
+            return View();
         }
 
+        [HttpPost]
+        public async Task<ActionResult> CreateAsync(VagaModel vaga)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(vaga);
+                }
+
+                vaga.idCorporacao = GetAuthenticatedCorporacaoId();
+                HttpClient httpClient = new HttpClient();
+                var content = new StringContent(JsonConvert.SerializeObject(vaga));
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+                HttpResponseMessage response = await httpClient.PostAsync(uriBase + "POST", content);
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                {
+                    TempData["Mensagem"] = "Vaga criada com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new Exception(serialized);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return View(vaga);
+            }
+        }
+        #endregion
 
 
 
+
+        #region Ação para ver detalhes da vaga
         [HttpGet]
         public async Task<ActionResult> DetailsAsync(int? id)
         {
             try
             {
                 HttpClient httpClient = new HttpClient();
-                string token = HttpContext.Session.GetString("SessionTokenUsuario");
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
                 HttpResponseMessage response = await httpClient.GetAsync(uriBase + id.ToString());
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    VagaModel v = await Task.Run(() =>
-                    JsonConvert.DeserializeObject<VagaModel>(serialized));
-                    return View(v);
+                    var vaga = JsonConvert.DeserializeObject<VagaModel>(serialized);
+                    return View(vaga);
                 }
                 else
-                    throw new System.Exception(serialized);
+                    throw new Exception(serialized);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+        #endregion
+
+        #region Ação para editar uma vaga
+        [HttpGet]
+        public async Task<ActionResult> EditAsync(int id)
+        {
+            try
+            {
+                var vagaAtual = await ObterVagaPorId(id);
+                return View(vagaAtual);
+            }
+            catch (Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
                 return RedirectToAction("Index");
@@ -132,22 +174,21 @@ namespace ChronosMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> EditAsync(VagaModel v)
+        public async Task<ActionResult> EditAsync(VagaModel vaga)
         {
             try
             {
-                // Verifica se a vaga pertence à corporação autenticada
-                var vagaAtual = await ObterVagaPorId(v.idVaga); // Método que busca a vaga pelo ID
+                var vagaAtual = await ObterVagaPorId(vaga.idVaga);
                 if (vagaAtual.idCorporacao != GetAuthenticatedCorporacaoId())
                 {
                     return Forbid("Você não tem permissão para editar esta vaga.");
                 }
 
                 HttpClient httpClient = new HttpClient();
-                var content = new StringContent(JsonConvert.SerializeObject(v));
+                var content = new StringContent(JsonConvert.SerializeObject(vaga));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-                HttpResponseMessage response = await httpClient.PutAsync(uriBase + $"Put/{v.idVaga}", content);
+                HttpResponseMessage response = await httpClient.PutAsync(uriBase + $"Put/{vaga.idVaga}", content);
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -161,16 +202,19 @@ namespace ChronosMVC.Controllers
             catch (Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return View(v); // Retorna à view com os dados
+                return View(vaga);
             }
         }
+        #endregion
 
-        [HttpGet]
-        public async Task<ActionResult> DeleteAsync(int id)
+        #region Ação para deletar uma vaga
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteAsync(int id)
         {
             try
             {
-                var vagaAtual = await ObterVagaPorId(id); // Método que busca a vaga pelo ID
+                var vagaAtual = await ObterVagaPorId(id);
                 if (vagaAtual.idCorporacao != GetAuthenticatedCorporacaoId())
                 {
                     return Forbid("Você não tem permissão para deletar esta vaga.");
@@ -192,6 +236,19 @@ namespace ChronosMVC.Controllers
                 return RedirectToAction("Index");
             }
         }
+        #endregion
+
+        #region Métodos auxiliares
+        private int GetAuthenticatedCorporacaoId()
+        {
+            var idClaim = User.Claims.FirstOrDefault(c => c.Type == "idCorporacao");
+            if (idClaim != null && int.TryParse(idClaim.Value, out int idCorporacao))
+            {
+                return idCorporacao;
+            }
+
+            throw new Exception("Usuário não autenticado ou id da corporação não encontrado.");
+        }
 
         private async Task<VagaModel> ObterVagaPorId(int id)
         {
@@ -204,59 +261,8 @@ namespace ChronosMVC.Controllers
                 return JsonConvert.DeserializeObject<VagaModel>(serialized);
             }
 
-            // Lidar com o erro se a vaga não for encontrada
             throw new Exception("Vaga não encontrada.");
         }
-
-
-        [HttpGet]
-        private async Task<List<VagaModel>> ObterVagas()
-        {
-            try
-            {
-                string uriComplementar = "GetAll";
-                HttpClient httpClient = new HttpClient();
-                string token = HttpContext.Session.GetString("SessionTokenUsuario");
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
-                string serialized = await response.Content.ReadAsStringAsync();
-
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    return JsonConvert.DeserializeObject<List<VagaModel>>(serialized);
-                }
-                else
-                {
-                    throw new Exception(serialized);
-                }
-            }
-            catch (Exception ex)
-            {
-                TempData["MensagemErro"] = ex.Message;
-                return null; // Retorna nulo em caso de erro
-            }
-        }
-
-
-
-
-        public async Task<IActionResult> VagasView()
-        {
-            var model = await ObterVagas(); // Chame o método de forma assíncrona
-            return View(model ?? new List<VagaModel>()); // Garante que um modelo válido seja passado
-        }
-
-        [HttpGet]
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-
-
-
-
-
+        #endregion
     }
 }

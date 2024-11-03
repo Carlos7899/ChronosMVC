@@ -1,18 +1,29 @@
 ﻿@model ChronosMVC.Models.CorporacaoModel
 
-
-
-<h2>Dados da Corporação</h2>
+<h2 class="text-center">Dados da Corporação</h2>
 
 <!-- Mini navegação -->
-<div class="mini-navegacao mb-3">
+<div class="mini-navegacao mb-3 text-center">
     <a asp-action="MeusDados" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-link">Meus Dados</a>
     <a asp-action="CreateEnderecoCorporacao" asp-controller="Endereco" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-link">Endereço</a>
 </div>
 
-<div class="card">
+<div class="card mx-auto" style="max-width: 600px;">
     <div class="card-body">
         <h5 class="card-title">Informações Pessoais</h5>
+
+        <div class="text-center mb-3">
+            <strong>Foto da Corporação:</strong><br />
+            @if (Model.fotoPerfilCorporacao != null && Model.fotoPerfilCorporacao.Length > 0)
+            {
+                var base64Image = Convert.ToBase64String(Model.fotoPerfilCorporacao);
+                <img src="data:image/png;base64,@base64Image" alt="Foto da Corporação" class="img-circle" />
+            }
+            else
+            {
+                <img src="~/img/imagemUsuario.png" alt="Imagem padrão" class="img-circle" />
+            }
+        </div>
 
         <p>
             <strong>Nome:</strong> @(Model.nomeCorporacao ?? "Não disponível")
@@ -21,7 +32,7 @@
             <strong>Email:</strong> @(Model.emailCorporacao ?? "Não disponível")
         </p>
         <p>
-            <strong>Tipo Corporacção:</strong> @(Model.tipoCorporacao)
+            <strong>Tipo de Corporação:</strong> @(Model.tipoCorporacao )
         </p>
         <p>
             <strong>CNPJ:</strong> @(Model.cnpjCorporacao ?? "Não disponível")
@@ -35,22 +46,36 @@
         <p>
             <strong>Data de Acesso:</strong> @(Model.DataAcesso?.ToString("dd/MM/yyyy") ?? "Não disponível")
         </p>
-        <div class="mb-3">
-            <strong>Foto da Corporação:</strong><br />
-            @if (Model.fotoPerfilCorporacao != null && Model.fotoPerfilCorporacao.Length > 0)
-            {
-                var base64Image = Convert.ToBase64String(Model.fotoPerfilCorporacao);
-                <img src="data:image/png;base64,@base64Image" alt="Foto da Corporação" style="max-width: 200px; max-height: 200px;" />
-            }
-            else
-            {
-                <img src="~/images/default-profile.png" alt="Imagem padrão" style="max-width: 200px; max-height: 200px;" />
-            }
-        </div>
     </div>
 </div>
 
+<div class="text-center mt-4">
+    <a asp-action="EditarDadosCorporacao" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-primary">Editar</a>
+</div>
 
+<style>
+    .img-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #007bff; /* Borda azul */
+    }
 
-<a asp-action="EditarDadosCorporacao" asp-route-idCorporacao="@Model.idCorporacao" class="btn btn-primary">Editar</a>
+    .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
+    .mini-navegacao a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #007bff;
+        transition: color 0.3s;
+    }
+
+        .mini-navegacao a:hover {
+            color: #0056b3; /* Cor mais escura ao passar o mouse */
+        }
+</style>

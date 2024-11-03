@@ -122,8 +122,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/API/ChronosMVC/Views/Vagas/VagasVIew.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcVmFnYXNWSWV3LmNzaHRtbA==
+[C:/API/ChronosMVC/Views/Vagas/VagasPorCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcVmFnYXNQb3JDb3Jwb3JhY2FvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Vagas/VagasView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcVmFnYXNWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/_ViewImports.cshtml]

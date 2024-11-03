@@ -35,6 +35,32 @@
         </div>
 
         <div class="mb-3">
+            <label asp-for="responsabilidadesVaga" class="form-label">Responsabilidades da Vaga</label>
+            <textarea asp-for="responsabilidadesVaga" class="form-control" rows="4" required></textarea>
+            <span asp-validation-for="responsabilidadesVaga" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="beneficiosVaga" class="form-label">Benefícios</label>
+            <textarea asp-for="beneficiosVaga" class="form-control" rows="4" required></textarea>
+            <span asp-validation-for="beneficiosVaga" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="salarioVaga" class="form-label">Salário</label>
+            <input asp-for="salarioVaga" class="form-control" required />
+            <span asp-validation-for="salarioVaga" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="cidadeVaga" class="form-label">Cidade</label>
+            <input asp-for="cidadeVaga" class="form-control" required />
+            <span asp-validation-for="cidadeVaga" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-3">
             <label asp-for="DataVencimento" class="form-label">Data de Vencimento</label>
             <input asp-for="DataVencimento" class="form-control" type="date" required />
             <span asp-validation-for="DataVencimento" class="text-danger"></span>

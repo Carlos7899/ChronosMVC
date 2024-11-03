@@ -87,7 +87,8 @@ namespace ChronosMVC.Controllers
                     new Claim(ClaimTypes.Name, model.emailCorporacao),
                     new Claim("Token", token), // Adicione o token como uma claim
                     new Claim("idCorporacao", idCorporacao.ToString()), // Use o ID capturado
-                    new Claim(ClaimTypes.Role, "Corporacao") // Adicionando a role
+                    new Claim(ClaimTypes.Role, "Corporacao"), // Adicionando a role
+                  
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "login");
