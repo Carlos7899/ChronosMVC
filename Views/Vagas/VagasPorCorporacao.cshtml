@@ -4,27 +4,33 @@
     ViewData["Title"] = "Vagas da Corporação";
 }
 
-<h1 class="text-center">Vagas da Corporação</h1>
 
-<!-- Barra de Navegação -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-    <div class="container">
-        <a class="navbar-brand" asp-controller="Vagas" asp-action="Create">Vagas</a>
+
+<!-- Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-controller="Vagas" asp-action="VagasView">Vagas</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
-                </li>
+                @if (User.IsInRole("Corporacao"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
+                    </li>
+                }
             </ul>
         </div>
     </div>
 </nav>
+
+<h1 class="text-center">Vagas da Corporação</h1>
+
 
 <div class="container">
     @if (Model == null || !Model.Any())
@@ -48,7 +54,6 @@
                             <p><strong>Cidade:</strong> @vaga.cidadeVaga</p>
                             <p><strong>Salário:</strong> @vaga.salarioVaga</p>
                             <p><strong>Benefícios:</strong> @vaga.beneficiosVaga</p>
-                            <a asp-controller="Vagas" asp-action="Details" asp-route-id="@vaga.idVaga" class="btn btn-info">Detalhes</a>
                             <a asp-controller="Vagas" asp-action="EditarVaga" asp-route-id="@vaga.idVaga" class="btn btn-warning">Editar</a>
                             <form asp-controller="Vagas" asp-action="Delete" asp-route-id="@vaga.idVaga" method="post" style="display:inline;">
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esta vaga?');">Deletar</button>

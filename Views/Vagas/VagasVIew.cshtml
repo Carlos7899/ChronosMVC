@@ -14,6 +14,18 @@
         margin-bottom: 20px;
     }
 
+    .card-title, .card-text {
+        overflow: hidden; /* Oculta o texto que ultrapassa o limite */
+        white-space: nowrap; /* Não permite que o texto quebre para a próxima linha */
+        text-overflow: ellipsis; /* Adiciona "..." no final do texto que foi truncado */
+    }
+
+    .card-text {
+        max-height: 60px; /* Limita a altura do texto no cartão */
+        line-height: 1.2em; /* Define a altura da linha para o texto */
+    }
+
+
     .search-input {
         width: 100%;
         padding: 0.5rem;
@@ -56,10 +68,11 @@
                 }
             </ul>
             <!-- Formulário de Pesquisa -->
-            <form class="d-flex ms-auto" asp-controller="Curso" asp-action="PesquisarCursos" method="get">
-                <input class="form-control me-2" type="search" name="nome" placeholder="Pesquisar por nome do curso" aria-label="Pesquisar" required />
+            <form class="d-flex ms-auto" asp-controller="Vagas" asp-action="PesquisarVagas" method="get">
+                <input class="form-control me-2" type="search" name="nomeVaga" placeholder="Pesquisar por nome da vaga" aria-label="Pesquisar" required />
                 <button class="btn btn-outline-success" type="submit">Pesquisar</button>
             </form>
+
         </div>
     </div>
 </nav>
@@ -67,16 +80,6 @@
 <!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">
     <h2 class="text-center mb-4">Vagas Disponíveis</h2>
-
-    <!-- Botão para criar nova vaga -->
-    @if (User.IsInRole("Corporacao"))
-    {
-        <div class="text-end mb-3">
-            <a href="@Url.Action("Create")" class="btn btn-primary">
-                <i class="fas fa-plus"></i> Criar Nova Vaga
-            </a>
-        </div>
-    }
 
     <!-- Verificação de mensagens de sucesso ou erro -->
     @if (TempData["Mensagem"] != null)
@@ -92,7 +95,6 @@
         </div>
     }
 
-    <!-- Cards de vagas -->
     <div class="row">
         @foreach (var item in Model)
         {
@@ -119,4 +121,5 @@
             </div>
         }
     </div>
+
 </div>

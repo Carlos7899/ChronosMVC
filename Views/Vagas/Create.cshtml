@@ -4,6 +4,35 @@
     ViewBag.Title = "Criar Vaga";
 }
 
+
+
+
+
+<!-- Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-controller="Vagas" asp-action="VagasView">Vagas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                @if (User.IsInRole("Corporacao"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
 <div class="container mt-5">
     <h2 class="text-center mb-4">Criar Nova Vaga</h2>
 

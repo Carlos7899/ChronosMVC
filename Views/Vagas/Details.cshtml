@@ -4,37 +4,44 @@
     ViewBag.Title = "Detalhes da Vaga";
 }
 
-<!-- Container para centralizar o conteúdo -->
+<!-- CSS para estilização -->
+<style>
+    .vaga-detail {
+        margin-top: 10px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-custom {
+        padding: 10px 20px;
+    }
+</style>
+
+<!-- Detalhes da Vaga -->
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Detalhes da Vaga</h2>
-    
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-title">Informações da Vaga</h5>
-        </div>
-        <div class="card-body">
-            <dl class="row">
-                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.idVaga)</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.idVaga)</dd>
+    <h2 class="text-center mb-4">@Model.nomeVaga</h2>
 
-                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.nomeVaga)</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.nomeVaga)</dd>
+    <div class="vaga-detail">
+        <h5>Descrição</h5>
+        <p>@Model.descricaoVaga</p>
 
-                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.descricaoVaga)</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.descricaoVaga)</dd>
-
-                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DataCriacao)</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.DataCriacao)</dd>
-            </dl>
-        </div>
+        <h5>Detalhes da Vaga</h5>
+        <p><strong>Responsabilidades:</strong> @Model.responsabilidadesVaga</p>
+        <p><strong>Benefícios:</strong> @Model.beneficiosVaga</p>
+        <p><strong>Salário:</strong> @Model.salarioVaga</p>
+        <p><strong>Cidade:</strong> @Model.cidadeVaga</p>
+        <p><strong>Criada em:</strong> @Model.DataCriacao.ToString("dd/MM/yyyy")</p>
+        <p><strong>Vencimento:</strong> @Model.DataVencimento.ToString("dd/MM/yyyy")</p>
     </div>
 
     <div class="text-end mt-4">
-        <a href="@Url.Action("Edit", new { id = Model.idVaga })" class="btn btn-warning">
-            <i class="fas fa-edit"></i> Editar
+        <a href="@Url.Action("Candidatar", new { id = Model.idVaga })" class="btn btn-primary btn-custom">
+            Candidatar-se
         </a>
-        <a href="@Url.Action("Index")" class="btn btn-secondary">
-            <i class="fas fa-arrow-left"></i> Retornar
+        <a href="@Url.Action("VagasView", "Vagas")" class="btn btn-secondary btn-custom">
+            <i class="fas fa-arrow-left"></i> Voltar
         </a>
     </div>
 </div>

@@ -7,7 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeuProjeto.Controllers
+namespace ChronosMVC.Controllers
 {
     public class CursoController : Controller
     {

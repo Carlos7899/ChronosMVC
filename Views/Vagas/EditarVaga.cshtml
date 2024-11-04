@@ -1,0 +1,80 @@
+﻿@model ChronosMVC.Models.VagaModel
+
+@{
+    ViewBag.Title = "Editar Vaga";
+}
+
+<style>
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Editar Vaga: @Model.nomeVaga</h2>
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["MensagemErro"]
+        </div>
+    }
+    @if (TempData["Mensagem"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Mensagem"]
+        </div>
+    }
+
+    <form asp-action="EditarVaga" method="post">
+        <input type="hidden" asp-for="idVaga" />
+
+
+        <div class="form-group">
+            <label asp-for="nomeVaga" class="form-label"></label>
+            <input asp-for="nomeVaga" class="form-control" required />
+            <span asp-validation-for="nomeVaga" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="descricaoVaga" class="form-label"></label>
+            <textarea asp-for="descricaoVaga" class="form-control" rows="3" required></textarea>
+            <span asp-validation-for="descricaoVaga" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="responsabilidadesVaga" class="form-label"></label>
+            <textarea asp-for="responsabilidadesVaga" class="form-control" rows="3" required></textarea>
+            <span asp-validation-for="responsabilidadesVaga" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="beneficiosVaga" class="form-label"></label>
+            <textarea asp-for="beneficiosVaga" class="form-control" rows="3" required></textarea>
+            <span asp-validation-for="beneficiosVaga" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="salarioVaga" class="form-label"></label>
+            <input asp-for="salarioVaga" class="form-control" required />
+            <span asp-validation-for="salarioVaga" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="cidadeVaga" class="form-label"></label>
+            <input asp-for="cidadeVaga" class="form-control" required />
+            <span asp-validation-for="cidadeVaga" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DataVencimento" class="form-label"></label>
+            <input asp-for="DataVencimento" class="form-control" type="date" required />
+            <span asp-validation-for="DataVencimento" class="text-danger"></span>
+        </div>
+
+        <div class="text-end mt-4">
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <a href="@Url.Action("VagasView", "Vagas")" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

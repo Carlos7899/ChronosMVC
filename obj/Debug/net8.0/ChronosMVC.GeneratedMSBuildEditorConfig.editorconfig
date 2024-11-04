@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\API\ChronosMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/API/ChronosMVC/Views/Candidatura/CandidaturaCorporacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXR1cmFcQ2FuZGlkYXR1cmFDb3Jwb3JhY2FvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/API/ChronosMVC/Views/Corporacao/AdicionarDadosCorporacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYWNhb1xBZGljaW9uYXJEYWRvc0NvcnBvcmFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -120,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/API/ChronosMVC/Views/Vagas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/API/ChronosMVC/Views/Vagas/EditarVaga.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYXNcRWRpdGFyVmFnYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/API/ChronosMVC/Views/Vagas/VagasPorCorporacao.cshtml]

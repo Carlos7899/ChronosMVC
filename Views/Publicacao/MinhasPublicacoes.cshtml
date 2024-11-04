@@ -89,19 +89,35 @@
         </div>
     }
 
-    <!-- Navegação -->
+
+
+    <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container">
-            @if (User.IsInRole("Corporacao"))
-            {
-                <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
-                <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
-                <a class="nav-link" href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
-            }
-            <a class="nav-link" href="@Url.Action("PesquisarPublicacao", "Publicacao")">Pesquisar Publicação</a>
+            <a class="navbar-brand" asp-controller="Publicacao" asp-action="ListarPublicacoes">Publicações</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    @if (User.IsInRole("Corporacao"))
+                    {
+                        <li>
+                             <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
+                        </li>
+                        <li>
+                             <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
+                        </li>
+                        <li>
+                             <a class="nav-link" href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
+                        </li>
+                    }
+                </ul>
+            </div>
         </div>
     </nav>
 
+ 
     <div class="row">
         @if (Model == null || !Model.Any())
         {

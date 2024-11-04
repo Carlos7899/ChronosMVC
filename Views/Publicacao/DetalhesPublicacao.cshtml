@@ -11,117 +11,60 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
-<style>
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-    }
-
-    .publication-details {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        width: 90%;
-        max-width: 600px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        position: relative;
-    }
-
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 1.5rem;
-        color: #aaa;
-        cursor: pointer;
-    }
-
-        .close-button:hover {
-            color: #000;
-        }
-</style>
-
-
 <body>
-    <div class="overlay">
-        <div class="publication-details">
-            <span class="close-button" onclick="window.history.back();" aria-label="Fechar detalhes da publicação">&times;</span>
-            <h2>@Model.títuloPublicacao</h2>
-            <p>@Model.conteudoPublicacao</p>
-            <p class="text-muted">Avaliação: @Model.avaliacaoPublicacao</p>
+    <div class="container mt-5">
+        <h2>@Model.títuloPublicacao</h2>
+        <p>@Model.conteudoPublicacao</p>
+        <p class="text-muted">Avaliação: @Model.avaliacaoPublicacao</p>
 
-            @if (Model.imagemPublicacao != null)
+        @if (Model.imagemPublicacao != null)
+        {
+            <img src="data:image/png;base64,@Convert.ToBase64String(Model.imagemPublicacao)" alt="Imagem da publicação" class="img-fluid my-3" />
+        }
+        else
+        {
+            <p class="text-muted">Nenhuma imagem disponível.</p>
+        }
+
+        <div class="d-flex justify-content-around mt-3">
+            <button class="btn btn-outline-secondary" aria-label="Curtir publicação">
+                <i class="bi bi-heart"></i> Curtir
+            </button>
+            <a href="#comentarioSection" class="btn btn-info">Adicionar Comentário</a>
+            <button class="btn btn-outline-secondary" aria-label="Ver visualizações da publicação">
+                <i class="bi bi-eye"></i> Visualizações
+            </button>
+        </div>
+
+        <h3 class="mt-4">Comentários</h3>
+        <div id="comentariosList">
+            @if (Model.Comentarios != null && Model.Comentarios.Any())
             {
-                <img src="data:image/png;base64,@Convert.ToBase64String(Model.imagemPublicacao)" alt="Imagem da publicação" class="img-fluid my-3" />
+                foreach (var comentario in Model.Comentarios)
+                {
+                    <div class="border-bottom mb-2 pb-2">
+                        <p>@comentario.comentarioPublicacao</p>
+                    </div>
+                }
             }
             else
             {
-                <p class="text-muted">Nenhuma imagem disponível.</p>
+                <p>Nenhum comentário disponível.</p>
             }
-
-            <div class="d-flex justify-content-around mt-3">
-                <button class="btn btn-outline-secondary" aria-label="Curtir publicação">
-                    <i class="bi bi-heart"></i> Curtir
-                </button>
-                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#comentarioModal">Adicionar Comentário</a>
-                <button class="btn btn-outline-secondary" aria-label="Ver visualizações da publicação">
-                    <i class="bi bi-eye"></i> Visualizações
-                </button>
-            </div>
-
-            <h3 class="mt-4">Comentários</h3>
-            <div id="comentariosList">
-                @if (Model.Comentarios != null && Model.Comentarios.Any())
-                {
-                    foreach (var comentario in Model.Comentarios)
-                    {
-                        <div class="border-bottom mb-2 pb-2">
-       
-                            <p>@comentario.comentarioPublicacao</p>
-                        </div>
-                    }
-                }
-                else
-                {
-                    <p>Nenhum comentário disponível.</p>
-                }
-            </div>
         </div>
+
+        <h3 class="mt-4" id="comentarioSection">Adicionar Comentário</h3>
+        <!-- Formulário que chama o método Create do ComentarioController -->
+        <form asp-action="Create" asp-controller="Comentario" method="post">
+            <input type="hidden" name="idPublicacao" value="@Model.idPublicacao" />
+            <input type="hidden" name="idEgresso" value="@ViewBag.IdEgresso" /> <!-- Campo oculto para idEgresso -->
+            <div class="mb-3">
+                <label for="comentarioPublicacao" class="form-label">Comentário</label>
+                <textarea name="comentarioPublicacao" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
     </div>
 
- 
-    <!-- Modal para Criar Comentário -->
-    <div class="modal fade" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="comentarioModalLabel">Adicionar Comentário</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Formulário que chama o método Create do ComentarioController -->
-                    <form asp-action="Create" asp-controller="Comentario" method="post">
-                        <!-- Campo oculto para vincular o comentário à publicação correta -->
-                        <input type="hidden" name="idPublicacao" value="@Model.idPublicacao" />
-                        <div class="mb-3">
-                            <label for="comentarioPublicacao" class="form-label">Comentário</label>
-                            <textarea name="comentarioPublicacao" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Salvar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Script do Bootstrap para funcionalidade do modal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
