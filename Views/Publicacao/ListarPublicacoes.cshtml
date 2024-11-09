@@ -6,46 +6,58 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
     body {
-        background-color: #f0f2f5;
+        background-color: #f4f6f9;
     }
 
     .container {
-        max-width: 1200px;
-        margin-top: 30px;
+        max-width: 900px;
     }
 
     .post-card {
-        border: 1px solid #e6e6e6;
+        border: 1px solid #e0e0e0;
         padding: 20px;
         margin-bottom: 20px;
-        border-radius: 8px;
+        border-radius: 12px;
         background-color: #ffffff;
-        transition: background-color 0.2s, transform 0.2s;
-        height: 350px; /* Altura fixa para os cards */
-        display: flex;
-        flex-direction: column; /* Permite o alinhamento vertical do conteúdo */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     }
 
-        .post-card:hover {
-            background-color: #f9f9f9;
-            transform: translateY(-2px);
-        }
+    .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .post-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-right: 15px;
+    }
 
     .post-title {
-        font-size: 1.2em;
+        font-size: 1.3em;
         font-weight: bold;
         color: #333;
     }
 
     .post-body {
-        flex-grow: 1; /* Faz o corpo do post ocupar o espaço restante */
+        flex-grow: 1;
         color: #555;
         margin: 10px 0;
-        overflow: hidden; /* Esconde conteúdo que excede o espaço */
-        text-overflow: ellipsis; /* Adiciona "..." ao final se o texto for muito longo */
+        overflow: hidden;
+        text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3; /* Limita a 3 linhas de texto */
+        -webkit-line-clamp: 3;
+        font-size: 1em;
     }
 
     .post-footer {
@@ -54,47 +66,96 @@
         align-items: center;
         color: #888;
         font-size: 0.9em;
-    }
-
-    .avaliacao {
-        color: #28a745;
-        font-weight: bold;
+        margin-top: 15px;
     }
 
     .post-image-publicacao {
         width: 100%;
-        max-height: 150px; /* Limita a altura da imagem */
+        max-height: 250px;
         object-fit: cover;
-        border-radius: 8px;
-        margin-top: 10px;
+        border-radius: 12px;
+        margin-top: 15px;
     }
 
     .interaction-buttons {
         display: flex;
-        gap: 10px;
+        gap: 15px;
     }
 
-    .btn-info {
-        font-size: 0.85em;
-        padding: 0.25rem 0.5rem;
+    .interaction-buttons a,
+    .interaction-buttons span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.9em;
+        color: #0073b1;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .interaction-buttons a:hover,
+    .interaction-buttons span:hover {
+        color: #005582;
+    }
+
+    .interaction-buttons .likes,
+    .interaction-buttons .comments {
+        color: #0073b1;
+    }
+
+    .interaction-buttons .views {
+        color: #999;
+    }
+
+    .interaction-buttons i {
+        font-size: 1.2em;
+    }
+
+    /* Estilo para a barra de pesquisa */
+    .search-bar {
+        margin-bottom: 20px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .search-bar input::placeholder {
+        font-weight: bold;
+        color: #888;
     }
 </style>
 
 <div class="container">
     <h1 class="text-center mb-4">Publicações</h1>
 
-    <!-- Navegação -->
+    <!-- Navegação + Barra de Pesquisa -->
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Pesquisar publicação...">
+            </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-        <div class="container">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Links de navegação (Botões) -->
             @if (User.IsInRole("Corporacao"))
             {
-                <a class="nav-link" href="@Url.Action("ListarPublicacoes", "Publicacao")">Publicações</a>
-                <a class="nav-link" href="@Url.Action("MinhasPublicacoes", "Publicacao")">Minhas Publicações</a>
-                <a class="nav-link" href="@Url.Action("CriarPublicacao", "Publicacao")">Criar Publicação</a>
+                <a class="btn btn-secondary" href="@Url.Action("ListarPublicacoes", "Publicacao")">
+                    <i class="fa fa-list"></i> Publicações
+                </a>
+                <a class="btn btn-primary" href="@Url.Action("MinhasPublicacoes", "Publicacao")">
+                    <i class="fa fa-user"></i> Minhas Publicações
+                </a>
+                <a class="btn btn-success" href="@Url.Action("CriarPublicacao", "Publicacao")">
+                    <i class="fa fa-plus-circle"></i> Criar Publicação
+                </a>
             }
-            <a class="nav-link" href="@Url.Action("PesquisarPublicacao", "Publicacao")">Pesquisar Publicação</a>
+            <!-- Barra de Pesquisa -->
         </div>
     </nav>
+
 
     <div class="row">
         @if (Model == null || !Model.Any())
@@ -107,9 +168,10 @@
         {
             @foreach (var publicacao in Model)
             {
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="post-card" onclick="location.href='@Url.Action("DetalhesPublicacao", "Publicacao", new { id = publicacao.idPublicacao })';" style="cursor:pointer;">
                         <div class="post-header">
+                            <div class="post-avatar"></div>
                             <div class="post-title">@publicacao.títuloPublicacao</div>
                         </div>
                         <div class="post-body">@publicacao.conteudoPublicacao</div>
@@ -122,10 +184,9 @@
                         <div class="post-footer">
                             <span>@publicacao.dataCriacaoPublicacao.ToString("dd/MM/yyyy")</span>
                             <div class="interaction-buttons">
-                                <a asp-controller="Publicacao" asp-action="DetalhesPublicacao" asp-route-idPublicacao="@publicacao.idPublicacao" class="btn btn-info btn-sm">Ver Comentários</a>
-                                <span class="views">
-                                    <i class="bi bi-eye"></i> @publicacao.numeroVisualizacoes Visualizações
-                                </span>
+                                <a asp-controller="Publicacao" asp-action="DetalhesPublicacao" asp-route-idPublicacao="@publicacao.idPublicacao">
+                                    <i class="fa fa-comment"></i> Comentários
+                                </a>
                             </div>
                         </div>
                     </div>

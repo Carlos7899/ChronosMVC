@@ -1157,19 +1157,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michele Cristina\\.nuget\\packages\\": {}
+    "C:\\Users\\etechas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\API\\ChronosMVC\\ChronosMVC.csproj",
+      "projectUniqueName": "D:\\TCC\\ChronosMVC\\ChronosMVC.csproj",
       "projectName": "ChronosMVC",
-      "projectPath": "C:\\API\\ChronosMVC\\ChronosMVC.csproj",
-      "packagesPath": "C:\\Users\\Michele Cristina\\.nuget\\packages\\",
-      "outputPath": "C:\\API\\ChronosMVC\\obj\\",
+      "projectPath": "D:\\TCC\\ChronosMVC\\ChronosMVC.csproj",
+      "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
+      "outputPath": "D:\\TCC\\ChronosMVC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Michele Cristina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1229,7 +1234,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,5 +14,7 @@ namespace ChronosMVC.Models
         [ForeignKey("idEgresso")]
         public int idEgresso { get; set; }
         public string comentarioPublicacao { get; set; } = string.Empty;
+
+        
     }
 }

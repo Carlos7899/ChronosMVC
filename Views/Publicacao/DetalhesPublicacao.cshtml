@@ -7,64 +7,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap e FontAwesome para ícones -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        /* Estilo Geral da Página */
+        body {
+            background-color: #f7f8fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #495057;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-top: 40px;
+        }
+
+        /* Estilo da Publicação */
+        .post-header {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .post-header:hover {
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .post-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .post-content {
+            font-size: 1.15em;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .post-footer {
+            font-size: 0.95em;
+            color: #6c757d;
+            margin-top: 20px;
+        }
+
+        .post-image {
+            max-height: 500px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-custom {
+            font-size: 1.1em;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #5a6268;
+            transform: scale(1.05);
+        }
+
+        .btn-custom:focus {
+            box-shadow: none;
+        }
+
+        .comment-box {
+            background-color: #fff;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .comment-box:hover {
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .comment-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+
+        .comment-item p {
+            font-size: 1.05em;
+            color: #495057;
+            margin-top: 10px;
+        }
+
+        .comment-header {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .comment-footer {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        /* Estilo do Formulário de Comentário */
+        .form-control {
+            border-radius: 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control:focus {
+            box-shadow: inset 0 1px 3px rgba(0, 123, 255, 0.25);
+        }
+
+        /* Estilo das Seções */
+        .section-header {
+            font-size: 1.75em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h2>@Model.títuloPublicacao</h2>
-        <p>@Model.conteudoPublicacao</p>
-        <p class="text-muted">Avaliação: @Model.avaliacaoPublicacao</p>
+    <div class="container">
+        <!-- Publicação -->
+        <div class="post-header">
+            <h2 class="post-title">@Model.títuloPublicacao</h2>
+            <p class="post-content">@Model.conteudoPublicacao</p>
+            <p class="post-footer">Avaliação: <span class="text-success">@Model.avaliacaoPublicacao</span></p>
 
-        @if (Model.imagemPublicacao != null)
-        {
-            <img src="data:image/png;base64,@Convert.ToBase64String(Model.imagemPublicacao)" alt="Imagem da publicação" class="img-fluid my-3" />
-        }
-        else
-        {
-            <p class="text-muted">Nenhuma imagem disponível.</p>
-        }
-
-        <div class="d-flex justify-content-around mt-3">
-            <button class="btn btn-outline-secondary" aria-label="Curtir publicação">
-                <i class="bi bi-heart"></i> Curtir
-            </button>
-            <a href="#comentarioSection" class="btn btn-info">Adicionar Comentário</a>
-            <button class="btn btn-outline-secondary" aria-label="Ver visualizações da publicação">
-                <i class="bi bi-eye"></i> Visualizações
-            </button>
-        </div>
-
-        <h3 class="mt-4">Comentários</h3>
-        <div id="comentariosList">
-            @if (Model.Comentarios != null && Model.Comentarios.Any())
+            @if (Model.imagemPublicacao != null)
             {
-                foreach (var comentario in Model.Comentarios)
-                {
-                    <div class="border-bottom mb-2 pb-2">
-                        <p>@comentario.comentarioPublicacao</p>
-                    </div>
-                }
+                <img src="data:image/png;base64,@Convert.ToBase64String(Model.imagemPublicacao)" alt="Imagem da publicação" class="post-image" />
             }
             else
             {
-                <p>Nenhum comentário disponível.</p>
+                <p class="text-muted">Nenhuma imagem disponível.</p>
             }
+
+            <div class="d-flex justify-content-between mt-4">
+                <button class="btn btn-outline-primary btn-custom">
+                    <i class="bi bi-heart"></i> Curtir
+                </button>
+                <a href="#comentarioSection" class="btn btn-primary btn-custom">Adicionar Comentário</a>
+                <button class="btn btn-outline-secondary btn-custom">
+                    <i class="bi bi-eye"></i> Visualizações
+                </button>
+            </div>
         </div>
 
-        <h3 class="mt-4" id="comentarioSection">Adicionar Comentário</h3>
-        <!-- Formulário que chama o método Create do ComentarioController -->
-        <form asp-action="Create" asp-controller="Comentario" method="post">
-            <input type="hidden" name="idPublicacao" value="@Model.idPublicacao" />
-            <input type="hidden" name="idEgresso" value="@ViewBag.IdEgresso" /> <!-- Campo oculto para idEgresso -->
-            <div class="mb-3">
-                <label for="comentarioPublicacao" class="form-label">Comentário</label>
-                <textarea name="comentarioPublicacao" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Salvar</button>
-        </form>
+        <!-- Formulário de Adicionar Comentário -->
+        <div class="comment-box mt-4" id="comentarioSection">
+            <h3 class="section-header">Adicionar Comentário</h3>
+            <form asp-action="Create" asp-controller="Comentario" method="post">
+                <input type="hidden" name="idPublicacao" value="@Model.idPublicacao" />
+                <input type="hidden" name="idEgresso" value="@ViewBag.IdEgresso" />
+                <div class="mb-3">
+                    <label for="comentarioPublicacao" class="form-label">Comentário</label>
+                    <textarea name="comentarioPublicacao" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-custom">Salvar</button>
+            </form>
+        </div>
     </div>
+        <!-- Seção de Comentários -->
+        <div class="comment-box mt-5">
+            <h3 class="section-header">Comentários</h3>
+            <div id="comentariosList">
+                @if (Model.Comentarios != null && Model.Comentarios.Any())
+                {
+                    foreach (var comentario in Model.Comentarios)
+                    {
+                    }
+                }
+                else
+                {
+                    <p class="text-muted">Nenhum comentário disponível.</p>
+                }
+            </div>
+        </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
