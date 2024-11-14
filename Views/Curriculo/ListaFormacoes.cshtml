@@ -1,0 +1,46 @@
+﻿@model List<ChronosMVC.Models.Curriculo.FormacaoModel>
+
+<h2>Formações</h2>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<a href="@Url.Action("AdicionarFormacao")" class="btn btn-success mb-3">Adicionar Nova Formação</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Curso</th>
+            <th>Instituição</th>
+            <th>Data de Conclusão</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var formacao in Model)
+        {
+            <tr>
+                <td>@formacao.cursoFormacao</td>
+                <td>@formacao.instituicaoFormacao</td>
+                <td>@formacao.dataConclusaoFormacao.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a href="@Url.Action("EditarFormacao", new { idFormacao = formacao.idFormacao })" class="btn btn-warning">Editar</a>
+                    <form action="@Url.Action("ExcluirFormacao", new { idFormacao = formacao.idFormacao })" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

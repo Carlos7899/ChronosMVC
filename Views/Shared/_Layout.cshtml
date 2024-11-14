@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ChronosMVC.styles.css" asp-append-version="true" />
 
+    @RenderSection("Styles", required: false)
+
     <style>
         .nav-link {
             position: relative;
@@ -88,7 +90,7 @@
                             @if (!string.IsNullOrEmpty(idEgresso))
                             {
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Curriculo" asp-action="CurriculoView">Curriculo</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Curriculo" asp-action="Detalhes">Curriculo</a>
                                     </li>
                             }
                      }

@@ -1,0 +1,45 @@
+﻿@model ChronosMVC.Models.Curriculo.CurriculoModel
+
+@{
+    ViewData["Title"] = "Editar Currículo";
+}
+
+<h2>Editar Currículo</h2>
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+<form asp-action="EditarCurriculo" method="post">
+    <div class="form-group">
+        <label for="emailCurriculo">Email</label>
+        <input type="email" class="form-control" id="emailCurriculo" name="emailCurriculo" value="@Model.emailCurriculo" required />
+    </div>
+
+    <div class="form-group">
+        <label for="telefoneCurriculo">Telefone</label>
+        <input type="text" class="form-control" id="telefoneCurriculo" name="telefoneCurriculo" value="@Model.telefoneCurriculo" required />
+    </div>
+
+    <div class="form-group">
+        <label for="habilidadesCurriculo">Habilidades</label>
+        <textarea class="form-control" id="habilidadesCurriculo" name="habilidadesCurriculo" rows="4">@Model.habilidadesCurriculo</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="descricaoCurriculo">Descrição</label>
+        <textarea class="form-control" id="descricaoCurriculo" name="descricaoCurriculo" rows="4">@Model.descricaoCurriculo</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>

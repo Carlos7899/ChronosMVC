@@ -1,0 +1,222 @@
+﻿@model ChronosMVC.Models.Curriculo.CurriculoModel
+
+@{
+    ViewData["Title"] = "Detalhes do Currículo";
+}
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@7.1.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="~/js/curriculo.js"></script>
+
+    <style>
+        .container {
+            max-width: 800px;
+        }
+
+        .curriculo-container {
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        .curriculo-section {
+            margin-bottom: 30px;
+        }
+
+            .curriculo-section h3 {
+                border-bottom: 2px solid #2c3e50;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+
+        .divider {
+            border: 1px solid #bdc3c7;
+            margin: 40px 0;
+        }
+
+        .experiencias-list, .formacoes-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experiencia-item, .formacao-item {
+            margin-bottom: 20px;
+        }
+
+        .experiencia-header, .formacao-header {
+            margin-bottom: 10px;
+        }
+
+            .experiencia-header h4, .formacao-header h4 {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .experiencia-header p, .formacao-header p {
+                font-size: 1em;
+                margin: 5px 0;
+            }
+
+        .btn {
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-warning {
+            background-color: #f39c12;
+            border-color: #e67e22;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #2980b9;
+            border-color: #3498db;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-3px);
+        }
+
+        .alert {
+            font-size: 1.2em;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .alert-link {
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        .buttons-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+            .buttons-container .btn {
+                margin: 0 10px;
+            }
+    </style>
+</head>
+
+<div class="container mt-5">
+    <div class="curriculo-container">
+        <h2 class="text-center mb-4">Currículo do egresso</h2>
+
+        @if (Model != null && Model.idCurriculo > 0)
+        {
+            <!-- Seção de Informações Pessoais -->
+            <div class="curriculo-section">
+                <h3>Informações Pessoais</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>Email:</strong> <span id="email">@Model.emailCurriculo</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Telefone:</strong> <span id="telefone">@Model.telefoneCurriculo</span></p>
+                    </div>
+                </div>
+                <p><strong>Habilidades:</strong> <span id="habilidades">@Model.habilidadesCurriculo</span></p>
+                <p><strong>Descrição:</strong> <span id="descricao">@Model.descricaoCurriculo</span></p>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Seção de Experiências Profissionais -->
+            <div class="curriculo-section">
+                <h3>Experiências Profissionais</h3>
+                @if (Model.ExperienciasProfissionais != null && Model.ExperienciasProfissionais.Any())
+                {
+                    <ul class="experiencias-list">
+                        @foreach (var experiencia in Model.ExperienciasProfissionais)
+                        {
+                            <li class="experiencia-item">
+                                <div class="experiencia-header">
+                                    <h4 class="cargo">@experiencia.cargoExperiencia</h4>
+                                    <p><strong>Empresa:</strong> <span class="empresa">@experiencia.empresaExperiencia</span></p>
+                                    <p><strong>Período:</strong> <span class="periodo">@experiencia.dataInicioExperiencia.ToString("MM/yyyy") - @experiencia.dataFimExperiencia?.ToString("MM/yyyy")</span></p>
+                                </div>
+                                <p><strong>Descrição:</strong> <span class="descricao">@experiencia.Descricao</span></p>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Você ainda não adicionou experiências profissionais.</p>
+                }
+            </div>
+
+            <hr class="divider">
+
+            <!-- Seção de Formações Acadêmicas -->
+            <div class="curriculo-section">
+                <h3>Formações Acadêmicas</h3>
+                @if (Model.FormacoesAcademicas != null && Model.FormacoesAcademicas.Any())
+                {
+                    <ul class="formacoes-list">
+                        @foreach (var formacao in Model.FormacoesAcademicas)
+                        {
+                            <li class="formacao-item">
+                                <div class="formacao-header">
+                                    <h4 class="curso">@formacao.cursoFormacao</h4>
+                                    <p><strong>Instituição:</strong> <span class="instituicao">@formacao.instituicaoFormacao</span></p>
+                                    <p><strong>Data de Conclusão:</strong> <span class="dataConclusao">@formacao.dataConclusaoFormacao.ToString("MM/yyyy")</span></p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Você ainda não adicionou formações acadêmicas.</p>
+                }
+            </div>
+
+        }
+        else
+        {
+            <div class="alert alert-warning text-center">
+                Você ainda não tem um currículo. <a href="@Url.Action("CriarCurriculo", "Curriculo")" class="alert-link">Clique aqui para criar um currículo</a>.
+            </div>
+        }
+    </div>
+
+    <!-- Botões de Ação fora do currículo -->
+    <div class="buttons-container">
+        <a href="@Url.Action("EditarCurriculo", "Curriculo")" class="btn btn-warning btn-lg">Editar Currículo</a>
+        <a href="@Url.Action("ListaExperiencias", "Curriculo")" class="btn btn-primary btn-lg">Ver Experiências</a>
+        <a href="@Url.Action("ListaFormacoes", "Curriculo")" class="btn btn-primary btn-lg">Ver Formações</a>
+        <button id="download-pdf" class="btn btn-success btn-lg mx-2">Baixar como PDF</button>
+        <button id="download-docx" class="btn btn-info btn-lg mx-2">Baixar como DOCX</button>
+
+    </div>
+
+</div>

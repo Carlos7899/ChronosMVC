@@ -1,0 +1,47 @@
+﻿@model ChronosMVC.Models.Curriculo.CurriculoModel
+
+@{
+    ViewData["Title"] = "Criar Currículo";
+}
+
+@section Styles {
+    <link href="~/css/barraDeProgresso.css" rel="stylesheet" />
+}
+
+<h2>Criar Currículo (Etapa 1)</h2>
+
+<form asp-action="CriarCurriculo" method="post">
+    <div class="form-group">
+        <label for="emailCurriculo">Email</label>
+        <input type="email" class="form-control" id="emailCurriculo" name="emailCurriculo" value="@Model?.emailCurriculo" required />
+    </div>
+
+    <div class="form-group">
+        <label for="telefoneCurriculo">Telefone</label>
+        <input type="text" class="form-control" id="telefoneCurriculo" name="telefoneCurriculo" value="@Model?.telefoneCurriculo" required />
+    </div>
+
+    <div class="form-group">
+        <label for="habilidadesCurriculo">Habilidades</label>
+        <textarea class="form-control" id="habilidadesCurriculo" name="habilidadesCurriculo">@Model?.habilidadesCurriculo</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="descricaoCurriculo">Descrição</label>
+        <textarea class="form-control" id="descricaoCurriculo" name="descricaoCurriculo">@Model?.descricaoCurriculo</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Próxima Etapa</button>
+</form>
+
+<!-- Barra de progresso com animação -->
+<div class="position-relative m-4">
+    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 1px;">
+        <div class="progress-bar" style="width: 33%"></div>
+    </div>
+    <!-- Botões representando as etapas -->
+    <button id="avancar" type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill step-btn" style="width: 2rem; height:2rem;">1</button>
+    <button id="retroceder" type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill step-btn" style="width: 2rem; height:2rem;">2</button>
+    <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill step-btn" style="width: 2rem; height:2rem;">3</button>
+</div>
+

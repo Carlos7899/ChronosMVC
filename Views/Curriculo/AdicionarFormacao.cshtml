@@ -1,0 +1,24 @@
+﻿@model ChronosMVC.Models.Curriculo.FormacaoModel
+
+<h2>Adicionar Nova Formação</h2>
+
+<form method="post" asp-action="AdicionarFormacao">
+    <div class="form-group">
+        <label for="cursoFormacao">Curso</label>
+        <input type="text" class="form-control" id="cursoFormacao" name="cursoFormacao" value="@Model.cursoFormacao" required />
+    </div>
+
+    <div class="form-group">
+        <label for="instituicaoFormacao">Instituição</label>
+        <input type="text" class="form-control" id="instituicaoFormacao" name="instituicaoFormacao" value="@Model.instituicaoFormacao" required />
+    </div>
+
+    <div class="form-group">
+        <label for="dataConclusaoFormacao">Data de Conclusão</label>
+        <input type="date" class="form-control" id="dataConclusaoFormacao" name="dataConclusaoFormacao" value="@Model.dataConclusaoFormacao.ToString("yyyy-MM-dd")" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Adicionar Formação</button>
+</form>
+
+<a href="@Url.Action("ListaFormacoes")" class="btn btn-secondary mt-3">Voltar para a lista de formações</a>

@@ -1,0 +1,27 @@
+﻿@model ChronosMVC.Models.Curriculo.FormacaoModel
+
+@{
+    ViewData["Title"] = "Editar Formação";
+}
+
+<h2>Editar Formação</h2>
+
+<form asp-action="EditarFormacao" method="post">
+    <input type="hidden" asp-for="idFormacao" />
+    <div class="form-group">
+        <label asp-for="cursoFormacao" class="control-label"></label>
+        <input asp-for="cursoFormacao" class="form-control" />
+        <span asp-validation-for="cursoFormacao" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="instituicaoFormacao" class="control-label"></label>
+        <input asp-for="instituicaoFormacao" class="form-control" />
+        <span asp-validation-for="instituicaoFormacao" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="dataConclusaoFormacao" class="control-label"></label>
+        <input asp-for="dataConclusaoFormacao" class="form-control" type="date" />
+        <span asp-validation-for="dataConclusaoFormacao" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

@@ -1,0 +1,55 @@
+﻿@model ChronosMVC.Models.Curriculo.ExperienciaModel
+
+@{
+    ViewData["Title"] = "Adicionar Experiência Profissional";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Exibição de Mensagens de Sucesso ou Erro -->
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<!-- Formulário de Adicionar Experiência -->
+<form method="post" asp-action="AdicionarExperiencia">
+    <div class="form-group">
+        <label for="cargoExperiencia">Cargo</label>
+        <input type="text" class="form-control" id="cargoExperiencia" name="cargoExperiencia" value="@Model.cargoExperiencia" required />
+    </div>
+
+    <div class="form-group">
+        <label for="empresaExperiencia">Empresa</label>
+        <input type="text" class="form-control" id="empresaExperiencia" name="empresaExperiencia" value="@Model.empresaExperiencia" required />
+    </div>
+
+    <div class="form-group">
+        <label for="dataInicioExperiencia">Data de Início</label>
+        <input type="date" class="form-control" id="dataInicioExperiencia" name="dataInicioExperiencia" value="@Model.dataInicioExperiencia.ToString("yyyy-MM-dd")" required />
+    </div>
+
+    <div class="form-group">
+        <label for="dataFimExperiencia">Data de Fim</label>
+        <input type="date" class="form-control" id="dataFimExperiencia" name="dataFimExperiencia" value="@Model.dataFimExperiencia?.ToString("yyyy-MM-dd")" />
+    </div>
+
+    <div class="form-group">
+        <label for="Descricao">Descrição</label>
+        <textarea class="form-control" id="Descricao" name="Descricao" rows="3">@Model.Descricao</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Adicionar Experiência</button>
+</form>
+
+<!-- Botão de Voltar -->
+<a href="@Url.Action("ListarExperiencias")" class="btn btn-secondary mt-3">Voltar para a lista de experiências</a>

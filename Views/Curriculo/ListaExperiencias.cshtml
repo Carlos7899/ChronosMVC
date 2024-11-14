@@ -1,0 +1,56 @@
+﻿@model List<ChronosMVC.Models.Curriculo.ExperienciaModel>
+
+@{
+    ViewData["Title"] = "Experiências Profissionais";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a href="@Url.Action("AdicionarExperiencia", "Curriculo")" class="btn btn-success mb-3">Adicionar Nova Experiência</a>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cargo</th>
+                <th>Empresa</th>
+                <th>Data de Início</th>
+                <th>Data de Término</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var experiencia in Model)
+            {
+                <tr>
+                    <td>@experiencia.cargoExperiencia</td>
+                    <td>@experiencia.empresaExperiencia</td>
+                    <td>@experiencia.dataInicioExperiencia.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        @if (experiencia.dataFimExperiencia.HasValue)
+                        {
+                            @experiencia.dataFimExperiencia.Value.ToString("dd/MM/yyyy")
+                        }
+                        else
+                        {
+                            <span>Atualmente</span>
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("EditarExperiencia", "Curriculo", new { idExperiencia = experiencia.idExperiencia })" class="btn btn-warning">Editar</a>
+                        <form action="@Url.Action("ExcluirExperiencia", "Curriculo", new { idExperiencia = experiencia.idExperiencia })" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Você ainda não possui experiências cadastradas.</p>
+}
+
+<a href="@Url.Action("Detalhes", "Curriculo")" class="btn btn-secondary">Voltar ao Currículo</a>

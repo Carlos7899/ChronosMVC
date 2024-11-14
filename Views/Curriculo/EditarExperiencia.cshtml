@@ -1,0 +1,37 @@
+﻿@model ChronosMVC.Models.Curriculo.ExperienciaModel
+
+@{
+    ViewData["Title"] = "Editar Experiência";
+}
+
+<h2>Editar Experiência</h2>
+
+<form asp-action="EditarExperiencia" method="post">
+    <input type="hidden" asp-for="idExperiencia" />
+    <div class="form-group">
+        <label asp-for="cargoExperiencia" class="control-label"></label>
+        <input asp-for="cargoExperiencia" class="form-control" />
+        <span asp-validation-for="cargoExperiencia" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empresaExperiencia" class="control-label"></label>
+        <input asp-for="empresaExperiencia" class="form-control" />
+        <span asp-validation-for="empresaExperiencia" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="dataInicioExperiencia" class="control-label"></label>
+        <input asp-for="dataInicioExperiencia" class="form-control" type="date" />
+        <span asp-validation-for="dataInicioExperiencia" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="dataFimExperiencia" class="control-label"></label>
+        <input asp-for="dataFimExperiencia" class="form-control" type="date" />
+        <span asp-validation-for="dataFimExperiencia" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Descricao" class="control-label"></label>
+        <textarea asp-for="Descricao" class="form-control"></textarea>
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

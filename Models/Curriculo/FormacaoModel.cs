@@ -21,12 +21,3 @@ namespace ChronosMVC.Models.Curriculo
 
     }
 }
-
-
-
-
-
-
-
-
-

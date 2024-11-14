@@ -1,0 +1,51 @@
+﻿/* Animação da barra de progresso */
+@keyframes progressAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.progress-bar {
+    animation: progressAnimation 1s ease-out;
+}
+
+/* Estilo dos botões de etapas */
+button.rounded-pill {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Quando o botão está ativo */
+button.btn-primary {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Quando o botão está inativo */
+button.btn-secondary {
+    background-color: #6c757d;
+}
+
+/* Efeito de hover nos botões */
+button.rounded-pill:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Fade-in para o formulário */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
