@@ -1,0 +1,171 @@
+﻿/* Container geral da página */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo principal do currículo */
+.curriculo-container {
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra suave para o efeito de flutuação */
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo dos títulos principais */
+h1, h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Título secundário (Nome do Egresso) */
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Títulos das seções do currículo */
+h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-top: 20px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+/* Estilo das seções de currículo */
+.curriculo-section {
+    margin-bottom: 30px;
+}
+
+    /* Parágrafos nas seções */
+    .curriculo-section p {
+        font-size: 1.1em;
+    }
+
+/* Divisor entre as seções */
+.divider {
+    border: 1px solid #bdc3c7;
+    margin: 40px 0;
+}
+
+/* Listas de experiências e formações */
+.experiencias-list, .formacoes-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Item das listas de experiências e formações */
+.experiencia-item, .formacao-item {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+/* Cabeçalhos das experiências e formações */
+.experiencia-header, .formacao-header {
+    margin-bottom: 10px;
+}
+
+    /* Estilo dos cabeçalhos das experiências e formações */
+    .experiencia-header h4, .formacao-header h4 {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    /* Parágrafos dentro das experiências e formações */
+    .experiencia-header p, .formacao-header p {
+        font-size: 1.1em;
+        margin: 5px 0;
+    }
+
+/* Estilo dos botões */
+.btn {
+    font-size: 1.1em;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra de flutuação */
+}
+
+/* Estilo do botão de editar currículo */
+.btn-warning {
+    background-color: #f39c12;
+    border-color: #e67e22;
+    color: #fff;
+}
+
+/* Estilo do botão de ação primária */
+.btn-primary {
+    background-color: #2980b9;
+    border-color: #3498db;
+    color: #fff;
+}
+
+/* Estilo do botão de sucesso */
+.btn-success {
+    background-color: #27ae60;
+    border-color: #2ecc71;
+    color: #fff;
+}
+
+/* Estilo do botão de informações */
+.btn-info {
+    background-color: #1abc9c;
+    border-color: #16a085;
+    color: #fff;
+}
+
+/* Efeito de hover nos botões */
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-5px); /* Move o botão para cima quando passa o mouse */
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Container de botões de ação */
+.buttons-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo da alerta de "sem currículo" */
+.alert {
+    font-size: 1.2em;
+    padding: 15px;
+    background-color: #f39c12;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    .curriculo-container {
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}

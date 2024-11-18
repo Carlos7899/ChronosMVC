@@ -12,6 +12,18 @@
     <div class="card-body">
         <h5 class="card-title">Informações Pessoais</h5>
 
+        <!-- Exibe a foto de perfil, se houver -->
+        <div class="mb-3">
+            @if (Model.fotoPerfilEgresso != null && Model.fotoPerfilEgresso.Length > 0)
+            {
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.fotoPerfilEgresso)" alt="Foto de perfil" class="img-fluid rounded-circle" style="max-width: 150px; height: auto;" />
+            }
+            else
+            {
+                <img src="~/images/default-profile.png" alt="Foto de perfil padrão" class="img-fluid rounded-circle" style="max-width: 150px; height: auto;" />
+            }
+        </div>
+
         <p>
             <strong>Nome:</strong> @(Model.nomeEgresso ?? "Não disponível")
         </p>
@@ -33,7 +45,4 @@
     </div>
 </div>
 
-
-
 <a asp-action="EditarDadosEgresso" asp-route-idEgresso="@Model.idEgresso" class="btn btn-primary">Editar</a>
-

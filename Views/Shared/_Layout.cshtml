@@ -7,69 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ChronosMVC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
 
     @RenderSection("Styles", required: false)
 
-    <style>
-        .nav-link {
-            position: relative;
-            padding-bottom: 5px;
-           
-        }
-
-        .footer {
-            background-color: #343a40;
-            padding: 40px 0;
-            color: #fff;
-            text-align: center;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 2px;
-            background-color: black;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            transform: scaleX(1);
-        }
-
-        .img-circle {
-            border: 2px solid #007bff; /* Borda azul */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-        }
-
-
-        .main {
-            margin-top: 70px;
-        }
-
-        .navbar-toggler {
-            border: none;
-            outline: none;
-        }
-
-            .navbar-toggler:focus {
-                outline: none;
-            }
-
-     
-    </style>
 </head>
 <body>
 
     <header>
-        <nav class="navbar bg-body-tertiary">
+        <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
                 <ul class="nav">
                     <li class="nav-item">

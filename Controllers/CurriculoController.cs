@@ -1,4 +1,5 @@
-﻿using ChronosMVC.Models.Curriculo;
+﻿using ChronosMVC.Models;
+using ChronosMVC.Models.Curriculo;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -27,10 +28,10 @@ namespace ChronosMVC.Controllers
         {
             try
             {
-                // 1. Obtendo o ID do Egresso logado
-                var idEgresso = GetLoggedEgressoId(); // Método fictício para obter o ID do egresso logado
+                // Obtendo o ID do Egresso logado
+                var idEgresso = GetLoggedEgressoId();
 
-                // 2. Carregar o currículo do egresso
+                // Carregar o currículo do egresso
                 var apiCurriculoEndpoint = apiUrl + $"GetByEgresso/{idEgresso}";
                 HttpResponseMessage responseCurriculo = await _httpClient.GetAsync(apiCurriculoEndpoint);
 
@@ -41,7 +42,7 @@ namespace ChronosMVC.Controllers
 
                     if (curriculo != null)
                     {
-                        // 3. Carregar as experiências profissionais
+                        // Carregar as experiências profissionais
                         var apiExperienciaEndpoint = apiExperienciaUrl + $"GetByCurriculo/{curriculo.idCurriculo}";
                         HttpResponseMessage responseExperiencia = await _httpClient.GetAsync(apiExperienciaEndpoint);
 
@@ -51,7 +52,7 @@ namespace ChronosMVC.Controllers
                             curriculo.ExperienciasProfissionais = JsonConvert.DeserializeObject<List<ExperienciaModel>>(jsonExperiencia);
                         }
 
-                        // 4. Carregar as formações acadêmicas
+                        // Carregar as formações acadêmicas
                         var apiFormacaoEndpoint = apiFormacaoUrl + $"GetByCurriculo/{curriculo.idCurriculo}";
                         HttpResponseMessage responseFormacao = await _httpClient.GetAsync(apiFormacaoEndpoint);
 
@@ -61,7 +62,10 @@ namespace ChronosMVC.Controllers
                             curriculo.FormacoesAcademicas = JsonConvert.DeserializeObject<List<FormacaoModel>>(jsonFormacao);
                         }
 
-                        return View(curriculo); // Retorna a view com o currículo, experiências e formações carregados
+                        // **Carregar o nome do egresso**
+                        ViewBag.nomeEgresso = await GetNomeEgresso(idEgresso);
+
+                        return View(curriculo); // Retorna a view com o currículo carregado
                     }
                 }
                 else
@@ -77,6 +81,7 @@ namespace ChronosMVC.Controllers
 
             return View(new CurriculoModel()); // Retorna uma view vazia caso não consiga carregar o currículo
         }
+
 
         #endregion
 
@@ -772,6 +777,60 @@ namespace ChronosMVC.Controllers
 
             throw new Exception("Egresso não autenticado.");
         }
+
+        private async Task<string> GetNomeEgresso(int idEgresso)
+        {
+            try
+            {
+                // Endpoint da API para buscar o egresso pelo ID
+                var apiEgressoEndpoint = $"http://localhost:5027/api/Egresso/GetbyId/{idEgresso}";
+
+                // Faz a requisição para a API
+                HttpResponseMessage response = await _httpClient.GetAsync(apiEgressoEndpoint);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    // Deserializa a resposta JSON para o tipo ApiResponse
+                    var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(jsonResponse);
+
+                    // Verifica se a resposta possui um egresso válido e retorna o nome
+                    if (apiResponse != null && apiResponse.value != null)
+                    {
+                        return apiResponse.value.nomeEgresso ?? "Nome não encontrado";
+                    }
+                    else
+                    {
+                        return "Nome não encontrado";
+                    }
+                }
+                else
+                {
+                    throw new Exception($"Erro ao buscar nome do egresso: {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Em caso de erro, retorna uma mensagem mais detalhada
+                return $"Erro ao obter nome do egresso: {ex.Message}";
+            }
+        }
+
+
+
+        public class EgressoResponse
+        {
+            public string nomeEgresso { get; set; }
+         
+        }
+
+        public class ApiResponse
+        {
+            public object result { get; set; }
+            public EgressoModel value { get; set; }
+        }
+
         #endregion
     }
 }

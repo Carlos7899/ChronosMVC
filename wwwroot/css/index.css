@@ -1,0 +1,72 @@
+﻿body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove margens padrão */
+}
+
+.hero-section {
+    position: relative;
+    height: 400px;
+    background-image: url('https://www.galiciaeducacao.com.br/wp-content/uploads/2022/10/Capa-Blog-etapas-da-negociacao.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+    .login-card h5 {
+        font-size: 28px;
+        color: #007bff;
+    }
+
+.cards-section {
+    margin-top: 50px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-primary {
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.card {
+    transition: transform 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+.quem-somos-section {
+    padding: 50px 0;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

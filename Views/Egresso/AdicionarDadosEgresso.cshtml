@@ -1,68 +1,120 @@
-﻿@using ChronosMVC.Models.Enums
+﻿@using ChronosMVC.Models
+@using ChronosMVC.Models.Enums
 @model ChronosMVC.Models.EgressoModel
+
 @{
-    ViewBag.Title = "AdicionarDadosEgresso";
+    ViewBag.Title = "Atualizar Dados do Egresso";
 }
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Informações</title>
+    <title>Atualizar Informações do Egresso</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-container">
-            <h2>Adicionar Informações do Egresso</h2>
-            <hr />
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Atualizar Informações do Egresso</h2>
+            </div>
+            <div class="card-body">
+                <hr />
 
-            @if (TempData["MensagemSucesso"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["MensagemSucesso"]
-                </div>
-            }
+                <!-- Mensagem de Sucesso -->
+                @if (TempData["MensagemSucesso"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["MensagemSucesso"]
+                    </div>
+                }
 
-            @if (TempData["MensagemErro"] != null)
-            {
-                <div class="alert alert-danger">
-                    @TempData["MensagemErro"]
-                </div>
-            }
+                <!-- Mensagem de Erro -->
+                @if (TempData["MensagemErro"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["MensagemErro"]
+                    </div>
+                }
 
-            @using (Html.BeginForm("AdicionarInformacoes", "Egresso", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
-                <div class="form-horizontal">
-                    <input type="hidden" asp-for="idEgresso" />
+                <!-- Formulário -->
+                @using (Html.BeginForm("AdicionarInformacoes", "Egresso", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" name="idEgresso" value="@Model.idEgresso" />
 
                     <div class="form-group">
                         <label for="NomeEgresso">Nome do Egresso</label>
-                        @Html.EditorFor(model => model.nomeEgresso, new { htmlAttributes = new { @class = "form-control", @id = "NomeEgresso" } })
+                        @Html.EditorFor(model => model.nomeEgresso, new { htmlAttributes = new { @class = "form-control", @id = "NomeEgresso", placeholder = "Digite o nome do egresso" } })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="EmailEgresso">Email</label>
+                        @Html.EditorFor(model => model.emailEgresso, new { htmlAttributes = new { @class = "form-control", @id = "EmailEgresso", placeholder = "Digite o email do egresso" } })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="NumeroEgresso">Número de Telefone</label>
+                        @Html.EditorFor(model => model.numeroEgresso, new { htmlAttributes = new { @class = "form-control", @id = "NumeroEgresso", placeholder = "Digite o número de telefone" } })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CpfEgresso">CPF</label>
+                        @Html.EditorFor(model => model.cpfEgresso, new { htmlAttributes = new { @class = "form-control", @id = "CpfEgresso", placeholder = "Digite o CPF" } })
                     </div>
 
                     <div class="form-group">
                         <label for="TipoEgresso">Tipo de Egresso</label>
                         @Html.DropDownListFor(model => model.tipoEgresso,
-                                 new SelectList(Enum.GetValues(typeof(TipoEgresso)).Cast<TipoEgresso>()
+                                 new SelectList(Enum.GetValues(typeof(ChronosMVC.Models.Enums.TipoEgresso))
+                                 .Cast<TipoEgresso>()
                                  .Select(tipo => new { Value = (int)tipo, Text = tipo.ToString() }),
                                  "Value", "Text"),
-                                 "Selecione o Tipo", new { @class = "form-control", @id = "TipoEgresso" })
+                                 "Selecione o Tipo de Egresso", new { @class = "form-control", @id = "TipoEgresso" })
                     </div>
 
-                    <div class="form-group">
-                        <label for="NumeroEgresso">Número de telefone</label>
-                        @Html.EditorFor(model => model.numeroEgresso, new { htmlAttributes = new { @class = "form-control", @id = "NumeroEgresso" } })
+                    <div class="form-group text-center">
+                        <label for="FotoPerfilEgresso" class="d-block">Foto de Perfil</label>
+                        <div class="image-upload">
+                            <label for="FotoPerfilEgresso" class="upload-label">
+                                <img id="profileImage" src="@((Model.fotoPerfilEgresso != null) ? "data:image/jpeg;base64," + Convert.ToBase64String(Model.fotoPerfilEgresso) : "~/img/imagemUsuario.png")" alt="Foto de Perfil" class="img-circle" />
+                                <input type="file" id="FotoPerfilEgresso" accept="image/*" onchange="convertToBase64()" />
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="CpfEgresso">CPF</label>
-                        @Html.EditorFor(model => model.cpfEgresso, new { htmlAttributes = new { @class = "form-control", @id = "CpfEgresso" } })
+                    <div class="form-group text-center">
+                        <input type="submit" value="Salvar Informações" class="btn btn-primary" />
                     </div>
-
-                    <input type="submit" value="Salvar Informações" class="btn btn-primary" />
-                </div>
-            }
+                }
+            </div>
         </div>
     </div>
+
+    <script>
+        function convertToBase64() {
+            const fileInput = document.getElementById('FotoPerfilEgresso');
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+                const profileImage = document.getElementById('profileImage');
+                profileImage.src = reader.result; // Atualiza a imagem exibida
+                // Atualiza a imagem em base64 no campo oculto
+                document.getElementById('imagemBase64').value = reader.result.split(',')[1];
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+    <input type="hidden" id="imagemBase64" name="fotoPerfilEgresso" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

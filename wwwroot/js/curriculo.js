@@ -1,4 +1,8 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
+
+    // Busca o nome do egresso a partir do atributo data do div
+    var nomeEgresso = document.getElementById("nomeEgresso").getAttribute("data-nome");
+
     // Verificação das bibliotecas
     if (typeof window.jspdf === 'undefined') {
         console.error("jsPDF não carregado corretamente!");
@@ -27,7 +31,7 @@
 
             // Cabeçalho do currículo
             doc.setFontSize(18);
-            doc.text("Currículo do Egresso", 20, 20);
+            doc.text( nomeEgresso, 20, 20);  // Agora o nome do egresso aparecerá
 
             // Informações Pessoais
             doc.setFontSize(12);
@@ -75,8 +79,8 @@
                 y += 15; // Espaço entre formações
             });
 
-            // Gerar o PDF e baixar
-            doc.save("curriculo_egresso.pdf");
+            // Gerar o PDF e baixar com o nome correto
+            doc.save("curriculo_" + nomeEgresso + ".pdf");  // Usando o nome do egresso no nome do arquivo
         });
     }
 
@@ -84,13 +88,6 @@
     const downloadDocxButton = document.getElementById("download-docx");
     if (downloadDocxButton) {
         downloadDocxButton.addEventListener("click", function () {
-            // Verificando se a biblioteca docx está carregada
-            if (typeof docx === 'undefined') {
-                console.error("A biblioteca docx não foi carregada corretamente.");
-                alert("Houve um erro ao tentar gerar o DOCX. Tente novamente mais tarde.");
-                return;
-            }
-
             // Criar o documento DOCX
             const doc = new docx.Document({
                 sections: [
@@ -99,7 +96,7 @@
                         children: [
                             // Cabeçalho
                             new docx.Paragraph({
-                                text: "Currículo do Egresso",
+                                text: nomeEgresso,  // Nome do egresso aqui também
                                 heading: docx.HeadingLevel.HEADING_1,
                                 alignment: docx.AlignmentType.CENTER,
                             }),
@@ -118,21 +115,21 @@
                                 text: "Experiências Profissionais:",
                                 heading: docx.HeadingLevel.HEADING_2,
                             }),
-                            ...getExperiencias(),
+                            ...getExperiencias(), // Adiciona as experiências
 
                             new docx.Paragraph({
                                 text: "Formações Acadêmicas:",
                                 heading: docx.HeadingLevel.HEADING_2,
                             }),
-                            ...getFormacoes(),
+                            ...getFormacoes(), // Adiciona as formações
                         ]
                     }
                 ]
             });
 
-            // Gerar o arquivo DOCX e forçar o download
+            // Gerar o arquivo DOCX e forçar o download com o nome correto
             docx.Packer.toBlob(doc).then((blob) => {
-                saveAs(blob, "curriculo_egresso.docx");
+                saveAs(blob, "curriculo_" + nomeEgresso + ".docx");  // Usando o nome do egresso no nome do arquivo
             }).catch(error => {
                 console.error("Erro ao gerar o arquivo DOCX", error);
                 alert("Houve um erro ao tentar gerar o DOCX. Tente novamente mais tarde.");

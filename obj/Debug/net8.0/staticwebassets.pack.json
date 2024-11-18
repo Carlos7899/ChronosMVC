@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\ChronosMVC.bundle.scp.css"
     },
     {
-      "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\Indexcss.css",
-      "PackagePath": "staticwebassets\\css\\Indexcss.css"
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
       "PackagePath": "staticwebassets\\css\\barraDeProgresso.css"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
+      "PackagePath": "staticwebassets\\css\\detalhesCurricuo.css"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\navbar.css",
+      "PackagePath": "staticwebassets\\css\\navbar.css"
     },
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\css\\site.css",
@@ -23,10 +35,6 @@
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\img\\imagemUsuario.png",
       "PackagePath": "staticwebassets\\img\\imagemUsuario.png"
-    },
-    {
-      "Id": "C:\\API\\ChronosMVC\\wwwroot\\js\\barraDeProgresso.js",
-      "PackagePath": "staticwebassets\\js\\barraDeProgresso.js"
     },
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\js\\curriculo.js",
