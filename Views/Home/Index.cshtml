@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@{
+    <title>
+        @{
             ViewData["Title"] = "Home Page";
-        }</title>
+        }
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <link rel="stylesheet" href="~/css/index.css" />
-   
 </head>
 
 <body>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Quem Somos -->
-    <div class="quem-somos-section">
+    <div class="quem-somos-section" id="quemSomos">
         <div class="container">
             <h2 class="display-4 text-center mb-4">Quem Somos?</h2>
             <div class="row align-items-center">
@@ -50,11 +50,11 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://cdn.pixabay.com/photo/2024/01/23/18/55/ai-generated-8528080_640.jpg" class="card-img-top" alt="Reintegração">
+                    <img src="~/img/reintegracao.jpeg" class="card-img-top" alt="Reintegração">
                     <div class="card-body">
                         <h5 class="card-title">Reintegração</h5>
-                        <p class="card-text">Chronos facilita sua volta ao mercado de trabalho como egresso. Cadastre-se agora e comece sua jornada.</p>
-                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                        <p class="card-text">Chronos facilita sua volta ao mercado de trabalho. Cadastre-se agora e comece sua jornada.</p>
+                        <a href="#reintegracao" class="btn btn-primary">Saiba Mais</a>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Empregos</h5>
                         <p class="card-text">Conectamos você com empresas que valorizam sua experiência profissional.</p>
-                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                        <a href="#empregos" class="btn btn-primary">Saiba Mais</a>
                     </div>
                 </div>
             </div>
@@ -73,10 +73,40 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMOrtoLfy8_khYpfdNDMdsz62EHHpWg_Svw&s" class="card-img-top" alt="Confiança">
                     <div class="card-body">
                         <h5 class="card-title">Confiança</h5>
-                        <p class="card-text">O Chronos é um aliado confiável na reinserção, oferecendo apoio e ferramentas para o sucesso dos egressos.</p>
-                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                        <p class="card-text">O Chronos é um aliado confiável na reintegração, oferecendo apoio e ferramentas para o sucesso dos egressos.</p>
+                        <a href="#confianca" class="btn btn-primary">Saiba Mais</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explicações e Gráficos -->
+    <div class="container explanation-section">
+        <div class="row">
+            <!-- Explicação Reintegração + Gráfico -->
+            <div class="col-md-12" id="reintegracao">
+                <h3>Reintegração no Mercado de Trabalho</h3>
+                <p>A reintegração de ex-presidiários ao mercado de trabalho é um dos maiores desafios sociais. O programa Chronos oferece suporte completo, desde a qualificação até a colocação em empresas parceiras.</p>
+
+                <!-- Canvas do Gráfico de Reintegração -->
+                <canvas id="reintegrationChart"></canvas>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <!-- Explicação Empregos -->
+            <div class="col-md-12" id="empregos">
+                <h3>Empregos para Egressos</h3>
+                <p>A conexão entre egressos e empresas é fundamental para garantir uma reintegração social bem-sucedida. O Chronos facilita essa conexão, criando oportunidades de emprego para quem precisa de uma segunda chance.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <!-- Explicação Confiança -->
+            <div class="col-md-12" id="confianca">
+                <h3>Construindo Confiança</h3>
+                <p>A confiança é a base para qualquer reintegração social bem-sucedida. O Chronos trabalha para garantir que tanto as empresas quanto os ex-presidiários possam confiar nos processos e nos resultados.</p>
             </div>
         </div>
     </div>
@@ -93,6 +123,24 @@
             </p>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Gráfico de Reintegração
+        var reintegrationChart = new Chart(document.getElementById("reintegrationChart"), {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Reintegração de Egressos',
+                    data: [12, 15, 9, 10, 5, 6],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
 
 </body>
 

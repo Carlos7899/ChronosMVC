@@ -70,3 +70,66 @@
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Explicação + Gráfico */
+.explanation-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+    .explanation-section .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .explanation-section .col-md-6 {
+        margin-bottom: 30px;
+    }
+
+    .explanation-section h3 {
+        font-size: 1.75rem;
+        color: #343a40;
+        font-weight: 600;
+    }
+
+    .explanation-section p {
+        font-size: 1.125rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .explanation-section canvas {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+/* Adicionando separadores para as seções de Reintegração, Empregos e Confiança */
+#reintegracao hr,
+#empregos hr,
+#confianca hr {
+    border: 0;
+    height: 2px;
+    background-color: #007bff;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    .footer a {
+        color: #f8f9fa;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }

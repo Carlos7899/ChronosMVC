@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dLMZD8hFxDE9ZbkwsFwXeU8/bTcZgiDLCB0j53MeUGI=",
+  "Hash": "TU2+pTJUDPOfeV3/wu/BIsHSGynRlFRTNWg+HUe6h6A=",
   "Source": "ChronosMVC",
   "BasePath": "_content/ChronosMVC",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ChronosMVC\\wwwroot",
       "Source": "ChronosMVC",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\API\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChronosMVC.styles.css",
+      "Identity": "D:\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChronosMVC.styles.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\API\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "ChronosMVC.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\API\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChronosMVC.styles.css"
+      "OriginalItemSpec": "D:\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChronosMVC.styles.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChronosMVC.bundle.scp.css",
+      "Identity": "D:\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChronosMVC.bundle.scp.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\API\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "ChronosMVC.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\API\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChronosMVC.bundle.scp.css"
+      "OriginalItemSpec": "D:\\ChronosMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChronosMVC.bundle.scp.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "css/barraDeProgresso.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\barraDeProgresso.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "css/detalhesCurricuo.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\detalhesCurricuo.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\css\\index.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\css\\index.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "css/index.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\css\\Login.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\css\\Login.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "css/Login.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\css\\navbar.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\css\\navbar.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "css/navbar.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\navbar.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\css\\site.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\css\\site.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\favicon.ico",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\favicon.ico",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\img\\imagemUsuario.png",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\img\\imagemUsuario.png",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "img/imagemUsuario.png",
       "AssetKind": "All",
@@ -207,10 +207,29 @@
       "OriginalItemSpec": "wwwroot\\img\\imagemUsuario.png"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\js\\curriculo.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\img\\reintegracao.jpeg",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
+      "BasePath": "_content/ChronosMVC",
+      "RelativePath": "img/reintegracao.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\reintegracao.jpeg"
+    },
+    {
+      "Identity": "D:\\ChronosMVC\\wwwroot\\js\\curriculo.js",
+      "SourceId": "ChronosMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "js/curriculo.js",
       "AssetKind": "All",
@@ -226,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\js\\curriculo.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\js\\site.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\js\\site.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -245,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -264,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -283,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -302,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -321,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -340,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -359,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -378,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -397,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -416,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -435,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -454,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -473,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -492,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -511,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -530,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -549,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -568,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -587,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -606,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -625,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -644,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -663,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -682,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -701,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -720,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -739,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -758,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -777,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -796,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -815,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -834,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -853,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -872,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -891,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -910,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -929,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -948,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -967,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -986,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1005,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1024,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1043,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1062,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1081,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1100,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1119,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1138,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1157,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1176,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1195,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1214,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1233,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1252,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1271,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1290,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1309,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\ChronosMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ChronosMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\API\\ChronosMVC\\wwwroot\\",
+      "ContentRoot": "D:\\ChronosMVC\\wwwroot\\",
       "BasePath": "_content/ChronosMVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
