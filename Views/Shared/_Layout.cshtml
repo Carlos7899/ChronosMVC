@@ -30,6 +30,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Curso" asp-action="ListaCursos">Cursos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contate</a>
+                    </li>
                      @if (User.Identity.IsAuthenticated)
                      {
                             var idEgresso = User.FindFirst("idEgresso")?.Value;
