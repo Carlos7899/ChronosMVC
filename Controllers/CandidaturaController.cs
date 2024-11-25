@@ -1,8 +1,9 @@
 ﻿using ChronosMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Runtime.Intrinsics.Arm;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ChronosMVC.Controllers
 {
@@ -16,189 +17,67 @@ namespace ChronosMVC.Controllers
             _httpClient = new HttpClient();
         }
 
-
-        #region Ação para listar todas as candidaturas
-        [HttpGet]
-        public async Task<ActionResult> ListaCandidaturas(int idEgresso)
-        {
-            try
-            {
-                string uriComplementar = $"GetByEgresso/{idEgresso}";
-                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl + uriComplementar);
-                string serialized = await response.Content.ReadAsStringAsync();
-
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    var candidaturas = JsonConvert.DeserializeObject<List<CandidaturaModel>>(serialized);
-                    return View(candidaturas);
-                }
-                else
-                {
-                    throw new Exception($"Erro: {response.StatusCode} - {serialized}");
-                }
-            }
-            catch (Exception ex)
-            {
-                TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("Index");
-            }
-        }
-        #endregion
-
-        #region Ação para criar uma nova candidatura
-        [HttpGet]
-        public ActionResult Create(int idVaga)
-        {
-            ViewBag.IdVaga = idVaga; // Passa o ID da vaga para a view
-            return View();
-        }
-
+        #region POST - Candidatar-se a uma vaga
         [HttpPost]
-        public async Task<ActionResult> Create(CandidaturaModel candidatura)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    candidatura.idEgresso = GetAuthenticatedEgressoId();
-                    var content = new StringContent(JsonConvert.SerializeObject(candidatura), Encoding.UTF8, "application/json");
-
-                    HttpResponseMessage response = await _httpClient.PostAsync(apiUrl + "POST", content);
-                    string serialized = await response.Content.ReadAsStringAsync();
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.Created)
-                    {
-                        TempData["MensagemSucesso"] = "Candidatura enviada com sucesso!";
-                        return RedirectToAction("ListaCandidaturas", new { idEgresso = candidatura.idEgresso });
-                    }
-                    else
-                    {
-                        throw new Exception(serialized);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    TempData["MensagemErro"] = ex.Message;
-                    return View(candidatura);
-                }
-            }
-            return View(candidatura);
-        }
-        #endregion
-
-        #region Ação para ver detalhes da candidatura
-        [HttpGet]
-        public async Task<ActionResult> Details(int id)
+        public async Task<IActionResult> Candidatar(int idVaga, CandidaturaModel candidatura)
         {
             try
             {
-                var candidatura = await ObterCandidaturaPorId(id);
-                return View(candidatura);
-            }
-            catch (Exception ex)
-            {
-                TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("ListaCandidaturas", new { idEgresso = GetAuthenticatedEgressoId() });
-            }
-        }
-        #endregion
+                // Chamar o endpoint da Vaga para buscar o idCorporacao
+                int idCorporacao = await GetCorporacaoByVagaId(idVaga);
 
-        #region Ação para editar uma candidatura
-        [HttpGet]
-        public async Task<IActionResult> Editar(int id)
-        {
-            try
-            {
-                var candidatura = await ObterCandidaturaPorId(id);
-                return View(candidatura);
-            }
-            catch (Exception ex)
-            {
-                TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("ListaCandidaturas", new { idEgresso = GetAuthenticatedEgressoId() });
-            }
-        }
+                // Atribuir o idCorporacao à candidatura
+                candidatura.idCorporacao = idCorporacao;
 
-        [HttpPost]
-        public async Task<IActionResult> Editar(CandidaturaModel candidatura)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    var content = new StringContent(JsonConvert.SerializeObject(candidatura), Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await _httpClient.PutAsync(apiUrl + $"Put/{candidatura.idCandidatura}", content);
+                // Serializa o objeto candidatura
+                string serializedCandidatura = JsonConvert.SerializeObject(candidatura);
+                var content = new StringContent(serializedCandidatura, Encoding.UTF8, "application/json");
 
-                    if (response.IsSuccessStatusCode)
-                    {
-                        TempData["MensagemSucesso"] = "Candidatura editada com sucesso!";
-                        return RedirectToAction("ListaCandidaturas", new { idEgresso = candidatura.idEgresso });
-                    }
-                    else
-                    {
-                        throw new Exception(await response.Content.ReadAsStringAsync());
-                    }
-                }
-                catch (Exception ex)
-                {
-                    TempData["MensagemErro"] = ex.Message;
-                }
-            }
-            return View(candidatura);
-        }
-        #endregion
+                // Envia a requisição POST para criar a candidatura
+                HttpResponseMessage response = await _httpClient.PostAsync(apiUrl + "POST", content);
 
-        #region Ação para deletar uma candidatura
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id)
-        {
-            try
-            {
-                HttpResponseMessage response = await _httpClient.DeleteAsync(apiUrl + $"Delete/{id}");
                 if (response.IsSuccessStatusCode)
                 {
-                    TempData["MensagemSucesso"] = "Candidatura deletada com sucesso!";
-                    return RedirectToAction("ListaCandidaturas", new { idEgresso = GetAuthenticatedEgressoId() });
+                    TempData["MensagemSucesso"] = "Candidatura enviada com sucesso!";
+                    return RedirectToAction("VagasView", "Vagas"); // Redireciona para a lista de vagas
                 }
                 else
                 {
-                    throw new Exception(await response.Content.ReadAsStringAsync());
+                    string errorResponse = await response.Content.ReadAsStringAsync();
+                    TempData["MensagemErro"] = "Erro ao enviar candidatura: " + errorResponse;
+                    return RedirectToAction("Detalhes", "Vagas", new { id = idVaga }); // Redireciona para a página da vaga
                 }
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("ListaCandidaturas", new { idEgresso = GetAuthenticatedEgressoId() });
+                TempData["MensagemErro"] = "Erro: " + ex.Message;
+                return RedirectToAction("Detalhes", "Vagas", new { id = idVaga }); // Em caso de erro, retorna à página da vaga
             }
         }
         #endregion
 
-        #region Métodos auxiliares
-        private int GetAuthenticatedEgressoId()
+        #region Método Auxiliar para Buscar o idCorporacao da Vaga
+        private async Task<int> GetCorporacaoByVagaId(int idVaga)
         {
-            var idClaim = User.Claims.FirstOrDefault(c => c.Type == "idEgresso");
-            if (idClaim != null && int.TryParse(idClaim.Value, out int idEgresso))
+            try
             {
-                return idEgresso;
+                // Chama o endpoint da Vaga para obter o idCorporacao
+                HttpResponseMessage response = await _httpClient.GetAsync($"http://localhost:5027/api/Vaga/GetCorporacaoByVagaId/{idVaga}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<int>(jsonResponse); 
+                }
+                else
+                {
+                    throw new Exception("Vaga não encontrada ou erro ao obter o idCorporacao.");
+                }
             }
-
-            throw new Exception("Usuário não autenticado ou id do egresso não encontrado.");
-        }
-
-        private async Task<CandidaturaModel> ObterCandidaturaPorId(int id)
-        {
-            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl + $"GetbyId/{id}");
-
-            if (response.IsSuccessStatusCode)
+            catch (Exception ex)
             {
-                string serialized = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<CandidaturaModel>(serialized);
+                throw new Exception("Erro ao buscar idCorporacao da vaga: " + ex.Message);
             }
-
-            throw new Exception("Candidatura não encontrada.");
         }
         #endregion
     }
 }
- 
