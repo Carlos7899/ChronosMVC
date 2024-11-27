@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Candidatura\" />
     <Folder Include="Views\Enderecos\" />
   </ItemGroup>
 

@@ -1,0 +1,38 @@
+﻿@model ChronosMVC.Models.CandidaturaModel
+@using ChronosMVC.Models.Enums
+
+@{
+    ViewData["Title"] = "Editar Candidatura";
+}
+
+<h1 class="text-center">Editar Candidatura</h1>
+
+<div class="container mt-4">
+    <form asp-action="Editar" method="post">
+
+        <input type="hidden" name="idCandidatura" value="@Model.idCandidatura" />
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            @Html.DropDownListFor(
+                     model => model.Status,
+                     new SelectList(
+                     Enum.GetValues(typeof(StatusCandidatura))
+                     .Cast<StatusCandidatura>()
+                     .Select(status => new { Value = status, Text = status.ToString() }),
+                     "Value", "Text", Model.Status),
+                     "Selecione o Status",
+                     new { @class = "form-control", @id = "status" }
+                     )
+        </div>
+        <div class="mb-3">
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea class="form-control" id="feedback" name="Feedback" rows="3">@Model.Feedback</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="notas" class="form-label">Notas</label>
+            <textarea class="form-control" id="notas" name="Notas" rows="3">@Model.Notas</textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="@Url.Action("CandidaturasPorCorporacao", "Candidatura")" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

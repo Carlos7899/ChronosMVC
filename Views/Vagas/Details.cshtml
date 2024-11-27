@@ -37,9 +37,10 @@
     </div>
 
     <div class="text-end mt-4">
-        <a href="@Url.Action("Candidatar", new { id = Model.idVaga })" class="btn btn-primary btn-custom">
-            Candidatar-se
-        </a>
+        <form method="post" asp-action="Candidatar" asp-controller="Candidatura">
+            <input type="hidden" name="idVaga" value="@Model.idVaga" />
+            <button type="submit" class="btn btn-primary btn-custom">Candidatar-se</button>
+        </form>
         <a href="@Url.Action("VagasView", "Vagas")" class="btn btn-secondary btn-custom">
             <i class="fas fa-arrow-left"></i> Voltar
         </a>

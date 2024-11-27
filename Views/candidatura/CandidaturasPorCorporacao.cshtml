@@ -1,10 +1,10 @@
-﻿@model IEnumerable<ChronosMVC.Models.VagaModel>
+﻿@model IEnumerable<ChronosMVC.Models.CandidaturaModel>
 
 @{
-    ViewData["Title"] = "Vagas da Corporação";
+    ViewData["Title"] = "Candidaturas Recebidas";
 }
 
-
+<h1 class="text-center">Candidaturas Recebidas</h1>
 
 <!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +24,7 @@
                         <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
                     </li>
                     <li class="nav-item">
-                        <a class ="nav-link" href="@Url.Action("CandidaturasPorCorporacao", "Candidatura")">Minhas Candidaturas</a>
+                        <a class="nav-link" href="@Url.Action("CandidaturasPorCorporacao", "Candidatura")">Minhas Candidaturas</a>
                     </li>
                 }
                 else
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="@Url.Action("MinhasCandidaturas", "Candidatura")">Minhas Candidaturas</a>
                     </li>
                 }
-             
+
             </ul>
             <form class="d-flex ms-auto" asp-controller="Vagas" asp-action="PesquisarVagas" method="get">
                 <input class="form-control me-2" type="search" name="nomeVaga" placeholder="Pesquisar por nome da vaga" aria-label="Pesquisar" required />
@@ -44,35 +44,40 @@
     </div>
 </nav>
 
-<h1 class="text-center">Vagas da Corporação</h1>
 
-
-<div class="container">
+<div class="container mt-4">
     @if (Model == null || !Model.Any())
     {
         <div class="alert alert-info text-center">
-            @ViewBag.Mensagem ?? "Não há vagas disponíveis."
+            Não há candidaturas para suas vagas.
         </div>
     }
     else
     {
         <div class="row">
-            @foreach (var vaga in Model)
+            @foreach (var candidatura in Model)
             {
                 <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">@vaga.nomeVaga</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">ID: @vaga.idVaga</h6>
-                            <p><strong>Descrição:</strong> @vaga.descricaoVaga</p>
-                            <p><strong>Data de Vencimento:</strong> @vaga.DataVencimento.ToString("dd/MM/yyyy")</p>
-                            <p><strong>Cidade:</strong> @vaga.cidadeVaga</p>
-                            <p><strong>Salário:</strong> @vaga.salarioVaga</p>
-                            <p><strong>Benefícios:</strong> @vaga.beneficiosVaga</p>
-                            <a asp-controller="Vagas" asp-action="EditarVaga" asp-route-id="@vaga.idVaga" class="btn btn-warning">Editar</a>
-                            <form asp-controller="Vagas" asp-action="Delete" asp-route-id="@vaga.idVaga" method="post" style="display:inline;">
-                                <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esta vaga?');">Deletar</button>
-                            </form>
+                            <h5 class="card-title">Candidatura #@candidatura.idCandidatura</h5>
+                            <p><strong>ID da Vaga:</strong> @candidatura.idVaga</p>
+                            <p><strong>ID do Egresso:</strong> @candidatura.idEgresso</p>
+                            <p><strong>Status:</strong> @candidatura.Status</p>
+                            <p><strong>Data de Inscrição:</strong> @candidatura.dataIncricao.ToString("dd/MM/yyyy")</p>
+                            <p><strong>Última Atualização:</strong> @(candidatura.DataAtualizacao.HasValue ? candidatura.DataAtualizacao.Value.ToString("dd/MM/yyyy") : "N/A")</p>
+                            <p><strong>Feedback:</strong> @(string.IsNullOrEmpty(candidatura.Feedback) ? "Nenhum" : candidatura.Feedback)</p>
+                            <p><strong>Notas:</strong> @(string.IsNullOrEmpty(candidatura.Notas) ? "Nenhuma" : candidatura.Notas)</p>
+                            <div class="mt-3">
+                                <a class="btn btn-info" href="@Url.Action("VerCurriculo", "Candidatura", new { idCandidatura = candidatura.idCandidatura })">
+                                    Ver Currículo do Egresso
+                                </a>
+                            </div>
+                            <div class="mt-3">
+                                <a class="btn btn-primary" href="@Url.Action("Editar", "Candidatura", new { id = candidatura.idCandidatura })">
+                                    Editar
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

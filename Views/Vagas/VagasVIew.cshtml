@@ -47,7 +47,7 @@
 <!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Vagas</a>
+        <a class="navbar-brand" href="@Url.Action("VagasView", "Vagas")">Vagas</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,15 +55,24 @@
             <ul class="navbar-nav">
                 @if (User.IsInRole("Corporacao"))
                 {
-                <li class="nav-item">
-                    <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("CandidaturasPorCorporacao", "Candidatura")">Minhas Candidaturas</a>
+                    </li>
                 }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("MinhasCandidaturas", "Candidatura")">Minhas Candidaturas</a>
+                    </li>
+                }
+
             </ul>
-            <!-- Formulário de Pesquisa -->
             <form class="d-flex ms-auto" asp-controller="Vagas" asp-action="PesquisarVagas" method="get">
                 <input class="form-control me-2" type="search" name="nomeVaga" placeholder="Pesquisar por nome da vaga" aria-label="Pesquisar" required />
                 <button class="btn btn-outline-success" type="submit">Pesquisar</button>
@@ -72,6 +81,7 @@
         </div>
     </div>
 </nav>
+
 
 <!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">

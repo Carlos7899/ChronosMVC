@@ -1,0 +1,100 @@
+﻿@model ChronosMVC.Models.Curriculo.CurriculoModel
+
+@{
+    ViewData["Title"] = "Currículo da Candidatura";
+}
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@7.1.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="~/js/curriculo.js"></script>
+
+    <link href="~/css/detalhesCurriculo.css" rel="stylesheet" />
+</head>
+
+<div class="container mt-5">
+    <div class="curriculo-container">
+
+        <div id="nomeEgresso" data-nome="@ViewBag.nomeEgresso"></div>
+
+        <h1>@ViewBag.nomeEgresso</h1>
+
+        <!-- Renderizar o currículo -->
+        @if (Model != null && Model.idCurriculo > 0)
+        {
+            <!-- Seção de Informações Pessoais -->
+            <div class="curriculo-section">
+                <h3>Informações Pessoais</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>Email:</strong> <span id="email">@Model.emailCurriculo</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Telefone:</strong> <span id="telefone">@Model.telefoneCurriculo</span></p>
+                    </div>
+                </div>
+                <p><strong>Habilidades:</strong> <span id="habilidades">@Model.habilidadesCurriculo</span></p>
+                <p><strong>Objetivo:</strong> <span id="descricao">@Model.descricaoCurriculo</span></p>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Seção de Experiências Profissionais -->
+            <div class="curriculo-section">
+                <h3>Experiências Profissionais</h3>
+                @if (Model.ExperienciasProfissionais != null && Model.ExperienciasProfissionais.Any())
+                {
+                    <ul class="experiencias-list">
+                        @foreach (var experiencia in Model.ExperienciasProfissionais)
+                        {
+                            <li class="experiencia-item">
+                                <div class="experiencia-header">
+                                    <h4 class="cargo">@experiencia.cargoExperiencia</h4>
+                                    <p><strong>Empresa:</strong> <span class="empresa">@experiencia.empresaExperiencia</span></p>
+                                    <p><strong>Período:</strong> <span class="periodo">@experiencia.dataInicioExperiencia.ToString("MM/yyyy") - @experiencia.dataFimExperiencia?.ToString("MM/yyyy")</span></p>
+                                </div>
+                                <p><strong>Descrição:</strong> <span class="descricao">@experiencia.Descricao</span></p>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Você ainda não adicionou experiências profissionais.</p>
+                }
+            </div>
+
+            <hr class="divider">
+
+            <!-- Seção de Formações Acadêmicas -->
+            <div class="curriculo-section">
+                <h3>Formações Acadêmicas</h3>
+                @if (Model.FormacoesAcademicas != null && Model.FormacoesAcademicas.Any())
+                {
+                    <ul class="formacoes-list">
+                        @foreach (var formacao in Model.FormacoesAcademicas)
+                        {
+                            <li class="formacao-item">
+                                <div class="formacao-header">
+                                    <h4 class="curso">@formacao.cursoFormacao</h4>
+                                    <p><strong>Instituição:</strong> <span class="instituicao">@formacao.instituicaoFormacao</span></p>
+                                    <p><strong>Data de Conclusão:</strong> <span class="dataConclusao">@formacao.dataConclusaoFormacao.ToString("MM/yyyy")</span></p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Você ainda não adicionou formações acadêmicas.</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="buttons-container">
+        <button id="download-pdf" class="btn btn-success btn-lg mx-2">Baixar como PDF</button>
+    </div>
+</div>
