@@ -10,9 +10,15 @@ namespace ChronosMVC.Controllers
 {
     public class CurriculoController : Controller
     {
-        private readonly string apiUrl = "http://localhost:5027/api/Curriculo/";
-        private readonly string apiExperienciaUrl = "http://localhost:5027/api/Experiencia/";
-        private readonly string apiFormacaoUrl = "http://localhost:5027/api/Formacao/";
+        private readonly string apiUrlLocal = "http://localhost:5027/api/Curriculo/";
+        private readonly string apiExperienciaUrlLocal = "http://localhost:5027/api/Experiencia/";
+        private readonly string apiFormacaoUrlLocal = "http://localhost:5027/api/Formacao/";
+
+
+        private readonly string apiUrl = "http://Chronos.somee.com/ChronosApi/api/Curriculo/";
+        private readonly string apiExperienciaUrl = "http://Chronos.somee.com/ChronosApi/api/Experiencia/";
+        private readonly string apiFormacaoUrl = "http://Chronos.somee.com/ChronosApi/api/Formacao/";
+
         private readonly HttpClient _httpClient;
 
         public CurriculoController()

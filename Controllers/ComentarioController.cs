@@ -9,8 +9,8 @@ namespace ChronosMVC.Controllers
     public class ComentarioController : Controller
     {
         private readonly HttpClient _httpClient;
-        private readonly string apiUrl = "http://localhost:5027/api/Comentario/";
-
+        private readonly string apiUrlLocal = "http://localhost:5027/api/Comentario/";
+        private readonly string apiUrl = "http://Chronos.somee.com/ChronosApi/api/Comentario/";
         public ComentarioController(HttpClient httpClient)
         {
             _httpClient = httpClient;

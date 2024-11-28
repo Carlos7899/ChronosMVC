@@ -12,7 +12,9 @@ namespace ChronosMVC.Controllers
     public class EgressoController : Controller
     {
         private readonly HttpClient _httpClient;
-        private readonly string apiUrl = "http://localhost:5027/api/Egresso/";
+        private readonly string apiUrlLocal = "http://localhost:5027/api/Egresso/";
+
+        private readonly string apiUrl = "http://Chronos.somee.com/ChronosApi/api/Egresso/";
 
         public EgressoController(HttpClient httpClient)
         {

@@ -13,7 +13,10 @@ namespace ChronosMVC.Controllers
 {
     public class VagasController : Controller
     {
-        private readonly string uriBase = "http://localhost:5027/api/Vaga/";
+        private readonly string uriBaseLocal = "http://localhost:5027/api/Vaga/";
+
+        private readonly string uriBase = "http://Chronos.somee.com/ChronosApi/api/Vaga/";
+
         private readonly HttpClient _httpClient;
 
         public VagasController()

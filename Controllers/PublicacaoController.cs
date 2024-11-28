@@ -13,7 +13,9 @@ namespace ChronosMVC.Controllers
     public class PublicacaoController : Controller
     {
         private readonly HttpClient _httpClient;
-        private readonly string apiUrl = "http://localhost:5027/api/Publicacao/";
+        private readonly string apiUrlLocal = "http://localhost:5027/api/Publicacao/";
+
+        private readonly string apiUrl = "http://Chronos.somee.com/ChronosApi/api/Publicacao/";
 
         public PublicacaoController(HttpClient httpClient)
         {

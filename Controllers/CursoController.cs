@@ -11,7 +11,10 @@ namespace ChronosMVC.Controllers
 {
     public class CursoController : Controller
     {
-        private readonly string apiUrl = "http://localhost:5027/api/Curso/";
+        private readonly string apiUrlLocal = "http://localhost:5027/api/Curso/";
+
+        private readonly string apiUrl = "http://Chronos.somee.com/ChronosApi/api/Curso/";
+
         private readonly HttpClient _httpClient;
 
         public CursoController()
