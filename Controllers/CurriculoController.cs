@@ -789,7 +789,7 @@ namespace ChronosMVC.Controllers
             try
             {
                 // Endpoint da API para buscar o egresso pelo ID
-                var apiEgressoEndpoint = $"http://localhost:5027/api/Egresso/GetbyId/{idEgresso}";
+                var apiEgressoEndpoint = $"http://Chronos.somee.com/ChronosApi/api/Egresso/GetbyId/{idEgresso}";
 
                 // Faz a requisição para a API
                 HttpResponseMessage response = await _httpClient.GetAsync(apiEgressoEndpoint);
