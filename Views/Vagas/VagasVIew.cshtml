@@ -21,7 +21,6 @@
         line-height: 1.2em; /* Define a altura da linha para o texto */
     }
 
-
     .search-input {
         width: 100%;
         padding: 0.5rem;
@@ -33,19 +32,40 @@
         transition: transform 0.2s;
     }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+    .card:hover {
+        transform: scale(1.05);
+    }
 
     .vaga-detail {
         margin-top: 10px;
     }
+
+    /* Estilo para a navbar com fundo azul claro, aumento nas laterais e bordas arredondadas */
+    .navbar-light {
+        background-color: #ADD8E6 !important;
+        padding-left: 15px; /* Aumenta 5px na lateral esquerda */
+        padding-right: 15px; /* Aumenta 5px na lateral direita */
+        border-radius: 10px; /* Arredonda as bordas da navbar */
+    }
+
+    /* Estilo para o botão de pesquisa */
+    .btn-outline-success {
+        background-color: #28a745; /* Cor de fundo do botão */
+        color: white; /* Cor do texto do botão */
+        border-radius: 0.25rem; /* Arredonda as bordas do botão */
+    }
+
+    /* Estilo para a barra de pesquisa */
+    .form-control {
+        width: 450px; /* Aumenta um pouco mais a altura da barra de pesquisa */
+    }
+
 </style>
 
 <link href="~/css/navbar.css" rel="stylesheet" />
 
 <!-- Navegação -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="@Url.Action("VagasView", "Vagas")">Vagas</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,13 +75,13 @@
             <ul class="navbar-nav">
                 @if (User.IsInRole("Corporacao"))
                 {
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-right: 15px; margin-left: 15px;">
                         <a class="nav-link" asp-controller="Vagas" asp-action="Create">Criar Vaga</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-right: 15px;">
                         <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-right: 15px;">
                         <a class="nav-link" href="@Url.Action("CandidaturasPorCorporacao", "Candidatura")">Minhas Candidaturas</a>
                     </li>
                 }
@@ -77,11 +97,9 @@
                 <input class="form-control me-2" type="search" name="nomeVaga" placeholder="Pesquisar por nome da vaga" aria-label="Pesquisar" required />
                 <button class="btn btn-outline-success" type="submit">Pesquisar</button>
             </form>
-
         </div>
     </div>
 </nav>
-
 
 <!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">
