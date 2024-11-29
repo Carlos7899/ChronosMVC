@@ -224,9 +224,9 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
+        #region metodos auxiliares
         private int GetLoggedEgressoId()
         {
-            // Exemplo, recuperando o id do egresso do claim ou sessão, dependendo do seu contexto
             var idClaim = User.Claims.FirstOrDefault(c => c.Type == "idEgresso");
             if (idClaim != null && int.TryParse(idClaim.Value, out int idEgresso))
             {
@@ -235,5 +235,6 @@ namespace ChronosMVC.Controllers
 
             throw new Exception("Egresso não autenticado.");
         }
+        #endregion
     }
 }

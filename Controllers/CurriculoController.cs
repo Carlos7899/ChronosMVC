@@ -737,10 +737,8 @@ namespace ChronosMVC.Controllers
         {
             try
             {
-                // Obtém o ID do egresso logado
                 var idEgresso = GetLoggedEgressoId();
 
-                // Chama a API para buscar o currículo do egresso
                 var apiEndpoint = apiUrl + $"GetByEgresso/{idEgresso}";
                 HttpResponseMessage response = await _httpClient.GetAsync(apiEndpoint);
 
@@ -749,7 +747,6 @@ namespace ChronosMVC.Controllers
                     var jsonResponse = await response.Content.ReadAsStringAsync();
                     var curriculo = JsonConvert.DeserializeObject<CurriculoModel>(jsonResponse);
 
-                    // Se o currículo for encontrado, retorna o idCurriculo
                     if (curriculo != null)
                     {
                         return curriculo.idCurriculo;
@@ -774,7 +771,6 @@ namespace ChronosMVC.Controllers
 
         private int GetLoggedEgressoId()
         {
-            // Exemplo, recuperando o id do egresso do claim ou sessão, dependendo do seu contexto
             var idClaim = User.Claims.FirstOrDefault(c => c.Type == "idEgresso");
             if (idClaim != null && int.TryParse(idClaim.Value, out int idEgresso))
             {
@@ -788,20 +784,16 @@ namespace ChronosMVC.Controllers
         {
             try
             {
-                // Endpoint da API para buscar o egresso pelo ID
-                var apiEgressoEndpoint = $"http://localhost:5027/api/Egresso/GetbyId/{idEgresso}";
+                var apiEgressoEndpoint = $"http://Chronos.somee.com/ChronosApi/api/Egresso/GetbyId/{idEgresso}";
 
-                // Faz a requisição para a API
                 HttpResponseMessage response = await _httpClient.GetAsync(apiEgressoEndpoint);
 
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonResponse = await response.Content.ReadAsStringAsync();
 
-                    // Deserializa a resposta JSON para o tipo ApiResponse
                     var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(jsonResponse);
 
-                    // Verifica se a resposta possui um egresso válido e retorna o nome
                     if (apiResponse != null && apiResponse.value != null)
                     {
                         return apiResponse.value.nomeEgresso ?? "Nome não encontrado";
@@ -818,7 +810,6 @@ namespace ChronosMVC.Controllers
             }
             catch (Exception ex)
             {
-                // Em caso de erro, retorna uma mensagem mais detalhada
                 return $"Erro ao obter nome do egresso: {ex.Message}";
             }
         }

@@ -44,7 +44,6 @@
 
 <link href="~/css/navbar.css" rel="stylesheet" />
 
-<!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="@Url.Action("VagasView", "Vagas")">Vagas</a>
@@ -83,11 +82,9 @@
 </nav>
 
 
-<!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">
     <h2 class="text-center mb-4">Vagas Disponíveis</h2>
 
-    <!-- Verificação de mensagens de sucesso ou erro -->
     @if (TempData["Mensagem"] != null)
     {
         <div class="alert alert-success">

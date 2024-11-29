@@ -19,6 +19,7 @@ namespace ChronosMVC.Controllers
     {
         private readonly HttpClient _httpClient;
         private readonly string apiUrlLocal = "http://localhost:5027/api/Corporacao/";
+
         private readonly string apiUrl = "http://Chronos.somee.com/ChronosApi/api/Corporacao/";
 
         public CorporacaoController(HttpClient httpClient)
@@ -75,27 +76,26 @@ namespace ChronosMVC.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                // Aqui, você deve deserializar a resposta da API para obter o ID da corporação
                 var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
                 var token = tokenResponse.Token;
-                var idCorporacao = tokenResponse.IdCorporacao; // Capturando o ID da corporação
-                Console.WriteLine($"ID da Corporação: {idCorporacao}"); // Adicione esta linha
+                var idCorporacao = tokenResponse.IdCorporacao; 
+                Console.WriteLine($"ID da Corporação: {idCorporacao}"); 
 
 
-                // Configure a claims identity
+               
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, model.emailCorporacao),
-                    new Claim("Token", token), // Adicione o token como uma claim
-                    new Claim("idCorporacao", idCorporacao.ToString()), // Use o ID capturado
-                    new Claim(ClaimTypes.Role, "Corporacao"), // Adicionando a role
+                    new Claim("Token", token), 
+                    new Claim("idCorporacao", idCorporacao.ToString()), 
+                    new Claim(ClaimTypes.Role, "Corporacao"), 
                   
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "login");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                await HttpContext.SignInAsync(claimsPrincipal); // Autentica o usuário
+                await HttpContext.SignInAsync(claimsPrincipal); 
 
                 TempData["MensagemSucesso"] = "Login realizado com sucesso!";
                 return RedirectToAction("Index", "Home");
@@ -136,25 +136,21 @@ namespace ChronosMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AdicionarInformacoes(CorporacaoModel model)
         {
-            // Certifique-se de que o idCorporacao está no modelo
+           
             if (model.idCorporacao <= 0)
             {
                 TempData["MensagemErro"] = "ID da corporação não é válido.";
                 return View("AdicionarDadosCorporacao", model);
             }
 
-            // Serializa o modelo para JSON
             var json = JsonConvert.SerializeObject(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            // Envia o pedido para a API
             var response = await _httpClient.PutAsync(apiUrl + "Put/" + model.idCorporacao, content);
             var responseContent = await response.Content.ReadAsStringAsync();
 
-            // Verifica se a resposta foi bem-sucedida
             if (response.IsSuccessStatusCode)
             {
-                // Se a resposta contiver um corpo, tente deserializá-lo
                 if (!string.IsNullOrEmpty(responseContent))
                 {
                     try
@@ -165,7 +161,6 @@ namespace ChronosMVC.Controllers
                     }
                     catch (JsonException ex)
                     {
-                        // Se houver um erro ao deserializar, registre o erro
                         TempData["MensagemErro"] = $"Erro ao processar a resposta: {ex.Message}";
                     }
                 }
@@ -176,7 +171,6 @@ namespace ChronosMVC.Controllers
                 return RedirectToAction("DadosCorporacao", "Corporacao");
             }
 
-            // Se a resposta não for bem-sucedida, registre o erro
             TempData["MensagemErro"] = $"Erro: {responseContent}";
             return View("AdicionarDadosCorporacao", model);
         }
@@ -236,20 +230,16 @@ namespace ChronosMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> EditarDadosCorporacao(int idCorporacao)
         {
-            // Envia uma solicitação GET para a API para obter os dados da corporação com base no ID
             var response = await _httpClient.GetAsync(apiUrl + "GetbyId/" + idCorporacao);
 
             if (response.IsSuccessStatusCode)
             {
                 var responseContent = await response.Content.ReadAsStringAsync();
 
-                // Deserializa o JSON para ApiResponse
                 var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(responseContent);
 
-                // Verifica se o valor não é nulo
                 if (apiResponse?.value != null)
                 {
-                    // Retorna a view com os dados da corporação para edição
                     return View("AdicionarDadosCorporacao", apiResponse.value);
                 }
             }

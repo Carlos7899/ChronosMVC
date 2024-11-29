@@ -80,17 +80,13 @@ namespace ChronosMVC.Controllers
             {
                 try
                 {
-                    // Obter o ID da corporação autenticada
                     publicacao.idCorporacao = GetAuthenticatedCorporacaoId();
 
-                    // Serialize o objeto de publicação
                     string serializedPublicacao = JsonConvert.SerializeObject(publicacao);
                     var content = new StringContent(serializedPublicacao, Encoding.UTF8, "application/json");
 
-                    // Envia a requisição para a API
                     HttpResponseMessage response = await _httpClient.PostAsync(apiUrl + "POST", content);
 
-                    // Verifica se a publicação foi criada com sucesso
                     if (response.StatusCode == System.Net.HttpStatusCode.Created)
                     {
                         TempData["MensagemSucesso"] = "Publicação criada com sucesso!";
@@ -108,7 +104,6 @@ namespace ChronosMVC.Controllers
                 }
             }
 
-            // Se o modelo não for válido ou ocorreu um erro, retorna a view com o modelo
             return View(publicacao);
         }
 
@@ -130,12 +125,12 @@ namespace ChronosMVC.Controllers
         {
             try
             {
-                string uriComplementar = $"GetbyId/{id}"; // Incluindo o ID na URL
+                string uriComplementar = $"GetbyId/{id}"; 
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync(apiUrl + uriComplementar); // A URL agora contém o ID
+                HttpResponseMessage response = await httpClient.GetAsync(apiUrl + uriComplementar); 
                 if (response.IsSuccessStatusCode)
                 {
                     string serialized = await response.Content.ReadAsStringAsync();
@@ -162,10 +157,8 @@ namespace ChronosMVC.Controllers
         {
             try
             {
-                // Obter o ID da corporação autenticada
                 var idCorporacao = GetAuthenticatedCorporacaoId();
 
-                // Chamar o método da API para obter as publicações
                 string uriComplementar = $"GetByCorporacao/{idCorporacao}";
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");

@@ -5,10 +5,6 @@
 }
 
 
-
-
-
-<!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="@Url.Action("VagasView", "Vagas")">Vagas</a>
@@ -52,7 +48,6 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">Criar Nova Vaga</h2>
 
-    <!-- Verificação de mensagens de sucesso ou erro -->
     @if (TempData["Mensagem"] != null)
     {
         <div class="alert alert-success">

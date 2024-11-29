@@ -24,7 +24,6 @@ namespace ChronosMVC.Controllers
             _httpClient = new HttpClient();
         }
 
-        //certo
         #region Ação para listar todas as vagas
         [HttpGet]
         public async Task<ActionResult> VagasView()
@@ -52,15 +51,14 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
-        //certo
         #region Ação para buscar vagas por nome 
         [HttpGet]
         public async Task<IActionResult> PesquisarVagas(string nomeVaga)
         {
             try
             {
-                // Chamar o método da API para obter as vagas pelo nome
-                string uriComplementar = $"GetByNome/{Uri.EscapeDataString(nomeVaga)}"; // Encode para garantir que o nome seja seguro na URL
+           
+                string uriComplementar = $"GetByNome/{Uri.EscapeDataString(nomeVaga)}"; 
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
@@ -75,7 +73,7 @@ namespace ChronosMVC.Controllers
                     {
                         ViewBag.Mensagem = "Nenhuma vaga encontrada com esse nome.";
                     }
-                    return View("VagasView", vagas); // Retorna a view com a lista de vagas
+                    return View("VagasView", vagas); 
                 }
                 else
                 {
@@ -90,17 +88,14 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
-        //certo
         #region Ação para listar as vagas da corporação autenticada
         [HttpGet]
         public async Task<IActionResult> VagasPorCorporacao()
         {
             try
-            {
-                // Obter o ID da corporação autenticada
+            {    
                 var idCorporacao = GetAuthenticatedCorporacaoId();
 
-                // Chamar o método da API para obter as vagas
                 string uriComplementar = $"GetByCorporacao/{idCorporacao}";
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
@@ -131,7 +126,6 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
-        //certo
         #region Ação para criar uma nova vaga
         [HttpGet]
         public ActionResult Create()
@@ -175,7 +169,6 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
-        //certo
         #region Ação para ver detalhes da vaga
         [HttpGet]
         public async Task<ActionResult> Details(int? id)
@@ -198,7 +191,6 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
-        //certo
         #region Ação para editar uma vaga
         [HttpGet]
         public async Task<IActionResult> EditarVaga(int id)
@@ -228,12 +220,10 @@ namespace ChronosMVC.Controllers
                     {
                         return Forbid("Você não tem permissão para editar esta vaga.");
                     }
-
-                    // Serializa o objeto da vaga
+ 
                     var serializedVaga = JsonConvert.SerializeObject(vaga);
                     var content = new StringContent(serializedVaga, Encoding.UTF8, "application/json");
 
-                    // Envia a requisição para a API
                     HttpResponseMessage response = await _httpClient.PutAsync(uriBase + $"Put/{vaga.idVaga}", content);
                     if (response.IsSuccessStatusCode)
                     {
@@ -251,13 +241,11 @@ namespace ChronosMVC.Controllers
                     TempData["MensagemErro"] = ex.Message;
                 }
             }
-            // Se o modelo não for válido, retorna a view com o modelo
             return View(vaga);
         }
 
         #endregion
 
-        //certo
         #region Ação para deletar uma vaga
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -289,7 +277,6 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
-        //certo
         #region Métodos auxiliares
         private int GetAuthenticatedCorporacaoId()
         {

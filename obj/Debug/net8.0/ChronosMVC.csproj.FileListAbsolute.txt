@@ -209,3 +209,7 @@ D:\ChronosMVC\obj\Debug\net8.0\refint\ChronosMVC.dll
 D:\ChronosMVC\obj\Debug\net8.0\ChronosMVC.pdb
 D:\ChronosMVC\obj\Debug\net8.0\ChronosMVC.genruntimeconfig.cache
 D:\ChronosMVC\obj\Debug\net8.0\ref\ChronosMVC.dll
+D:\TCC\ChronosMVC\bin\Debug\net8.0\ChronosMVC.staticwebassets.endpoints.json
+D:\TCC\ChronosMVC\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\TCC\ChronosMVC\obj\Debug\net8.0\staticwebassets\msbuild.ChronosMVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\TCC\ChronosMVC\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
