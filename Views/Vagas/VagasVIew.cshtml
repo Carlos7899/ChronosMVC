@@ -60,15 +60,49 @@
         width: 450px; /* Aumenta um pouco mais a altura da barra de pesquisa */
     }
 
+    .card {
+    border-radius: 10px; /* Borda arredondada */
+    overflow: hidden; /* Evita conteúdo "vazando" */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.card-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-footer {
+    border-top: 1px solid #e5e5e5;
+}
+
+.vaga-detail p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-info {
+    background-color: #007bff;
+    border-color: #0056b3;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+    border-color: #003f7f;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+}
+
 </style>
 
 <link href="~/css/navbar.css" rel="stylesheet" />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
+<br><br><br><br>
 <!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -125,30 +159,38 @@
     }
 
     <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">@item.nomeVaga</h5>
-                        <p class="card-text">@item.descricaoVaga</p>
-                        <div class="vaga-detail">
-                            <strong>Responsabilidades:</strong> @item.responsabilidadesVaga<br />
-                            <strong>Benefícios:</strong> @item.beneficiosVaga<br />
-                            <strong>Salário:</strong> @item.salarioVaga<br />
-                            <strong>Cidade:</strong> @item.cidadeVaga<br />
-                            <strong>Criada em:</strong> @item.DataCriacao.ToString("dd/MM/yyyy")<br />
-                            <strong>Vencimento:</strong> @item.DataVencimento.ToString("dd/MM/yyyy")
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-info">
-                            <i class="fas fa-info-circle"></i> Detalhes
-                        </a>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <!-- Cabeçalho do Card -->
+                <div class="card-header text-white bg-primary text-center">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-briefcase"></i> @item.nomeVaga
+                    </h5>
+                </div>
+                <!-- Corpo do Card -->
+                <div class="card-body">
+                    <p class="card-text text-muted">@item.descricaoVaga</p>
+                    <div class="vaga-detail">
+                        <p><i class="fas fa-tasks"></i> <strong>Responsabilidades:</strong> @item.responsabilidadesVaga</p>
+                        <p><i class="fas fa-gift"></i> <strong>Benefícios:</strong> @item.beneficiosVaga</p>
+                        <p><i class="fas fa-money-bill"></i> <strong>Salário:</strong> @item.salarioVaga</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Cidade:</strong> @item.cidadeVaga</p>
+                        <p><i class="fas fa-calendar"></i> <strong>Criada em:</strong> @item.DataCriacao.ToString("dd/MM/yyyy")</p>
+                        <p><i class="fas fa-hourglass-end"></i> <strong>Vencimento:</strong> @item.DataVencimento.ToString("dd/MM/yyyy")</p>
                     </div>
                 </div>
+                <!-- Rodapé do Card -->
+                <div class="card-footer bg-light text-center">
+                    <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-info btn-sm">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
             </div>
-        }
-    </div>
+        </div>
+    }
+</div>
+
 
 </div>

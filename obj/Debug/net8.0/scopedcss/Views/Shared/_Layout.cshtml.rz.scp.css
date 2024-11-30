@@ -46,3 +46,40 @@ button.accept-policy[b-k4nnxg4vgy] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+/* Estilo sólido para a navbar */
+.navbar[b-k4nnxg4vgy] {
+  background-color: rgb(77, 142, 254) !important; /* Azul claro */
+  border-bottom: 1px solid #e5e5e5; /* Borda inferior */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  z-index: 1030; /* Fica acima de outros elementos */
+}
+
+/* Estilo para os links da navbar */
+.navbar .nav-link[b-k4nnxg4vgy] {
+  color: #0077cc; /* Azul padrão */
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover[b-k4nnxg4vgy] {
+  color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* Ajustes para dispositivos móveis */
+.navbar-toggler[b-k4nnxg4vgy] {
+  background-color: rgb(255, 255, 255) !important; /* Azul claro */
+  color: #0056b3;
+  border-bottom: 1px solid #e5e5e5; /* Borda inferior */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  z-index: 1030; /* Fica acima de outros elementos */
+}
+
+.offcanvas[b-k4nnxg4vgy] {
+  background-color: #f8f9fa; /* Fundo claro do menu */
+}
+
+/* Espaçamento no corpo da página para compensar a navbar fixa */
+body[b-k4nnxg4vgy] {
+  padding-top: 56px; /* Ajuste com base na altura da navbar */
+}
+

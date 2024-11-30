@@ -49,3 +49,26 @@
         outline: none;
 
 }
+
+.navbar {
+    background-color: #d6eaff !important; /* Azul claro com prioridade */
+    border-bottom: 1px solid #e5e5e5; /* Borda inferior para destaque */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.navbar.fixed-top {
+    z-index: 1030; /* Garantir que a navbar fique acima de outros elementos */
+}
+
+.nav-link {
+    color: #0077cc; /* Azul claro para links */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Azul escuro no hover */
+}
+
+.offcanvas {
+    background-color: #f8f9fa; /* Fundo claro para consistência */
+}
+

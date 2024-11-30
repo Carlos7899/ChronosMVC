@@ -17,30 +17,94 @@
     .btn-custom {
         padding: 10px 20px;
     }
+    .vaga-detail {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1rem;
+}
+
+.vaga-detail h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vaga-detail p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
 </style>
 
 <!-- Detalhes da Vaga -->
 <div class="container mt-5">
     <h2 class="text-center mb-4">@Model.nomeVaga</h2>
 
-    <div class="vaga-detail">
-        <h5>Descrição</h5>
-        <p>@Model.descricaoVaga</p>
-
-        <h5>Detalhes da Vaga</h5>
-        <p><strong>Responsabilidades:</strong> @Model.responsabilidadesVaga</p>
-        <p><strong>Benefícios:</strong> @Model.beneficiosVaga</p>
-        <p><strong>Salário:</strong> @Model.salarioVaga</p>
-        <p><strong>Cidade:</strong> @Model.cidadeVaga</p>
-        <p><strong>Criada em:</strong> @Model.DataCriacao.ToString("dd/MM/yyyy")</p>
-        <p><strong>Vencimento:</strong> @Model.DataVencimento.ToString("dd/MM/yyyy")</p>
+    <div class="vaga-detail card shadow-lg p-4">
+    <!-- Título da Página -->
+    <div class="text-center mb-4">
+        <h2 class="text-primary">
+            <i class="fas fa-briefcase"></i> Detalhes da Vaga
+        </h2>
     </div>
+
+    <!-- Descrição -->
+    <div class="mb-4">
+        <h5 class="text-secondary"><i class="fas fa-info-circle"></i> Descrição</h5>
+        <p class="text-muted">@Model.descricaoVaga</p>
+    </div>
+
+    <!-- Detalhes da Vaga -->
+    <div>
+        <h5 class="text-secondary"><i class="fas fa-list"></i> Detalhes da Vaga</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong><i class="fas fa-tasks"></i> Responsabilidades:</strong> @Model.responsabilidadesVaga</li>
+            <li class="list-group-item"><strong><i class="fas fa-gift"></i> Benefícios:</strong> @Model.beneficiosVaga</li>
+            <li class="list-group-item"><strong><i class="fas fa-money-bill-wave"></i> Salário:</strong> @Model.salarioVaga</li>
+            <li class="list-group-item"><strong><i class="fas fa-map-marker-alt"></i> Cidade:</strong> @Model.cidadeVaga</li>
+            <li class="list-group-item"><strong><i class="fas fa-calendar"></i> Criada em:</strong> @Model.DataCriacao.ToString("dd/MM/yyyy")</li>
+            <li class="list-group-item"><strong><i class="fas fa-hourglass-end"></i> Vencimento:</strong> @Model.DataVencimento.ToString("dd/MM/yyyy")</li>
+        </ul>
+    </div>
+</div>
+
 
     <div class="text-end mt-4">
         <form method="post" asp-action="Candidatar" asp-controller="Candidatura">
             <input type="hidden" name="idVaga" value="@Model.idVaga" />
             <button type="submit" class="btn btn-primary btn-custom">Candidatar-se</button>
         </form>
+        <br>
         <a href="@Url.Action("VagasView", "Vagas")" class="btn btn-secondary btn-custom">
             <i class="fas fa-arrow-left"></i> Voltar
         </a>
