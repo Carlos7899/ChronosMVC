@@ -13,15 +13,64 @@
         <input asp-for="cursoFormacao" class="form-control" />
         <span asp-validation-for="cursoFormacao" class="text-danger"></span>
     </div>
+    <br>
     <div class="form-group">
         <label asp-for="instituicaoFormacao" class="control-label"></label>
         <input asp-for="instituicaoFormacao" class="form-control" />
         <span asp-validation-for="instituicaoFormacao" class="text-danger"></span>
     </div>
+    <br>
     <div class="form-group">
-        <label asp-for="dataConclusaoFormacao" class="control-label"></label>
-        <input asp-for="dataConclusaoFormacao" class="form-control" type="date" />
-        <span asp-validation-for="dataConclusaoFormacao" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <label asp-for="dataConclusaoFormacao" class="control-label"></label>
+    <input asp-for="dataConclusaoFormacao" class="form-control" type="date" id="dataConclusaoFormacao" />
+    <span asp-validation-for="dataConclusaoFormacao" class="text-danger"></span>
+</div>
+
+<script>
+    // Limitar a data máxima para 80 anos atrás (considerando 2024)
+    const hoje = new Date();
+    const limiteMaximo = new Date();
+    limiteMaximo.setFullYear(hoje.getFullYear() - 80);  // Subtrai 80 anos da data de hoje
+
+    // Formatar a data para o formato yyyy-mm-dd
+    const dataLimiteMaxima = limiteMaximo.toISOString().split('T')[0];
+
+    // Definir o valor máximo para o campo de data de conclusão
+    const dataConclusao = document.getElementById('dataConclusaoFormacao');
+    dataConclusao.setAttribute('max', dataLimiteMaxima);
+
+    // Se houver um campo de data de início, garantir que a data de conclusão não seja anterior
+    const dataInicio = document.getElementById('dataInicioExperiencia');  // Campo de data de início
+    const dataFim = document.getElementById('dataFimExperiencia'); // Campo de data de fim
+
+    if (dataInicio) {
+        // Adiciona evento para a data de início
+        dataInicio.addEventListener('input', function() {
+            const dataSelecionadaInicio = dataInicio.value;
+            // A data de conclusão deve ser no mínimo a data de início
+            dataConclusao.setAttribute('min', dataSelecionadaInicio);
+            // Se a data de conclusão for antes da data de início, ajustamos automaticamente
+            if (dataConclusao.value && dataConclusao.value < dataSelecionadaInicio) {
+                dataConclusao.value = dataSelecionadaInicio;
+            }
+        });
+    }
+
+    // Se houver um campo de data de fim, garantir que a data de conclusão não seja anterior a data de fim
+    if (dataFim) {
+        // Adiciona evento para a data de fim
+        dataFim.addEventListener('input', function() {
+            const dataSelecionadaFim = dataFim.value;
+            // A data de conclusão não pode ser anterior à data de fim
+            dataConclusao.setAttribute('min', dataSelecionadaFim);
+            // Se a data de conclusão for antes da data de fim, ajustamos automaticamente
+            if (dataConclusao.value && dataConclusao.value < dataSelecionadaFim) {
+                dataConclusao.value = dataSelecionadaFim;
+            }
+        });
+    }
+</script>
+
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar</button>
 </form>

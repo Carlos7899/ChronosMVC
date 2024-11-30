@@ -50,11 +50,11 @@
                 </button>
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Chronos</h5>
+                    <div class="offcanvas-header" style="background-color: rgb(114, 114, 255);">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 200%;">Chronos</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div class="offcanvas-body" style="font-size: 130%;">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -104,7 +104,7 @@
     </header>
 
     <div class="container">
-        <main role="main" class="pb-3 main">
+        <main role="main" >
             @RenderBody()
         </main>
     </div>

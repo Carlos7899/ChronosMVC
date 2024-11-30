@@ -126,10 +126,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdyZXNzb1xMb2dpbkVncmVzc28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Carlos/ChronosMVC/Views/Home/Candidaturas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW5kaWRhdHVyYXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Carlos/ChronosMVC/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -140,10 +136,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Carlos/ChronosMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Carlos/ChronosMVC/Views/Home/Visualizarcurriculo.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXN1YWxpemFyY3VycmljdWxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Carlos/ChronosMVC/Views/Publicacao/CriarPublicacao.cshtml]
