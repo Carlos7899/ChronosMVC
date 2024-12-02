@@ -113,10 +113,15 @@
                     <label for="FotoPerfilEgresso" class="d-block">Foto de Perfil</label>
                     <div class="image-upload">
                         <label for="FotoPerfilEgresso" class="upload-label">
-                            <img id="profileImage" src="@((Model.fotoPerfilEgresso != null) ? "data:image/jpeg;base64," + Convert.ToBase64String(Model.fotoPerfilEgresso) : "~/img/imagemUsuario.png")" alt="Foto de Perfil" class="img-circle" />
+                            <img id="profileImage"
+                                 src="@((Model.fotoPerfilEgresso != null && Model.fotoPerfilEgresso.Length > 0) ?
+                    "data:image/jpeg;base64," + Convert.ToBase64String(Model.fotoPerfilEgresso) :
+                    Url.Content("~/img/imagemUsuario.png"))"
+                                 alt="Foto de Perfil" class="img-circle" />
                             <input type="file" id="FotoPerfilEgresso" accept="image/*" onchange="convertToBase64()" />
                         </label>
                     </div>
+
                 </div>
                 <hr />
 

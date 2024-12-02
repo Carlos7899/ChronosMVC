@@ -180,11 +180,6 @@ namespace ChronosMVC.Controllers
         [HttpGet]
         public async Task<ActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound(); 
-            }
-
             try
             {
                 var vaga = await ObterVagaPorId(id.Value); 

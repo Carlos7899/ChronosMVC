@@ -11,22 +11,116 @@
 
     <script src="~/js/curriculo.js"></script>
 
-    <link href="~/css/detalhesCurriculo.css" rel="stylesheet" />
+    <!-- Estilos CSS embutidos -->
+    <style>
+        /* GERAL */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+          
+        }
+
+        .curriculo-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+          
+        }
+
+        h3.section-title {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        hr.divider {
+            margin: 20px 0;
+            border-top: 2px solid #f1f1f1;
+        }
+
+        /* SEÇÕES */
+        .curriculo-section {
+            margin-bottom: 30px;
+        }
+
+        .experiencias-list,
+        .formacoes-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .experiencia-item,
+        .formacao-item {
+            margin-bottom: 15px;
+        }
+
+        .experiencia-header,
+        .formacao-header {
+            margin-bottom: 5px;
+        }
+
+        .cargo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .empresa,
+        .periodo,
+        .descricao {
+            font-size: 1rem;
+           
+        }
+
+        .curso {
+            font-size: 1.2rem;
+          
+        }
+
+        .instituicao,
+        .dataConclusao {
+            font-size: 1rem;
+           
+        }
+
+        /* BOTÕES */
+        .buttons-container {
+            margin-top: 30px;
+        }
+
+        button#download-pdf {
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+        }
+
+            button#download-pdf:hover {
+                background-color: #218838;
+                cursor: pointer;
+            }
+    </style>
 </head>
 
 <div class="container mt-5">
     <div class="curriculo-container">
-
-        <div id="nomeEgresso" data-nome="@ViewBag.nomeEgresso"></div>
-
-        <h1>@ViewBag.nomeEgresso</h1>
+        <!-- Nome do Egresso -->
+        <div id="nomeEgresso" class="text">
+            <h1>@ViewBag.nomeEgresso</h1>
+        </div>
 
         <!-- Renderizar o currículo -->
         @if (Model != null && Model.idCurriculo > 0)
         {
             <!-- Seção de Informações Pessoais -->
             <div class="curriculo-section">
-                <h3>Informações Pessoais</h3>
+                <h3 class="section-title">Informações Pessoais</h3>
                 <div class="row">
                     <div class="col-md-6">
                         <p><strong>Email:</strong> <span id="email">@Model.emailCurriculo</span></p>
@@ -43,7 +137,7 @@
 
             <!-- Seção de Experiências Profissionais -->
             <div class="curriculo-section">
-                <h3>Experiências Profissionais</h3>
+                <h3 class="section-title">Experiências Profissionais</h3>
                 @if (Model.ExperienciasProfissionais != null && Model.ExperienciasProfissionais.Any())
                 {
                     <ul class="experiencias-list">
@@ -70,7 +164,7 @@
 
             <!-- Seção de Formações Acadêmicas -->
             <div class="curriculo-section">
-                <h3>Formações Acadêmicas</h3>
+                <h3 class="section-title">Formações Acadêmicas</h3>
                 @if (Model.FormacoesAcademicas != null && Model.FormacoesAcademicas.Any())
                 {
                     <ul class="formacoes-list">
@@ -94,7 +188,7 @@
         }
     </div>
 
-    <div class="buttons-container">
+    <div class="buttons-container text-center">
         <button id="download-pdf" class="btn btn-success btn-lg mx-2">Baixar como PDF</button>
     </div>
 </div>

@@ -1,106 +1,12 @@
-@model IEnumerable<ChronosMVC.Models.CursoModel>
+@model ChronosMVC.Models.VagaModel
 
 @{
-    ViewData["Title"] = "Lista de Cursos";
+    ViewBag.Title = "Detalhes da Vaga";
 }
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- CSS para estilização -->
 <style>
-    .search-container {
-        margin-bottom: 20px;
-    }
-
-    .card-title, .card-text {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-    .card-text {
-        max-height: 60px;
-        line-height: 1.2em;
-    }
-
-    .search-input {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-    }
-
-    .card {
-        transition: transform 0.2s;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
     .vaga-detail {
-        margin-top: 10px;
-    }
-
-    .navbar-light {
-        background-color: #ADD8E6;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-    }
-
-    .btn-outline-success {
-        background-color: #28a745;
-        color: white;
-        border-radius: 0.25rem;
-    }
-
-    .form-control {
-        width: 450px;
-    }
-
-    .card {
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .card-header {
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    .card-footer {
-        border-top: 1px solid #e5e5e5;
-    }
-
-    .vaga-detail p {
-        margin-bottom: 10px;
-        font-size: 0.9rem;
-    }
-
-    .btn-info {
-        background-color: #007bff;
-        border-color: #0056b3;
-    }
-
-    .btn-info:hover {
-        background-color: #0056b3;
-        border-color: #003f7f;
-    }
-
-    .text-muted {
-        font-size: 0.9rem;
-    }
-
-    .navbar-principal {
-        margin-bottom: 20px;
-    }
-
-    .curso-detail {
         margin-top: 10px;
         padding: 15px;
         background-color: #f8f9fa;
@@ -111,129 +17,32 @@
     .btn-custom {
         padding: 10px 20px;
     }
-
-    .curso-detail {
-        background-color: #ffffff;
-        border-radius: 8px;
-        border: 1px solid #e5e5e5;
-        margin: 20px auto;
-        max-width: 800px;
-        font-size: 1rem;
-    }
-
-    .curso-detail h5 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .curso-detail p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 10px;
-    }
-
-    .list-group-item {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-        border: none;
-        border-bottom: 1px solid #f1f1f1;
-    }
-
-    .list-group-item:last-child {
-        border-bottom: none;
-    }
-
-    .text-muted {
-        color: #6c757d !important;
-    }
-
-    .btn-outline-primary {
-        border: 2px solid #007bff;
-        color: #007bff;
-        transition: all 0.3s ease;
-    }
-
-    .btn-outline-primary:hover {
-        background-color: #007bff;
-        color: #fff;
-    }
-
 </style>
 
-<h1 class="text-center">Cursos</h1>
-<br>
+<!-- Detalhes da Vaga -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">@Model.nomeVaga</h2>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-    <div class="container">
-        <a class="navbar-brand" asp-controller="Curso" asp-action="ListaCursos">Cursos</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                @if (User.IsInRole("Corporacao"))
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Curso" asp-action="CriarCurso">Criar Curso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("CursosPorCorporacao", "Curso")">Meus Cursos</a>
-                    </li>
-                }
-            </ul>
+    <div class="vaga-detail">
+        <h5>Descrição</h5>
+        <p>@Model.descricaoVaga</p>
 
-            <form class="d-flex ms-auto" asp-controller="Curso" asp-action="PesquisarCursos" method="get">
-                <input class="form-control me-2" type="search" name="nomeCurso" placeholder="Pesquisar..." aria-label="Pesquisar" required />
-                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-            </form>
-        </div>
+        <h5>Detalhes da Vaga</h5>
+        <p><strong>Responsabilidades:</strong> @Model.responsabilidadesVaga</p>
+        <p><strong>Benefícios:</strong> @Model.beneficiosVaga</p>
+        <p><strong>Salário:</strong> @Model.salarioVaga</p>
+        <p><strong>Cidade:</strong> @Model.cidadeVaga</p>
+        <p><strong>Criada em:</strong> @Model.DataCriacao.ToString("dd/MM/yyyy")</p>
+        <p><strong>Vencimento:</strong> @Model.DataVencimento.ToString("dd/MM/yyyy")</p>
     </div>
-</nav>
 
-<div class="container">
-    @if (Model == null || !Model.Any())
-    {
-        <div class="alert alert-info text-center">
-            Não há cursos disponíveis.
-        </div>
-    }
-    else
-    {
-        <div class="row">
-            @foreach (var curso in Model)
-            {
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-lg p-4">
-                        <div class="text-center mb-4">
-                            <h2 class="text-primary">
-                                <i class="fas fa-book"></i> @curso.nomeCurso
-                            </h2>
-                        </div>
-
-                        <div class="mb-4">
-                            <h5 class="text-secondary"><i class="fas fa-info-circle"></i> Descrição</h5>
-                            <p class="text-muted">@curso.descricaoCurso</p>
-                        </div>
-
-                        <div>
-                            <h5 class="text-secondary"><i class="fas fa-list"></i> Detalhes do Curso</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><strong><i class="fas fa-clock"></i> Carga Horária:</strong> @curso.cargaHorariaCurso horas</li>
-                                <li class="list-group-item"><strong><i class="fas fa-calendar"></i> Data Início:</strong> @curso.dataInicioCurso.ToString("dd/MM/yyyy")</li>
-                                <li class="list-group-item"><strong><i class="fas fa-calendar-alt"></i> Data Fim:</strong> @curso.dataFimCurso.ToString("dd/MM/yyyy")</li>
-                                <li class="list-group-item"><strong><i class="fas fa-users"></i> Limite de Vagas:</strong> @(curso.limiteVagas.HasValue ? curso.limiteVagas.ToString() : "Sem limite")</li>
-                            </ul>
-                        </div>
-
-                        <div class="text-end mt-4">
-                            <a asp-controller="Curso" asp-action="Details" asp-route-id="@curso.idCurso" class="btn btn-outline-primary btn-custom">
-                                <i class="fas fa-info-circle"></i> Detalhes
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    }
+    <div class="text-end mt-4">
+        <form method="post" asp-action="Candidatar" asp-controller="Candidatura">
+            <input type="hidden" name="idVaga" value="@Model.idVaga" />
+            <button type="submit" class="btn btn-primary btn-custom">Candidatar-se</button>
+        </form>
+        <a href="@Url.Action("VagasView", "Vagas")" class="btn btn-secondary btn-custom">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
 </div>

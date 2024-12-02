@@ -3,109 +3,152 @@
 @{
     ViewBag.Title = "CadastroCorporacao";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Cadastro</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+    h2 {
+        text-align: center;
+    }
 
-        html,
-        body {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #f5f5f5;
+    }
 
-        .container {
-            display: flex;
-            width: 100vw;
-            /* Largura total da janela */
-            height: 100vh;
-            /* Altura total da janela */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .login-container {
+        display: flex;
+        max-width: 900px;
+        width: 100%;
+        height: 500px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
 
-        .image-container {
+        .login-container .left {
             flex: 1;
-            background: url('https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4') no-repeat center center;
+            background: url('https://img.freepik.com/fotos-gratis/angulo-baixo-de-edificios-altos-na-cidade_23-2149318525.jpg?t=st=1733100252~exp=1733103852~hmac=7c08cd38cc7bc51b524bf47fb787b56e161b5d3cc99dd11ac5abda54ea5babca&w=740') no-repeat center center;
             background-size: cover;
         }
 
-        .form-container {
+        .login-container .right {
             flex: 1;
-            background-color: #fff;
             padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            position: relative;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #007BFF;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #333;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-            input[type="submit"]:hover {
-                background-color: #0056b3;
-            }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <div class="image-container"></div>
-
-        <div class="form-container">
-            <h2>Cadastrar-se</h2>
-            <hr />
-
-            @if (TempData["MensagemSucesso"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["MensagemSucesso"]
-                </div>
+            .login-container .right h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: #007BFF;
             }
 
-            @if (TempData["MensagemErro"] != null)
-            {
-                <div class="alert alert-danger">
-                    @TempData["MensagemErro"]
-                </div>
+            .login-container .right form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
             }
 
+            .login-container .right label {
+                font-size: 14px;
+                color: #333;
+                margin-bottom: 5px;
+            }
+
+            .login-container .right input[type="text"],
+            .login-container .right input[type="email"],
+            .login-container .right input[type="password"] {
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 16px;
+                background: #f9f9f9;
+                transition: all 0.3s ease;
+            }
+
+                .login-container .right input[type="text"]:focus,
+                .login-container .right input[type="email"]:focus,
+                .login-container .right input[type="password"]:focus {
+                    border-color: #007BFF;
+                    outline: none;
+                    background: #fff;
+                }
+
+            .login-container .right input[type="submit"] {
+                margin-top: 20px;
+                padding: 12px;
+                background: linear-gradient(90deg, #007BFF, #001AAF);
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+          
+            .login-container .right input[type="text"],
+            .login-container .right input[type="email"],
+            .login-container .right input[type="password"] {
+                width: 100%;
+            }
+
+
+                .login-container .right input[type="submit"]:hover {
+                    background: linear-gradient(90deg, #0056b3, #001AAF);
+                }
+
+            .login-container .right a {
+                font-size: 14px;
+                color: #007BFF;
+                text-decoration: none;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+                .login-container .right a:hover {
+                    text-decoration: underline;
+                }
+
+</style>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<h2>Área de Cadastro Corporativo</h2>
+<hr />
+@using (Html.BeginForm("RegistrarCorporacao", "Corporacao", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="login-container">
+        <div class="left"></div>
+        <div class="right">
+            <h2>Corporação - Cadastro</h2>
             @using (Html.BeginForm("RegistrarCorporacao", "Corporacao", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
@@ -136,8 +179,7 @@
                     <br />
                 </div>
             }
-
-            <p>
+                 <p>
                 Já possui uma conta? <a href="/Corporacao/LoginCorporacao">Clique aqui para fazer login.</a>
             </p>
 
@@ -150,4 +192,4 @@
             </script>
         </div>
     </div>
-</body>
+}
