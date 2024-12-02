@@ -1,11 +1,87 @@
-﻿<br><br>
-@model ChronosMVC.Models.Curriculo.FormacaoModel
+﻿@model ChronosMVC.Models.Curriculo.FormacaoModel
 
 @{
     ViewData["Title"] = "Editar Formação";
 }
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+<br />
+<br />
+<br />
+<br />
 <h2>Editar Formação</h2>
+
+<!-- CSS Embutido -->
+<style>
+    /* Estilo para os formulários */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .text-danger {
+        font-size: 0.9rem;
+    }
+
+    /* Botões */
+    .btn {
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .btn-lg {
+        padding: 12px 20px;
+    }
+
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .mb-4 {
+        margin-bottom: 2rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .mt-3 {
+        margin-top: 1rem;
+    }
+
+    .alert {
+        margin-top: 1rem;
+    }
+</style>
 
 <form asp-action="EditarFormacao" method="post">
     <input type="hidden" asp-for="idFormacao" />
@@ -22,55 +98,11 @@
     </div>
     <br>
     <div class="form-group">
-    <label asp-for="dataConclusaoFormacao" class="control-label"></label>
-    <input asp-for="dataConclusaoFormacao" class="form-control" type="date" id="dataConclusaoFormacao" />
-    <span asp-validation-for="dataConclusaoFormacao" class="text-danger"></span>
-</div>
-
-<script>
-    // Limitar a data máxima para 80 anos atrás (considerando 2024)
-    const hoje = new Date();
-    const limiteMaximo = new Date();
-    limiteMaximo.setFullYear(hoje.getFullYear() - 80);  // Subtrai 80 anos da data de hoje
-
-    // Formatar a data para o formato yyyy-mm-dd
-    const dataLimiteMaxima = limiteMaximo.toISOString().split('T')[0];
-
-    // Definir o valor máximo para o campo de data de conclusão
-    const dataConclusao = document.getElementById('dataConclusaoFormacao');
-    dataConclusao.setAttribute('max', dataLimiteMaxima);
-
-    // Se houver um campo de data de início, garantir que a data de conclusão não seja anterior
-    const dataInicio = document.getElementById('dataInicioExperiencia');  // Campo de data de início
-    const dataFim = document.getElementById('dataFimExperiencia'); // Campo de data de fim
-
-    if (dataInicio) {
-        // Adiciona evento para a data de início
-        dataInicio.addEventListener('input', function() {
-            const dataSelecionadaInicio = dataInicio.value;
-            // A data de conclusão deve ser no mínimo a data de início
-            dataConclusao.setAttribute('min', dataSelecionadaInicio);
-            // Se a data de conclusão for antes da data de início, ajustamos automaticamente
-            if (dataConclusao.value && dataConclusao.value < dataSelecionadaInicio) {
-                dataConclusao.value = dataSelecionadaInicio;
-            }
-        });
-    }
-
-    // Se houver um campo de data de fim, garantir que a data de conclusão não seja anterior a data de fim
-    if (dataFim) {
-        // Adiciona evento para a data de fim
-        dataFim.addEventListener('input', function() {
-            const dataSelecionadaFim = dataFim.value;
-            // A data de conclusão não pode ser anterior à data de fim
-            dataConclusao.setAttribute('min', dataSelecionadaFim);
-            // Se a data de conclusão for antes da data de fim, ajustamos automaticamente
-            if (dataConclusao.value && dataConclusao.value < dataSelecionadaFim) {
-                dataConclusao.value = dataSelecionadaFim;
-            }
-        });
-    }
-</script>
+        <label asp-for="dataConclusaoFormacao" class="control-label"></label>
+        <input asp-for="dataConclusaoFormacao" class="form-control" type="date" id="dataConclusaoFormacao" />
+        <span asp-validation-for="dataConclusaoFormacao" class="text-danger"></span>
+    </div>
+ 
 
     <br>
     <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar</button>

@@ -31,7 +31,7 @@
                         <a class="nav-link text-white" asp-area="" asp-controller="Curso" asp-action="ListaCursos">Cursos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contact">Contate</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contact">Contato</a>
                     </li>
                      @if (User.Identity.IsAuthenticated)
                      {
@@ -39,7 +39,7 @@
                             @if (!string.IsNullOrEmpty(idEgresso))
                             {
                                     <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Curriculo" asp-action="Detalhes">Curriculo</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Curriculo" asp-action="Detalhes">Currículo</a>
                                     </li>
                             }
                      }

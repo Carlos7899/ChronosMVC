@@ -12,7 +12,7 @@ namespace ChronosMVC.Models.Curriculo
         public int idCurriculo { get; set; }
         public string cursoFormacao { get; set; }
         public string instituicaoFormacao { get; set; }
-        public DateTime dataConclusaoFormacao { get; set; }
+        public DateTime dataConclusaoFormacao { get; set; } = DateTime.Today;
 
 
         [NotMapped]

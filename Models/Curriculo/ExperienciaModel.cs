@@ -12,7 +12,7 @@ namespace ChronosMVC.Models.Curriculo
         public int idCurriculo { get; set; }
         public string cargoExperiencia { get; set; }
         public string empresaExperiencia { get; set; }
-        public DateTime dataInicioExperiencia { get; set; }
+        public DateTime dataInicioExperiencia { get; set; } = DateTime.Today;
         public DateTime? dataFimExperiencia { get; set; }
         public string Descricao { get; set; }
 

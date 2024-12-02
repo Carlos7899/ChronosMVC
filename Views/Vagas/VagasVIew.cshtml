@@ -3,22 +3,22 @@
 @{
     ViewBag.Title = "Vagas";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- CSS para estilização -->
 <style>
     .search-container {
         margin-bottom: 20px;
     }
 
     .card-title, .card-text {
-        overflow: hidden; /* Oculta o texto que ultrapassa o limite */
-        white-space: nowrap; /* Não permite que o texto quebre para a próxima linha */
-        text-overflow: ellipsis; /* Adiciona "..." no final do texto que foi truncado */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .card-text {
-        max-height: 60px; /* Limita a altura do texto no cartão */
-        line-height: 1.2em; /* Define a altura da linha para o texto */
+        max-height: 60px;
+        line-height: 1.2em;
     }
 
     .search-input {
@@ -40,70 +40,67 @@
         margin-top: 10px;
     }
 
-    /* Estilo para a navbar com fundo azul claro, aumento nas laterais e bordas arredondadas */
     .navbar-light {
         background-color: #ADD8E6 !important;
-        padding-left: 15px; /* Aumenta 5px na lateral esquerda */
-        padding-right: 15px; /* Aumenta 5px na lateral direita */
-        border-radius: 10px; /* Arredonda as bordas da navbar */
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 10px;
     }
 
-    /* Estilo para o botão de pesquisa */
     .btn-outline-success {
-        background-color: #28a745; /* Cor de fundo do botão */
-        color: white; /* Cor do texto do botão */
-        border-radius: 0.25rem; /* Arredonda as bordas do botão */
+        background-color: #28a745;
+        color: white;
+        border-radius: 0.25rem;
     }
 
-    /* Estilo para a barra de pesquisa */
     .form-control {
-        width: 450px; /* Aumenta um pouco mais a altura da barra de pesquisa */
+        width: 450px
     }
 
     .card {
-    border-radius: 10px; /* Borda arredondada */
-    overflow: hidden; /* Evita conteúdo "vazando" */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.card:hover {
-    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
-}
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-.card-header {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
+    .card-header {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 
-.card-footer {
-    border-top: 1px solid #e5e5e5;
-}
+    .card-footer {
+        border-top: 1px solid #e5e5e5;
+    }
 
-.vaga-detail p {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
+    .vaga-detail p {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
 
-.btn-info {
-    background-color: #007bff;
-    border-color: #0056b3;
-}
+    .btn-info {
+        background-color: #007bff;
+        border-color: #0056b3;
+    }
 
-.btn-info:hover {
-    background-color: #0056b3;
-    border-color: #003f7f;
-}
+    .btn-info:hover {
+        background-color: #0056b3;
+        border-color: #003f7f;
+    }
 
-.text-muted {
-    font-size: 0.9rem;
-}
+    .text-muted {
+        font-size: 0.9rem;
+    }
 
 </style>
 
 <link href="~/css/navbar.css" rel="stylesheet" />
 <br><br><br><br>
-<!-- Navegação -->
+
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="@Url.Action("VagasView", "Vagas")">Vagas</a>
@@ -130,21 +127,18 @@
                         <a class="nav-link" href="@Url.Action("MinhasCandidaturas", "Candidatura")">Minhas Candidaturas</a>
                     </li>
                 }
-
             </ul>
             <form class="d-flex ms-auto" asp-controller="Vagas" asp-action="PesquisarVagas" method="get">
-                <input class="form-control me-2" type="search" name="nomeVaga" placeholder="Pesquisar por nome da vaga" aria-label="Pesquisar" required />
+                <input class="form-control me-2" type="search" name="nomeVaga" placeholder="Pesquisar..." aria-label="Pesquisar" required />
                 <button class="btn btn-outline-success" type="submit">Pesquisar</button>
             </form>
         </div>
     </div>
 </nav>
 
-<!-- Container para centralizar o conteúdo -->
 <div class="container mt-5">
     <h2 class="text-center mb-4">Vagas Disponíveis</h2>
 
-    <!-- Verificação de mensagens de sucesso ou erro -->
     @if (TempData["Mensagem"] != null)
     {
         <div class="alert alert-success">
@@ -182,15 +176,15 @@
                     </div>
                 </div>
                 <!-- Rodapé do Card -->
-                <div class="card-footer bg-light text-center">
-                    <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-info btn-sm">
-                        <i class="fas fa-info-circle"></i> Detalhes
-                    </a>
-                </div>
+                @if (User.IsInRole("Egresso"))
+                {
+                    <div class="card-footer bg-light text-center">
+                        <a href="@Url.Action("Details", new { id = item.idVaga })" class="btn btn-info btn-sm">
+                            <i class="fas fa-info-circle"></i> Detalhes
+                        </a>
+                    </div>
+                }
             </div>
         </div>
     }
-</div>
-
-
 </div>

@@ -1,38 +1,34 @@
-﻿<br><br>
-@model ChronosMVC.Models.CursoModel
+﻿@model ChronosMVC.Models.CursoModel
 
 @{
     ViewData["Title"] = "Editar Curso";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<h1 class="text-center">Editar Curso</h1>
+<br />
+<br />
+<br />
 
-<div class="container">
-    @if (TempData["MensagemErro"] != null)
-    {
-        <div class="alert alert-danger">@TempData["MensagemErro"]</div>
-    }
-    if (TempData["MensagemSucesso"] != null)
-    {
-    <div class="alert alert-success">@TempData["MensagemSucesso"]</div>
-    }
+<h1 class="text-center mb-4">Editar Curso</h1>
+
+<div class="container bg-light p-4 rounded shadow-sm">
 
     <form asp-action="EditarCurso" method="post">
         <div class="mb-3">
             <label asp-for="nomeCurso" class="form-label">Nome do Curso</label>
-            <input asp-for="nomeCurso" class="form-control" />
+            <input asp-for="nomeCurso" class="form-control" placeholder="Digite o nome do curso" />
             <span asp-validation-for="nomeCurso" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="descricaoCurso" class="form-label">Descrição do Curso</label>
-            <textarea asp-for="descricaoCurso" class="form-control"></textarea>
+            <textarea asp-for="descricaoCurso" class="form-control" placeholder="Descreva o conteúdo do curso"></textarea>
             <span asp-validation-for="descricaoCurso" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="cargaHorariaCurso" class="form-label">Carga Horária (horas)</label>
-            <input asp-for="cargaHorariaCurso" type="number" class="form-control" />
+            <input asp-for="cargaHorariaCurso" type="number" class="form-control" placeholder="Ex: 40" />
             <span asp-validation-for="cargaHorariaCurso" class="text-danger"></span>
         </div>
 
@@ -50,13 +46,83 @@
 
         <div class="mb-3">
             <label asp-for="limiteVagas" class="form-label">Limite de Vagas</label>
-            <input asp-for="limiteVagas" type="number" class="form-control" />
+            <input asp-for="limiteVagas" type="number" class="form-control" placeholder="Número máximo de vagas" />
             <span asp-validation-for="limiteVagas" class="text-danger"></span>
         </div>
 
         <input type="hidden" asp-for="idCurso" />
 
-        <button type="submit" class="btn btn-primary">Salvar</button>
-        <a asp-action="ListaCursos" class="btn btn-secondary">Cancelar</a>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
+            <a asp-action="ListaCursos" class="btn btn-secondary btn-lg">Cancelar</a>
+        </div>
     </form>
 </div>
+
+@section Styles {
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+            .form-control:focus {
+                border-color: #0056b3;
+                box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+            }
+
+        .btn-primary, .btn-secondary {
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+            .btn-primary:hover {
+                background-color: #004085;
+                border-color: #003366;
+            }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+
+        .text-danger {
+            font-size: 0.9rem;
+        }
+    </style>
+}

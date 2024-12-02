@@ -10,7 +10,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualizar Informações do Egresso</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Cor de fundo suave */
+        }
+
+        .image-upload {
+            position: relative;
+            display: inline-block;
+        }
+
+        .upload-label {
+            cursor: pointer;
+            display: inline-block; /* Garante que o rótulo se comporte como um bloco */
+            transition: transform 0.3s; /* Transição suave */
+        }
+
+        .upload-label:hover {
+            transform: scale(1.05); /* Leve aumento ao passar o mouse */
+        }
+
+        .img-circle {
+            width: 100px; /* Tamanho da imagem */
+            height: 100px;
+            border-radius: 50%; /* Torna a imagem redonda */
+            object-fit: cover; /* Mantém a proporção da imagem */
+            border: 2px solid #007bff; /* Borda azul ao redor da imagem */
+            transition: border-color 0.3s; /* Transição suave na cor da borda */
+        }
+
+        .img-circle:hover {
+            border-color: #0056b3; /* Cor da borda ao passar o mouse */
+        }
+
+        input[type="file"] {
+            display: none; /* Esconde o input de arquivo */
+        }
+
+        .container {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff; /* Fundo do container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border-radius: 10px; /* Borda arredondada do card */
+            margin: 0 auto; /* Centraliza o card horizontalmente */
+        }
+
+        .card-header {
+            background-color: #007bff; /* Cor de fundo do cabeçalho */
+            color: white; /* Cor do texto do cabeçalho */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .form-group label {
+            font-weight: bold; /* Deixar os rótulos em negrito */
+        }
+
+        .form-control {
+            border-radius: 5px; /* Arredondar os cantos dos campos de entrada */
+            border: 1px solid #ced4da; /* Borda padrão */
+            transition: border-color 0.3s; /* Transição suave na cor da borda */
+        }
+
+        .form-control:focus {
+            border-color: #007bff; /* Cor da borda ao focar */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Cor do botão */
+            border-color: #007bff; /* Cor da borda do botão */
+            transition: background-color 0.3s; /* Transição suave */
+            border-radius: 50px; /* Bordas arredondadas dos botões */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cor ao passar o mouse */
+            border-color: #0056b3; /* Cor da borda ao passar o mouse */
+        }
+
+        .alert {
+            border-radius: 5px; /* Arredondar cantos das mensagens */
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +108,16 @@
             <div class="card-header text-center">
                 <h2>Atualizar Informações do Egresso</h2>
             </div>
-            <div class="card-body">
+            <div class="card-body text-center">
+                <div class="form-group">
+                    <label for="FotoPerfilEgresso" class="d-block">Foto de Perfil</label>
+                    <div class="image-upload">
+                        <label for="FotoPerfilEgresso" class="upload-label">
+                            <img id="profileImage" src="@((Model.fotoPerfilEgresso != null) ? "data:image/jpeg;base64," + Convert.ToBase64String(Model.fotoPerfilEgresso) : "~/img/imagemUsuario.png")" alt="Foto de Perfil" class="img-circle" />
+                            <input type="file" id="FotoPerfilEgresso" accept="image/*" onchange="convertToBase64()" />
+                        </label>
+                    </div>
+                </div>
                 <hr />
 
                 <!-- Mensagem de Sucesso -->
@@ -74,17 +172,7 @@
                                  "Value", "Text"),
                                  "Selecione o Tipo de Egresso", new { @class = "form-control", @id = "TipoEgresso" })
                     </div>
-
-                    <div class="form-group text-center">
-                        <label for="FotoPerfilEgresso" class="d-block">Foto de Perfil</label>
-                        <div class="image-upload">
-                            <label for="FotoPerfilEgresso" class="upload-label">
-                                <img id="profileImage" src="@((Model.fotoPerfilEgresso != null) ? "data:image/jpeg;base64," + Convert.ToBase64String(Model.fotoPerfilEgresso) : "~/img/imagemUsuario.png")" alt="Foto de Perfil" class="img-circle" />
-                                <input type="file" id="FotoPerfilEgresso" accept="image/*" onchange="convertToBase64()" />
-                            </label>
-                        </div>
-                    </div>
-
+<br>
                     <div class="form-group text-center">
                         <input type="submit" value="Salvar Informações" class="btn btn-primary" />
                     </div>
@@ -113,8 +201,4 @@
     </script>
 
     <input type="hidden" id="imagemBase64" name="fotoPerfilEgresso" />
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

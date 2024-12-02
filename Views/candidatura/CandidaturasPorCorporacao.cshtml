@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<ChronosMVC.Models.CandidaturaModel>
 
 @{
-    ViewData["Title"] = "Candidaturas Recebidas";
+    ViewData["Title"] = "Minhas Candidaturas";
 }
 
-<h1 class="text-center">Candidaturas Recebidas</h1>
+<h1 class="text-center">Minhas Candidaturas</h1>
+<br>
+<br>
 
 <!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +25,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("VagasPorCorporacao", "Vagas")">Minhas Vagas</a>
                     </li>
-                    <li class="nav-item">
+                    <li>
                         <a class="nav-link" href="@Url.Action("CandidaturasPorCorporacao", "Candidatura")">Minhas Candidaturas</a>
                     </li>
                 }
@@ -45,11 +47,11 @@
 </nav>
 
 
-<div class="container mt-4">
+<div class="container">
     @if (Model == null || !Model.Any())
     {
         <div class="alert alert-info text-center">
-            Não há candidaturas para suas vagas.
+            Você ainda não se candidatou a nenhuma vaga.
         </div>
     }
     else
@@ -60,24 +62,12 @@
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Candidatura #@candidatura.idCandidatura</h5>
-                            <p><strong>ID da Vaga:</strong> @candidatura.idVaga</p>
-                            <p><strong>ID do Egresso:</strong> @candidatura.idEgresso</p>
-                            <p><strong>Status:</strong> @candidatura.Status</p>
+                            <h5 class="card-title">Candidatura </h5> 
+                            <h6 class="card-subtitle mb-2 text-muted">Status: @candidatura.Status</h6>
                             <p><strong>Data de Inscrição:</strong> @candidatura.dataIncricao.ToString("dd/MM/yyyy")</p>
                             <p><strong>Última Atualização:</strong> @(candidatura.DataAtualizacao.HasValue ? candidatura.DataAtualizacao.Value.ToString("dd/MM/yyyy") : "N/A")</p>
                             <p><strong>Feedback:</strong> @(string.IsNullOrEmpty(candidatura.Feedback) ? "Nenhum" : candidatura.Feedback)</p>
                             <p><strong>Notas:</strong> @(string.IsNullOrEmpty(candidatura.Notas) ? "Nenhuma" : candidatura.Notas)</p>
-                            <div class="mt-3">
-                                <a class="btn btn-info" href="@Url.Action("VerCurriculo", "Candidatura", new { idCandidatura = candidatura.idCandidatura })">
-                                    Ver Currículo do Egresso
-                                </a>
-                            </div>
-                            <div class="mt-3">
-                                <a class="btn btn-primary" href="@Url.Action("Editar", "Candidatura", new { id = candidatura.idCandidatura })">
-                                    Editar
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>

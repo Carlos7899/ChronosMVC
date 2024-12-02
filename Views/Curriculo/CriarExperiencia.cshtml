@@ -83,4 +83,30 @@
     <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill step-btn" style="width: 2rem; height:2rem;">3</button>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const avancarBtn = document.getElementById('avancar');
+        const retrocederBtn = document.getElementById('retroceder');
+        const progressBar = document.querySelector('.progress-bar');
+
+        // Evento para avançar a etapa
+        avancarBtn.addEventListener('click', function() {
+            avancarBtn.classList.remove('btn-primary');
+            avancarBtn.classList.add('btn-secondary');
+            retrocederBtn.classList.remove('btn-secondary');
+            retrocederBtn.classList.add('btn-primary');
+            progressBar.style.width = '66%';
+        });
+
+        // Evento para retroceder a etapa
+        retrocederBtn.addEventListener('click', function() {
+            retrocederBtn.classList.remove('btn-primary');
+            retrocederBtn.classList.add('btn-secondary');
+            avancarBtn.classList.remove('btn-secondary');
+            avancarBtn.classList.add('btn-primary');
+            progressBar.style.width = '33%';
+        });
+    });
+</script>
+
 <a href="@Url.Action("Detalhes", "Curriculo")" class="btn btn-secondary mt-3">Voltar para os Detalhes do Currículo</a>

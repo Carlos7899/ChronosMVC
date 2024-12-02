@@ -1,15 +1,11 @@
 ﻿@model ChronosMVC.Models.EgressoModel
 
-<h2>Dados do Egresso</h2>
+<h2 class="text-center">Dados do Egresso</h2>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Mini navegação -->
-<div class="mini-navegacao mb-3">
-    <a asp-action="MeusDados" asp-route-idEgresso="@Model.idEgresso" class="btn btn-link">Meus Dados</a>
-    <a asp-action="CreateEnderecoEgresso" asp-controller="Endereco" asp-route-idEgresso="@Model.idEgresso" class="btn btn-link">Endereço</a>
-</div>
-
-<div class="card">
-    <div class="card-body">
+<br>
+<div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-body text-center">
         <h5 class="card-title">Informações Pessoais</h5>
 
         <!-- Exibe a foto de perfil, se houver -->
@@ -31,7 +27,7 @@
             <strong>Email:</strong> @(Model.emailEgresso ?? "Não disponível")
         </p>
         <p>
-            <strong>Tipo Corporacção:</strong> @(Model.tipoEgresso)
+            <strong>Tipo Egresso:</strong> @(Model.tipoEgresso)
         </p>
         <p>
             <strong>CPF:</strong> @(Model.cpfEgresso ?? "Não disponível")
@@ -45,4 +41,42 @@
     </div>
 </div>
 
-<a asp-action="EditarDadosEgresso" asp-route-idEgresso="@Model.idEgresso" class="btn btn-primary">Editar</a>
+<div class="text-center mt-3">
+    <a asp-action="EditarDadosEgresso" asp-route-idEgresso="@Model.idEgresso" class="btn btn-primary">Editar</a>
+</div>
+
+<style>
+    .img-circle {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #007bff; /* Borda azul */
+    }
+
+    .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .card-title {
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 50px;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+</style>

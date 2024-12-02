@@ -1,8 +1,9 @@
 ﻿@page
 @model ChronosMVC.Models.CorporacaoModel
 @{
-    ViewBag.Title = "LoginCorporacao";
+    ViewBag.Title = "Login Corporativo";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 @if (TempData["MensagemSucesso"] != null)
 {
@@ -18,32 +19,55 @@
     </div>
 }
 
-<h2>Área de Login Corporativo</h2>
-<hr />
-@using (Html.BeginForm("Login", "Corporacao", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-    <div class="form-horizontal">
-        <div class="form-group">
-            <label class="control-label col-md-2">Email</label>
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.emailCorporacao, new { htmlAttributes = new { @class = "form-control" } })
+<head>
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+
+<!-- Container principal de login -->
+<div class="login-container">
+    <div class="login-box">
+        <h2>Área de Login Corporativo</h2>
+        <p class="login-subtitle">Bem-vindo de volta! Por favor, insira suas credenciais.</p>
+
+        @using (Html.BeginForm("Login", "Corporacao", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="input-group">
+                <label for="emailCorporacao" class="input-label">Email</label>
+                @Html.EditorFor(model => model.emailCorporacao, new { htmlAttributes = new { @class = "input-field" } })
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Senha</label>
-            <div class="col-md-6">
-                @Html.PasswordFor(model => model.PasswordString, new { @class = "form-control" })
+            <div class="input-group">
+                <label for="PasswordString" class="input-label">Senha</label>
+                @Html.PasswordFor(model => model.PasswordString, new { @class = "input-field" })
             </div>
-        </div>
 
-        <br />
-        <input type="submit" value="Entrar" class="btn btn-success" />
-        <br />
+            <!-- Novo botão estilizado -->
+            <button type="submit" class="styled-button">
+                Entrar
+                <div class="inner-button">
+                    <svg id="Arrow"
+                         viewBox="0 0 32 32"
+                         xmlns="http://www.w3.org/2000/svg"
+                         height="20px"
+                         width="20px"
+                         class="icon">
+                        <defs>
+                            <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="iconGradient">
+                                <stop style="stop-color:#FFFFFF;stop-opacity:1" offset="0%"></stop>
+                                <stop style="stop-color:#AAAAAA;stop-opacity:1" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#iconGradient)"
+                              d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"></path>
+                    </svg>
+                </div>
+            </button>
 
-        <div class="form-group">
-            <p><a href="/Corporacao/CadastroCorporacao">Não possui uma conta? Clique aqui para registrar-se!</a></p>
-        </div>
+            <div class="signup-link">
+                <p><a href="/Corporacao/CadastroCorporacao">Não possui uma conta? Clique aqui para registrar-se!</a></p>
+            </div>
+        }
     </div>
-}
+</div>

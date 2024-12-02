@@ -1,11 +1,98 @@
-﻿<br><br>
-@model ChronosMVC.Models.Curriculo.ExperienciaModel
+﻿@model ChronosMVC.Models.Curriculo.ExperienciaModel
 
 @{
     ViewData["Title"] = "Editar Experiência";
 }
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<br />
+<br />
+<br />
 <h2>Editar Experiência</h2>
+<br />
+<!-- CSS Embutido -->
+<style>
+    /* Estilo para os formulários */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .text-danger {
+        font-size: 0.9rem;
+    }
+
+    /* Botões */
+    .btn {
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+
+    .btn-lg {
+        padding: 12px 20px;
+    }
+
+    /* Botão "Cancelar" para voltar à lista */
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .mb-4 {
+        margin-bottom: 2rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .mt-3 {
+        margin-top: 1rem;
+    }
+
+    /* Alerts */
+    .alert {
+        margin-top: 1rem;
+    }
+</style>
 
 <form asp-action="EditarExperiencia" method="post">
     <input type="hidden" asp-for="idExperiencia" />

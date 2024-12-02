@@ -3,10 +3,12 @@
 @{
     ViewData["Title"] = "Minhas Candidaturas";
 }
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <h1 class="text-center">Minhas Candidaturas</h1>
+<br>
+<br>
 
-<!-- Navegação -->
+<!-- NavegaÃ§Ã£o -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="@Url.Action("VagasView", "Vagas")">Vagas</a>
@@ -49,7 +51,7 @@
     @if (Model == null || !Model.Any())
     {
         <div class="alert alert-info text-center">
-            Você ainda não se candidatou a nenhuma vaga.
+            VocÃª ainda nÃ£o se candidatou a nenhuma vaga.
         </div>
     }
     else
@@ -62,8 +64,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Candidatura </h5> 
                             <h6 class="card-subtitle mb-2 text-muted">Status: @candidatura.Status</h6>
-                            <p><strong>Data de Inscrição:</strong> @candidatura.dataIncricao.ToString("dd/MM/yyyy")</p>
-                            <p><strong>Última Atualização:</strong> @(candidatura.DataAtualizacao.HasValue ? candidatura.DataAtualizacao.Value.ToString("dd/MM/yyyy") : "N/A")</p>
+                            <p><strong>Data de InscriÃ§Ã£o:</strong> @candidatura.dataIncricao.ToString("dd/MM/yyyy")</p>
+                            <p><strong>Ãšltima AtualizaÃ§Ã£o:</strong> @(candidatura.DataAtualizacao.HasValue ? candidatura.DataAtualizacao.Value.ToString("dd/MM/yyyy") : "N/A")</p>
                             <p><strong>Feedback:</strong> @(string.IsNullOrEmpty(candidatura.Feedback) ? "Nenhum" : candidatura.Feedback)</p>
                             <p><strong>Notas:</strong> @(string.IsNullOrEmpty(candidatura.Notas) ? "Nenhuma" : candidatura.Notas)</p>
                         </div>
