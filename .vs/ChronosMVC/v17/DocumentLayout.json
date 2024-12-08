@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\API\\ChronosMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\manifest\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\manifest\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\js\\service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\js\\service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\manifest\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\manifest\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -362,7 +362,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -370,19 +370,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\manifest\\manifest.json",
               "RelativeDocumentMoniker": "wwwroot\\manifest\\manifest.json",
               "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\manifest\\manifest.json",
               "RelativeToolTip": "wwwroot\\manifest\\manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAQAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-08T21:29:32.763Z"
+              "WhenOpened": "2024-12-08T21:29:32.763Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "service-worker.js",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\js\\service-worker.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\service-worker.js",
@@ -418,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -431,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -443,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\API\\ChronosMVC\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
