@@ -1,0 +1,21 @@
+﻿@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Empilha os elementos */
+        height: auto; /* Ajusta a altura da caixa */
+    }
+
+        .login-container .left {
+            display: none; /* Esconde a imagem à esquerda em telas pequenas */
+        }
+
+        .login-container .right {
+            padding: 15px;
+        }
+
+            .login-container .right h2 {
+                font-size: 20px; /* Ajuste de tamanho da fonte para dispositivos móveis */
+            }
+
+            .login-container .right input[type="submit"] {
+                font-size: 14px; /* Reduz o tamanho do botão */
+            }

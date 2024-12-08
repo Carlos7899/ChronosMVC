@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System;
+using System.Text.RegularExpressions;
 
 namespace ChronosMVC.Controllers
 {
@@ -32,6 +33,32 @@ namespace ChronosMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> LoginEgresso(EgressoModel model)
         {
+            // Verifique se o e-mail e a senha são válidos
+            if (string.IsNullOrEmpty(model.emailEgresso))
+            {
+                ModelState.AddModelError("emailEgresso", "O e-mail é obrigatório.");
+            }
+            else if (!Regex.IsMatch(model.emailEgresso, @"^[a-zA-Z0-9._%+-]+@gmail\.com$"))
+            {
+                ModelState.AddModelError("emailEgresso", "O e-mail deve ser no formato @gmail.com.");
+            }
+
+            if (string.IsNullOrEmpty(model.PasswordString))
+            {
+                ModelState.AddModelError("PasswordString", "A senha é obrigatória.");
+            }
+            else if (model.PasswordString.Length < 6)
+            {
+                ModelState.AddModelError("PasswordString", "A senha deve ter pelo menos 6 caracteres.");
+            }
+
+            // Se o modelo for inválido, retornar a view com as mensagens de erro
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Se as validações passarem, prosseguir com a autenticação
             var loginData = new { emailEgresso = model.emailEgresso, passwordString = model.PasswordString };
             var json = JsonConvert.SerializeObject(loginData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -66,6 +93,7 @@ namespace ChronosMVC.Controllers
             return View("LoginEgresso", model);
         }
 
+
         [HttpGet]
         public IActionResult CadastroEgresso()
         {
@@ -76,6 +104,32 @@ namespace ChronosMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegistrarEgresso(EgressoModel model)
         {
+            // Validações do modelo
+            if (string.IsNullOrWhiteSpace(model.emailEgresso))
+            {
+                ModelState.AddModelError("emailEgresso", "O e-mail não pode estar vazio.");
+            }
+            else if (!model.emailEgresso.EndsWith("@gmail.com"))
+            {
+                ModelState.AddModelError("emailEgresso", "O e-mail deve ser no formato '@gmail.com'.");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.PasswordString))
+            {
+                ModelState.AddModelError("PasswordString", "A senha não pode estar vazia.");
+            }
+            else if (model.PasswordString.Length < 6)
+            {
+                ModelState.AddModelError("PasswordString", "A senha deve ter pelo menos 6 caracteres.");
+            }
+
+            // Verificação se o modelo é válido
+            if (!ModelState.IsValid)
+            {
+                return View("CadastroEgresso", model);
+            }
+
+            // Criação do objeto para enviar ao API
             var registerData = new { emailEgresso = model.emailEgresso, passwordString = model.PasswordString };
             var json = JsonConvert.SerializeObject(registerData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -89,9 +143,11 @@ namespace ChronosMVC.Controllers
                 return RedirectToAction("LoginEgresso");
             }
 
+            // Caso haja erro, exibe o erro retornado pela API
             TempData["MensagemErro"] = $"Erro: {responseContent}";
-            return View(model);
+            return View("CadastroEgresso", model);
         }
+
         #endregion
 
         #region Manipulação de Dados do Egresso

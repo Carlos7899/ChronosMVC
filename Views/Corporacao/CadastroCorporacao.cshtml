@@ -1,9 +1,11 @@
-﻿@page
+﻿﻿
+@page
 @model ChronosMVC.Models.CorporacaoModel
 @{
     ViewBag.Title = "CadastroCorporacao";
 }
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/registro.css" rel="stylesheet" />
 
 <style>
     h2 {
@@ -142,52 +144,62 @@
 
 <h2>Área de Cadastro Corporativo</h2>
 <hr />
+
 @using (Html.BeginForm("RegistrarCorporacao", "Corporacao", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
+
+    <!-- Exibe erros gerais do formulário -->
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
     <div class="login-container">
         <div class="left"></div>
         <div class="right">
             <h2>Corporação - Cadastro</h2>
-            @using (Html.BeginForm("RegistrarCorporacao", "Corporacao", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <label class="control-label col-md-2" for="emailCorporacao">Email</label>
-                        <div class="col-md-6">
-                            @Html.EditorFor(model => model.emailCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "emailCorporacao" } })
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-md-2" for="PasswordString">Senha</label>
-                        <div class="col-md-6">
-                            @Html.PasswordFor(model => model.PasswordString, new { htmlAttributes = new { @class = "form-control", @id = "PasswordString" } })
-                        </div>
+            <div class="form-horizontal">
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="emailCorporacao">Email</label>
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.emailCorporacao, new { htmlAttributes = new { @class = "form-control", @id = "emailCorporacao" } })
                     </div>
-
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-6">
-                            <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()" />
-                            <label for="show-password">Ver Senha</label>
-                        </div>
-                    </div>
-
-                    <br />
-                    <input type="submit" value="Registrar" class="btn btn-primary" />
-                    <br />
                 </div>
-            }
-                 <p>
+                @Html.ValidationMessageFor(model => model.emailCorporacao, "", new { @class = "text-danger" })
+
+                <!-- Senha -->
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="PasswordString">Senha</label>
+                    <div class="col-md-6">
+                        @Html.PasswordFor(model => model.PasswordString, new { htmlAttributes = new { @class = "form-control", @id = "PasswordString" } })
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.PasswordString, "", new { @class = "text-danger" })
+
+                <!-- Exibir Senha -->
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-6">
+                        <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()" />
+                        <label for="show-password">Ver Senha</label>
+                    </div>
+                </div>
+
+                <br />
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+                <br />
+            </div>
+
+            <p>
                 Já possui uma conta? <a href="/Corporacao/LoginCorporacao">Clique aqui para fazer login.</a>
             </p>
 
             <script>
                 function togglePasswordVisibility() {
                     const passwordInput = document.getElementById('PasswordString');
+                    const confirmPasswordInput = document.getElementById('ConfirmPassword');
                     const showPasswordCheckbox = document.getElementById('show-password');
                     passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+                    confirmPasswordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
                 }
             </script>
         </div>

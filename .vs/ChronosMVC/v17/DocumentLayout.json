@@ -1,337 +1,341 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ChronosMVC\\",
+  "WorkspaceRootPath": "C:\\API\\ChronosMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\criarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\criarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\adicionarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\adicionarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\criarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\criarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\adicionarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\adicionarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\criarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\criarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\candidatura\\vercurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\vercurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\candidatura\\candidaturasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\candidaturasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\candidatura\\minhascandidaturas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\minhascandidaturas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\candidatura\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\vagas\\vagasview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\vagasview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\vagascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\vagascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enums\\statuscandidatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enums\\statuscandidatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\candidaturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\candidaturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\vagas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curso\\criarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\criarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curso\\cursosporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\cursosporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curso\\editarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\editarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curso\\listacursos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\listacursos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\vagas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\vagas\\editarvaga.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\editarvaga.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\vagas\\vagasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\vagasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\corporacao\\adicionardadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\adicionardadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\egresso\\adicionardadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\adicionardadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\egresso\\cadastroegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\cadastroegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\egresso\\dadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\dadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\corporacao\\cadastrocorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\cadastrocorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\egresso\\loginegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\loginegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\egressocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\egressocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\curriculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\curriculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\publicacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\publicacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\cursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\cursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\corporacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\cadastrocorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\cadastrocorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\logincorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\egresso\\cadastroegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\cadastroegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\egresso\\loginegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\loginegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\egressocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\egressocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\registro.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\registro.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\criarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\criarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\adicionarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\adicionarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\criarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\criarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\adicionarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\adicionarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\criarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\criarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\candidatura\\vercurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\vercurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\candidatura\\candidaturasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\candidaturasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\candidatura\\minhascandidaturas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\minhascandidaturas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\candidatura\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\candidatura\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\vagas\\vagasview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\vagasview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\vagascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\vagascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enums\\statuscandidatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enums\\statuscandidatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\candidaturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\candidaturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\vagas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curso\\criarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\criarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curso\\cursosporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\cursosporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curso\\editarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\editarcurso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curso\\listacursos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curso\\listacursos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\vagas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\vagas\\editarvaga.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\editarvaga.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\vagas\\vagasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\vagas\\vagasporcorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\adicionardadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\adicionardadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\egresso\\adicionardadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\adicionardadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\corporacao\\dadoscorporacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\egresso\\dadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\egresso\\dadosegresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\curriculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\curriculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\publicacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\publicacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\cursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\cursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\controllers\\candidaturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\controllers\\candidaturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:controllers\\candidaturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\js\\curriculo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\js\\curriculo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\js\\curriculo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\editarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\editarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\editarexperiencia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\css\\detalhescurricuo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\detalhescurricuo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\detalhescurricuo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\css\\navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\css\\barradeprogresso.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\barradeprogresso.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\barradeprogresso.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\editarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\editarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\editarcurriculo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\egressomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\egressomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\egressomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\chronosmvc.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\chronosmvc.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:chronosmvc.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\curriculo\\curriculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\curriculo\\curriculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\curriculo\\curriculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\editarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\editarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\editarformacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\listaformacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\listaformacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\listaformacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\curriculo\\formacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\curriculo\\formacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\curriculo\\formacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\curriculo\\listaexperiencias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\curriculo\\listaexperiencias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\curriculo\\listaexperiencias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\curriculo\\experienciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\curriculo\\experienciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\curriculo\\experienciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\publicacao\\detalhespublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\publicacao\\detalhespublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\publicacao\\detalhespublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\publicacao\\minhaspublicacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\publicacao\\minhaspublicacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\publicacao\\minhaspublicacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\comentariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\comentariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\comentariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\vagamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\vagamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\vagamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\cursomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\cursomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\cursomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\publicacao\\listarpublicacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\publicacao\\listarpublicacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\publicacao\\listarpublicacoes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\publicacao\\editarpublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\publicacao\\editarpublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\publicacao\\editarpublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\corporacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\corporacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\corporacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\publicacao\\criarpublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\publicacao\\criarpublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\publicacao\\criarpublicacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\publicacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\publicacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\publicacaomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enums\\tipologradouro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enums\\tipologradouro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enums\\tipologradouro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enderecos\\vagaenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enderecos\\vagaenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enderecos\\vagaenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enderecos\\egressoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enderecos\\egressoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enderecos\\egressoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enderecos\\corporacaoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enderecos\\corporacaoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enderecos\\corporacaoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enderecos\\logradouromodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enderecos\\logradouromodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enderecos\\logradouromodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enderecos\\cursoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enderecos\\cursoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enderecos\\cursoenderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\models\\enums\\tipocorporacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\models\\enums\\tipocorporacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:models\\enums\\tipocorporacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|d:\\chronosmvc\\views\\home\\escolherlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|c:\\api\\chronosmvc\\views\\home\\escolherlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B97504-213E-49E0-B10F-F620869563C8}|ChronosMVC.csproj|solutionrelative:views\\home\\escolherlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -342,7 +346,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -350,89 +354,175 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdicionarExperiencia.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\AdicionarExperiencia.cshtml",
-              "RelativeDocumentMoniker": "Views\\Curriculo\\AdicionarExperiencia.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\AdicionarExperiencia.cshtml",
-              "RelativeToolTip": "Views\\Curriculo\\AdicionarExperiencia.cshtml",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "CadastroEgresso.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Egresso\\CadastroEgresso.cshtml",
+              "RelativeDocumentMoniker": "Views\\Egresso\\CadastroEgresso.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Egresso\\CadastroEgresso.cshtml",
+              "RelativeToolTip": "Views\\Egresso\\CadastroEgresso.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-12T17:01:46.299Z",
+              "WhenOpened": "2024-10-22T18:04:53.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CriarCurriculo.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\CriarCurriculo.cshtml",
-              "RelativeDocumentMoniker": "Views\\Curriculo\\CriarCurriculo.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\CriarCurriculo.cshtml",
-              "RelativeToolTip": "Views\\Curriculo\\CriarCurriculo.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "EgressoController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\EgressoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EgressoController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\EgressoController.cs",
+              "RelativeToolTip": "Controllers\\EgressoController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwv0YAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T18:06:50.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginEgresso.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Egresso\\LoginEgresso.cshtml",
+              "RelativeDocumentMoniker": "Views\\Egresso\\LoginEgresso.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Egresso\\LoginEgresso.cshtml",
+              "RelativeToolTip": "Views\\Egresso\\LoginEgresso.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAkwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-11T18:22:45.635Z",
+              "WhenOpened": "2024-10-22T18:05:12.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastroCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\CadastroCorporacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Corporacao\\CadastroCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\CadastroCorporacao.cshtml",
+              "RelativeToolTip": "Views\\Corporacao\\CadastroCorporacao.cshtml",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T21:02:38.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CorporacaoController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\CorporacaoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CorporacaoController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\CorporacaoController.cs",
+              "RelativeToolTip": "Controllers\\CorporacaoController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAgwJQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T16:32:07.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Corporacao\\LoginCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
+              "RelativeToolTip": "Views\\Corporacao\\LoginCorporacao.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T16:39:28.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdicionarFormacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\AdicionarFormacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Curriculo\\AdicionarFormacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\AdicionarFormacao.cshtml",
+              "RelativeToolTip": "Views\\Curriculo\\AdicionarFormacao.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T17:21:20.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CriarFormacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\CriarFormacao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Curriculo\\CriarFormacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\CriarFormacao.cshtml",
+              "RelativeToolTip": "Views\\Curriculo\\CriarFormacao.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T14:27:00.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "CriarExperiencia.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\CriarExperiencia.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\CriarExperiencia.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\CriarExperiencia.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\CriarExperiencia.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\CriarExperiencia.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\CriarExperiencia.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACQAAAAEAAAA",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T20:35:12.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CriarFormacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\CriarFormacao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Curriculo\\CriarFormacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\CriarFormacao.cshtml",
-              "RelativeToolTip": "Views\\Curriculo\\CriarFormacao.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAoAAAA",
+              "DocumentIndex": 9,
+              "Title": "CriarCurriculo.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\CriarCurriculo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Curriculo\\CriarCurriculo.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\CriarCurriculo.cshtml",
+              "RelativeToolTip": "Views\\Curriculo\\CriarCurriculo.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-12T14:27:00.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdicionarFormacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\AdicionarFormacao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Curriculo\\AdicionarFormacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\AdicionarFormacao.cshtml",
-              "RelativeToolTip": "Views\\Curriculo\\AdicionarFormacao.cshtml",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-12T17:21:20.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VerCurriculo.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\candidatura\\VerCurriculo.cshtml",
-              "RelativeDocumentMoniker": "Views\\candidatura\\VerCurriculo.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\candidatura\\VerCurriculo.cshtml",
-              "RelativeToolTip": "Views\\candidatura\\VerCurriculo.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T16:14:49.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T18:22:45.635Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "registro.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\registro.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\registro.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\registro.css",
+              "RelativeToolTip": "wwwroot\\css\\registro.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-08T17:21:24.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdicionarExperiencia.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\AdicionarExperiencia.cshtml",
+              "RelativeDocumentMoniker": "Views\\Curriculo\\AdicionarExperiencia.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\AdicionarExperiencia.cshtml",
+              "RelativeToolTip": "Views\\Curriculo\\AdicionarExperiencia.cshtml",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T17:01:46.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VerCurriculo.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\candidatura\\VerCurriculo.cshtml",
+              "RelativeDocumentMoniker": "Views\\candidatura\\VerCurriculo.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\candidatura\\VerCurriculo.cshtml",
+              "RelativeToolTip": "Views\\candidatura\\VerCurriculo.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T16:14:49.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CandidaturasPorCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\candidatura\\CandidaturasPorCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\candidatura\\CandidaturasPorCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\candidatura\\CandidaturasPorCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\candidatura\\CandidaturasPorCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\candidatura\\CandidaturasPorCorporacao.cshtml",
               "RelativeToolTip": "Views\\candidatura\\CandidaturasPorCorporacao.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -440,11 +530,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "Editar.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\candidatura\\Editar.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\candidatura\\Editar.cshtml",
               "RelativeDocumentMoniker": "Views\\candidatura\\Editar.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\candidatura\\Editar.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\candidatura\\Editar.cshtml",
               "RelativeToolTip": "Views\\candidatura\\Editar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -452,11 +542,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "StatusCandidatura.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enums\\StatusCandidatura.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enums\\StatusCandidatura.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\StatusCandidatura.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enums\\StatusCandidatura.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enums\\StatusCandidatura.cs",
               "RelativeToolTip": "Models\\Enums\\StatusCandidatura.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -464,11 +554,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "CandidaturaModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\CandidaturaModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\CandidaturaModel.cs",
               "RelativeDocumentMoniker": "Models\\CandidaturaModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\CandidaturaModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\CandidaturaModel.cs",
               "RelativeToolTip": "Models\\CandidaturaModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -476,11 +566,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "VagasController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\VagasController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\VagasController.cs",
               "RelativeDocumentMoniker": "Controllers\\VagasController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\VagasController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\VagasController.cs",
               "RelativeToolTip": "Controllers\\VagasController.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAQwL4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -488,11 +578,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Vagas\\Details.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\Details.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Vagas\\Details.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Vagas\\Details.cshtml",
               "RelativeToolTip": "Views\\Vagas\\Details.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowC8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -500,11 +590,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "MinhasCandidaturas.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\candidatura\\MinhasCandidaturas.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\candidatura\\MinhasCandidaturas.cshtml",
               "RelativeDocumentMoniker": "Views\\candidatura\\MinhasCandidaturas.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\candidatura\\MinhasCandidaturas.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\candidatura\\MinhasCandidaturas.cshtml",
               "RelativeToolTip": "Views\\candidatura\\MinhasCandidaturas.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -512,11 +602,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "VagasVIew.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Vagas\\VagasVIew.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\VagasVIew.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\VagasVIew.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Vagas\\VagasVIew.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Vagas\\VagasVIew.cshtml",
               "RelativeToolTip": "Views\\Vagas\\VagasVIew.cshtml",
               "ViewState": "AgIAAF8AAAAAAAAAAAAowGwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -524,11 +614,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "CriarCurso.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curso\\CriarCurso.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curso\\CriarCurso.cshtml",
               "RelativeDocumentMoniker": "Views\\Curso\\CriarCurso.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curso\\CriarCurso.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curso\\CriarCurso.cshtml",
               "RelativeToolTip": "Views\\Curso\\CriarCurso.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwBoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -536,11 +626,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "Detalhes.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\Detalhes.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\Detalhes.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\Detalhes.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\Detalhes.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\Detalhes.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\Detalhes.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -548,11 +638,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "CursosPorCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curso\\CursosPorCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curso\\CursosPorCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Curso\\CursosPorCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curso\\CursosPorCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curso\\CursosPorCorporacao.cshtml",
               "RelativeToolTip": "Views\\Curso\\CursosPorCorporacao.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAACQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -560,11 +650,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "EditarCurso.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curso\\EditarCurso.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curso\\EditarCurso.cshtml",
               "RelativeDocumentMoniker": "Views\\Curso\\EditarCurso.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curso\\EditarCurso.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curso\\EditarCurso.cshtml",
               "RelativeToolTip": "Views\\Curso\\EditarCurso.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -572,11 +662,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "ListaCursos.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curso\\ListaCursos.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curso\\ListaCursos.cshtml",
               "RelativeDocumentMoniker": "Views\\Curso\\ListaCursos.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curso\\ListaCursos.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curso\\ListaCursos.cshtml",
               "RelativeToolTip": "Views\\Curso\\ListaCursos.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -584,11 +674,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -596,11 +686,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Vagas\\Create.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\Create.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Vagas\\Create.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Vagas\\Create.cshtml",
               "RelativeToolTip": "Views\\Vagas\\Create.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowBwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -608,11 +698,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "EditarVaga.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Vagas\\EditarVaga.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\EditarVaga.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\EditarVaga.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Vagas\\EditarVaga.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Vagas\\EditarVaga.cshtml",
               "RelativeToolTip": "Views\\Vagas\\EditarVaga.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -620,11 +710,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "VagasPorCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Vagas\\VagasPorCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Vagas\\VagasPorCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Vagas\\VagasPorCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Vagas\\VagasPorCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Vagas\\VagasPorCorporacao.cshtml",
               "RelativeToolTip": "Views\\Vagas\\VagasPorCorporacao.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -632,23 +722,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CadastroEgresso.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Egresso\\CadastroEgresso.cshtml",
-              "RelativeDocumentMoniker": "Views\\Egresso\\CadastroEgresso.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Egresso\\CadastroEgresso.cshtml",
-              "RelativeToolTip": "Views\\Egresso\\CadastroEgresso.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAowCYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-22T18:04:53.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "AdicionarDadosEgresso.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Egresso\\AdicionarDadosEgresso.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Egresso\\AdicionarDadosEgresso.cshtml",
               "RelativeDocumentMoniker": "Views\\Egresso\\AdicionarDadosEgresso.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Egresso\\AdicionarDadosEgresso.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Egresso\\AdicionarDadosEgresso.cshtml",
               "RelativeToolTip": "Views\\Egresso\\AdicionarDadosEgresso.cshtml",
               "ViewState": "AgIAAGEAAAAAAAAAAAAowHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -656,11 +734,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "AdicionarDadosCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
               "RelativeToolTip": "Views\\Corporacao\\AdicionarDadosCorporacao.cshtml",
               "ViewState": "AgIAAIkAAAAAAAAAAAAowLkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -668,11 +746,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "DadosCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Corporacao\\DadosCorporacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Corporacao\\DadosCorporacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Corporacao\\DadosCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Corporacao\\DadosCorporacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Corporacao\\DadosCorporacao.cshtml",
               "RelativeToolTip": "Views\\Corporacao\\DadosCorporacao.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -680,11 +758,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "DadosEgresso.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Egresso\\DadosEgresso.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Egresso\\DadosEgresso.cshtml",
               "RelativeDocumentMoniker": "Views\\Egresso\\DadosEgresso.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Egresso\\DadosEgresso.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Egresso\\DadosEgresso.cshtml",
               "RelativeToolTip": "Views\\Egresso\\DadosEgresso.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -692,47 +770,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CadastroCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Corporacao\\CadastroCorporacao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Corporacao\\CadastroCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Corporacao\\CadastroCorporacao.cshtml",
-              "RelativeToolTip": "Views\\Corporacao\\CadastroCorporacao.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAowGUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-20T21:02:38.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "LoginEgresso.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Egresso\\LoginEgresso.cshtml",
-              "RelativeDocumentMoniker": "Views\\Egresso\\LoginEgresso.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Egresso\\LoginEgresso.cshtml",
-              "RelativeToolTip": "Views\\Egresso\\LoginEgresso.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBYAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-22T18:05:12.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LoginCorporacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Corporacao\\LoginCorporacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Corporacao\\LoginCorporacao.cshtml",
-              "RelativeToolTip": "Views\\Corporacao\\LoginCorporacao.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T16:39:28.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "CursoController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\CursoController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\CursoController.cs",
               "RelativeDocumentMoniker": "Controllers\\CursoController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\CursoController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\CursoController.cs",
               "RelativeToolTip": "Controllers\\CursoController.cs",
               "ViewState": "AQIAAJoAAAAAAAAAAABBwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -740,11 +782,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAABgAAAAAAAAAAAAAACEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -752,11 +794,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "PublicacaoController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\PublicacaoController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\PublicacaoController.cs",
               "RelativeDocumentMoniker": "Controllers\\PublicacaoController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\PublicacaoController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\PublicacaoController.cs",
               "RelativeToolTip": "Controllers\\PublicacaoController.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAABBwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -764,11 +806,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAABwAAAAAAAAAAABBwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -776,23 +818,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "EgressoController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\EgressoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EgressoController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\EgressoController.cs",
-              "RelativeToolTip": "Controllers\\EgressoController.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAAAKkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T18:06:50.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "CurriculoController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\CurriculoController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\CurriculoController.cs",
               "RelativeDocumentMoniker": "Controllers\\CurriculoController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\CurriculoController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\CurriculoController.cs",
               "RelativeToolTip": "Controllers\\CurriculoController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -800,23 +830,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "CorporacaoController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\CorporacaoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CorporacaoController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\CorporacaoController.cs",
-              "RelativeToolTip": "Controllers\\CorporacaoController.cs",
-              "ViewState": "AQIAABMBAAAAAAAAAABBwBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:32:07.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ComentarioController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\ComentarioController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\ComentarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\ComentarioController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\ComentarioController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\ComentarioController.cs",
               "RelativeToolTip": "Controllers\\ComentarioController.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAABBwAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -824,11 +842,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "CandidaturaController.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Controllers\\CandidaturaController.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Controllers\\CandidaturaController.cs",
               "RelativeDocumentMoniker": "Controllers\\CandidaturaController.cs",
-              "ToolTip": "D:\\ChronosMVC\\Controllers\\CandidaturaController.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Controllers\\CandidaturaController.cs",
               "RelativeToolTip": "Controllers\\CandidaturaController.cs",
               "ViewState": "AQIAAIABAAAAAAAAAABBwFoBAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -836,11 +854,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "curriculo.js",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\js\\curriculo.js",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\js\\curriculo.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\curriculo.js",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\js\\curriculo.js",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\js\\curriculo.js",
               "RelativeToolTip": "wwwroot\\js\\curriculo.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -848,11 +866,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "EditarExperiencia.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\EditarExperiencia.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\EditarExperiencia.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\EditarExperiencia.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\EditarExperiencia.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\EditarExperiencia.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\EditarExperiencia.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -860,11 +878,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ChronosMVC\\appsettings.json",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\ChronosMVC\\appsettings.json",
+              "ToolTip": "C:\\API\\ChronosMVC\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -872,11 +890,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Program.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ChronosMVC\\Program.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -884,11 +902,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "index.css",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\css\\index.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\index.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\index.css",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\css\\index.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\index.css",
               "RelativeToolTip": "wwwroot\\css\\index.css",
               "ViewState": "AgIAAGkAAAAAAAAAAAAIwIQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -896,11 +914,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "detalhesCurricuo.css",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\detalhesCurricuo.css",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\detalhesCurricuo.css",
               "RelativeToolTip": "wwwroot\\css\\detalhesCurricuo.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -908,11 +926,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "barraDeProgresso.css",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\barraDeProgresso.css",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\barraDeProgresso.css",
               "RelativeToolTip": "wwwroot\\css\\barraDeProgresso.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -920,11 +938,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "navbar.css",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\css\\navbar.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\navbar.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\navbar.css",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\css\\navbar.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\navbar.css",
               "RelativeToolTip": "wwwroot\\css\\navbar.css",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -932,11 +950,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "site.js",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\js\\site.js",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -944,11 +962,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "EgressoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\EgressoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\EgressoModel.cs",
               "RelativeDocumentMoniker": "Models\\EgressoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\EgressoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\EgressoModel.cs",
               "RelativeToolTip": "Models\\EgressoModel.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAUwCQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -956,11 +974,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "EditarCurriculo.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\EditarCurriculo.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\EditarCurriculo.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\EditarCurriculo.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\EditarCurriculo.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\EditarCurriculo.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\EditarCurriculo.cshtml",
               "ViewState": "AgIAABEAAAAAAAAAAAAswC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -968,11 +986,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "Login.css",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\css\\Login.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\Login.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\Login.css",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\css\\Login.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\Login.css",
               "RelativeToolTip": "wwwroot\\css\\Login.css",
               "ViewState": "AgIAAFEAAAAAAAAAAAAcwG4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -980,11 +998,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "site.css",
-              "DocumentMoniker": "D:\\ChronosMVC\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "D:\\ChronosMVC\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\API\\ChronosMVC\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -992,11 +1010,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "EditarFormacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\EditarFormacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\EditarFormacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\EditarFormacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\EditarFormacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\EditarFormacao.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\EditarFormacao.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1004,11 +1022,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\ChronosMVC\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\ChronosMVC\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\API\\ChronosMVC\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAsAAAAAAAAAAAAiwB8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -1016,22 +1034,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "ChronosMVC",
-              "DocumentMoniker": "D:\\ChronosMVC\\ChronosMVC.csproj",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\ChronosMVC.csproj",
               "RelativeDocumentMoniker": "ChronosMVC.csproj",
-              "ToolTip": "D:\\ChronosMVC\\ChronosMVC.csproj",
+              "ToolTip": "C:\\API\\ChronosMVC\\ChronosMVC.csproj",
               "RelativeToolTip": "ChronosMVC.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-12T19:20:22.319Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "ListaExperiencias.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\ListaExperiencias.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\ListaExperiencias.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\ListaExperiencias.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\ListaExperiencias.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\ListaExperiencias.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\ListaExperiencias.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1039,11 +1057,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "CurriculoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Curriculo\\CurriculoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Curriculo\\CurriculoModel.cs",
               "RelativeDocumentMoniker": "Models\\Curriculo\\CurriculoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Curriculo\\CurriculoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Curriculo\\CurriculoModel.cs",
               "RelativeToolTip": "Models\\Curriculo\\CurriculoModel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAmwBoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1051,11 +1069,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "ListaFormacoes.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Curriculo\\ListaFormacoes.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Curriculo\\ListaFormacoes.cshtml",
               "RelativeDocumentMoniker": "Views\\Curriculo\\ListaFormacoes.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Curriculo\\ListaFormacoes.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Curriculo\\ListaFormacoes.cshtml",
               "RelativeToolTip": "Views\\Curriculo\\ListaFormacoes.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1063,11 +1081,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "FormacaoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Curriculo\\FormacaoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Curriculo\\FormacaoModel.cs",
               "RelativeDocumentMoniker": "Models\\Curriculo\\FormacaoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Curriculo\\FormacaoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Curriculo\\FormacaoModel.cs",
               "RelativeToolTip": "Models\\Curriculo\\FormacaoModel.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1075,11 +1093,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "ExperienciaModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Curriculo\\ExperienciaModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Curriculo\\ExperienciaModel.cs",
               "RelativeDocumentMoniker": "Models\\Curriculo\\ExperienciaModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Curriculo\\ExperienciaModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Curriculo\\ExperienciaModel.cs",
               "RelativeToolTip": "Models\\Curriculo\\ExperienciaModel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwBAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1087,11 +1105,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "MinhasPublicacoes.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Publicacao\\MinhasPublicacoes.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Publicacao\\MinhasPublicacoes.cshtml",
               "RelativeDocumentMoniker": "Views\\Publicacao\\MinhasPublicacoes.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Publicacao\\MinhasPublicacoes.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Publicacao\\MinhasPublicacoes.cshtml",
               "RelativeToolTip": "Views\\Publicacao\\MinhasPublicacoes.cshtml",
               "ViewState": "AgIAAHAAAAAAAAAAAAAkwIIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1099,11 +1117,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "ComentarioModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\ComentarioModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\ComentarioModel.cs",
               "RelativeDocumentMoniker": "Models\\ComentarioModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\ComentarioModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\ComentarioModel.cs",
               "RelativeToolTip": "Models\\ComentarioModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1111,11 +1129,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "DetalhesPublicacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Publicacao\\DetalhesPublicacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Publicacao\\DetalhesPublicacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Publicacao\\DetalhesPublicacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Publicacao\\DetalhesPublicacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Publicacao\\DetalhesPublicacao.cshtml",
               "RelativeToolTip": "Views\\Publicacao\\DetalhesPublicacao.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAgwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1123,11 +1141,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "CursoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\CursoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\CursoModel.cs",
               "RelativeDocumentMoniker": "Models\\CursoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\CursoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\CursoModel.cs",
               "RelativeToolTip": "Models\\CursoModel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAA4wAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1135,11 +1153,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "VagaModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\VagaModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\VagaModel.cs",
               "RelativeDocumentMoniker": "Models\\VagaModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\VagaModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\VagaModel.cs",
               "RelativeToolTip": "Models\\VagaModel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAIwA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1147,11 +1165,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "EditarPublicacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Publicacao\\EditarPublicacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Publicacao\\EditarPublicacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Publicacao\\EditarPublicacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Publicacao\\EditarPublicacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Publicacao\\EditarPublicacao.cshtml",
               "RelativeToolTip": "Views\\Publicacao\\EditarPublicacao.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1159,11 +1177,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "ListarPublicacoes.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Publicacao\\ListarPublicacoes.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Publicacao\\ListarPublicacoes.cshtml",
               "RelativeDocumentMoniker": "Views\\Publicacao\\ListarPublicacoes.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Publicacao\\ListarPublicacoes.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Publicacao\\ListarPublicacoes.cshtml",
               "RelativeToolTip": "Views\\Publicacao\\ListarPublicacoes.cshtml",
               "ViewState": "AgIAAHAAAAAAAAAAAAAkwH4AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1171,11 +1189,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "CorporacaoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\CorporacaoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\CorporacaoModel.cs",
               "RelativeDocumentMoniker": "Models\\CorporacaoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\CorporacaoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\CorporacaoModel.cs",
               "RelativeToolTip": "Models\\CorporacaoModel.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAxwBcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1183,11 +1201,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "CriarPublicacao.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Publicacao\\CriarPublicacao.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Publicacao\\CriarPublicacao.cshtml",
               "RelativeDocumentMoniker": "Views\\Publicacao\\CriarPublicacao.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Publicacao\\CriarPublicacao.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Publicacao\\CriarPublicacao.cshtml",
               "RelativeToolTip": "Views\\Publicacao\\CriarPublicacao.cshtml",
               "ViewState": "AgIAAD0AAAAAAAAAAAAkwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1195,11 +1213,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "PublicacaoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\PublicacaoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\PublicacaoModel.cs",
               "RelativeDocumentMoniker": "Models\\PublicacaoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\PublicacaoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\PublicacaoModel.cs",
               "RelativeToolTip": "Models\\PublicacaoModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1207,11 +1225,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1219,11 +1237,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "Error.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Shared\\Error.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Shared\\Error.cshtml",
               "RelativeToolTip": "Views\\Shared\\Error.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1231,11 +1249,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1243,11 +1261,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1255,11 +1273,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "TipoLogradouro.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enums\\TipoLogradouro.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enums\\TipoLogradouro.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\TipoLogradouro.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enums\\TipoLogradouro.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enums\\TipoLogradouro.cs",
               "RelativeToolTip": "Models\\Enums\\TipoLogradouro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1267,11 +1285,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "VagaEnderecoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enderecos\\VagaEnderecoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\VagaEnderecoModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\VagaEnderecoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enderecos\\VagaEnderecoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enderecos\\VagaEnderecoModel.cs",
               "RelativeToolTip": "Models\\Enderecos\\VagaEnderecoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1279,11 +1297,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "EgressoEnderecoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enderecos\\EgressoEnderecoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\EgressoEnderecoModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\EgressoEnderecoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enderecos\\EgressoEnderecoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enderecos\\EgressoEnderecoModel.cs",
               "RelativeToolTip": "Models\\Enderecos\\EgressoEnderecoModel.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1291,11 +1309,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "CorporacaoEnderecoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enderecos\\CorporacaoEnderecoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\CorporacaoEnderecoModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\CorporacaoEnderecoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enderecos\\CorporacaoEnderecoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enderecos\\CorporacaoEnderecoModel.cs",
               "RelativeToolTip": "Models\\Enderecos\\CorporacaoEnderecoModel.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA8wA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1303,11 +1321,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "LogradouroModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enderecos\\LogradouroModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\LogradouroModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\LogradouroModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enderecos\\LogradouroModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enderecos\\LogradouroModel.cs",
               "RelativeToolTip": "Models\\Enderecos\\LogradouroModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1315,11 +1333,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "CursoEnderecoModel.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enderecos\\CursoEnderecoModel.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enderecos\\CursoEnderecoModel.cs",
               "RelativeDocumentMoniker": "Models\\Enderecos\\CursoEnderecoModel.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enderecos\\CursoEnderecoModel.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enderecos\\CursoEnderecoModel.cs",
               "RelativeToolTip": "Models\\Enderecos\\CursoEnderecoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1327,11 +1345,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "TipoCorporacao.cs",
-              "DocumentMoniker": "D:\\ChronosMVC\\Models\\Enums\\TipoCorporacao.cs",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Models\\Enums\\TipoCorporacao.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\TipoCorporacao.cs",
-              "ToolTip": "D:\\ChronosMVC\\Models\\Enums\\TipoCorporacao.cs",
+              "ToolTip": "C:\\API\\ChronosMVC\\Models\\Enums\\TipoCorporacao.cs",
               "RelativeToolTip": "Models\\Enums\\TipoCorporacao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1339,11 +1357,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "EscolherLogin.cshtml",
-              "DocumentMoniker": "D:\\ChronosMVC\\Views\\Home\\EscolherLogin.cshtml",
+              "DocumentMoniker": "C:\\API\\ChronosMVC\\Views\\Home\\EscolherLogin.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\EscolherLogin.cshtml",
-              "ToolTip": "D:\\ChronosMVC\\Views\\Home\\EscolherLogin.cshtml",
+              "ToolTip": "C:\\API\\ChronosMVC\\Views\\Home\\EscolherLogin.cshtml",
               "RelativeToolTip": "Views\\Home\\EscolherLogin.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
