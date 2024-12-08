@@ -12,6 +12,7 @@ using System.Text.Unicode;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.RegularExpressions;
 
 namespace ChronosMVC.Controllers
 {
@@ -67,6 +68,29 @@ namespace ChronosMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(CorporacaoModel model)
         {
+   
+            if (!ModelState.IsValid)
+            {
+                TempData["MensagemErro"] = "Por favor, preencha todos os campos corretamente.";
+                return View("LoginCorporacao", model);
+            }
+
+            if (string.IsNullOrEmpty(model.emailCorporacao))
+            {
+                ModelState.AddModelError("emailCorporacao", "O e-mail é obrigatório.");
+            }
+
+            if (string.IsNullOrEmpty(model.PasswordString))
+            {
+                ModelState.AddModelError("PasswordString", "A senha é obrigatória.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                TempData["MensagemErro"] = "Por favor, preencha todos os campos corretamente.";
+                return View("LoginCorporacao", model);
+            }
+
             var loginData = new { emailCorporacao = model.emailCorporacao, passwordString = model.PasswordString };
             var json = JsonConvert.SerializeObject(loginData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -76,27 +100,23 @@ namespace ChronosMVC.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                // Aqui, você deve deserializar a resposta da API para obter o ID da corporação
+     
                 var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
                 var token = tokenResponse.Token;
-                var idCorporacao = tokenResponse.IdCorporacao; // Capturando o ID da corporação
-                Console.WriteLine($"ID da Corporação: {idCorporacao}"); // Adicione esta linha
+                var idCorporacao = tokenResponse.IdCorporacao; 
 
-
-                // Configure a claims identity
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, model.emailCorporacao),
-                    new Claim("Token", token), // Adicione o token como uma claim
-                    new Claim("idCorporacao", idCorporacao.ToString()), // Use o ID capturado
-                    new Claim(ClaimTypes.Role, "Corporacao"), // Adicionando a role
-                  
+                    new Claim("Token", token), 
+                    new Claim("idCorporacao", idCorporacao.ToString()), 
+                    new Claim(ClaimTypes.Role, "Corporacao"), 
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "login");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                await HttpContext.SignInAsync(claimsPrincipal); // Autentica o usuário
+                await HttpContext.SignInAsync(claimsPrincipal); 
 
                 TempData["MensagemSucesso"] = "Login realizado com sucesso!";
                 return RedirectToAction("Index", "Home");
@@ -108,10 +128,34 @@ namespace ChronosMVC.Controllers
 
 
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegistrarCorporacao(CorporacaoModel model)
         {
+
+            if (string.IsNullOrEmpty(model.emailCorporacao) || string.IsNullOrEmpty(model.PasswordString))
+            {
+                ModelState.AddModelError("", "Todos os campos são obrigatórios.");
+                return View("CadastroCorporacao", model);
+            }
+
+            if (!Regex.IsMatch(model.emailCorporacao, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
+                ModelState.AddModelError("emailCorporacao", "O e-mail fornecido não é válido.");
+                return View("CadastroCorporacao", model);
+            }
+
+            if (model.PasswordString.Length < 6)
+            {
+                ModelState.AddModelError("PasswordString", "A senha deve ter no mínimo 6 caracteres.");
+                return View("CadastroCorporacao", model);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View("CadastroCorporacao", model);
+            }
 
             var registerData = new { emailCorporacao = model.emailCorporacao, passwordString = model.PasswordString };
             var json = JsonConvert.SerializeObject(registerData);
@@ -123,12 +167,13 @@ namespace ChronosMVC.Controllers
             if (response.IsSuccessStatusCode)
             {
                 TempData["MensagemSucesso"] = "Registro realizado com sucesso!";
-                return RedirectToAction("LoginCorporacao"); 
+                return RedirectToAction("LoginCorporacao");
             }
 
             TempData["MensagemErro"] = $"Erro: {responseContent}";
-            return View(model); 
+            return View("CadastroCorporacao", model);
         }
+
 
 
 
