@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="manifest" href="~/manifest/manifest.json">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Chronos</title>
@@ -146,6 +147,14 @@
             });
         });
     </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/js/service-worker.js')
+                .then(() => console.log('Service Worker registrado com sucesso!'))
+                .catch(err => console.error('Erro ao registrar o Service Worker:', err));
+        }
+    </script>
+
 
 
 
