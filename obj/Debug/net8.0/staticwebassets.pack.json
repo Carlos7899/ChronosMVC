@@ -41,12 +41,20 @@
       "PackagePath": "staticwebassets\\img\\imagemUsuario.png"
     },
     {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\img\\logo.jpeg",
+      "PackagePath": "staticwebassets\\img\\logo.jpeg"
+    },
+    {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\img\\reintegracao.jpeg",
       "PackagePath": "staticwebassets\\img\\reintegracao.jpeg"
     },
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\js\\curriculo.js",
       "PackagePath": "staticwebassets\\js\\curriculo.js"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\js\\service-worker.js",
+      "PackagePath": "staticwebassets\\js\\service-worker.js"
     },
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\js\\site.js",
@@ -279,6 +287,18 @@
     {
       "Id": "C:\\API\\ChronosMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\manifest\\icon512_maskable.png",
+      "PackagePath": "staticwebassets\\manifest\\icon512_maskable.png"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\manifest\\icon512_rounded.png",
+      "PackagePath": "staticwebassets\\manifest\\icon512_rounded.png"
+    },
+    {
+      "Id": "C:\\API\\ChronosMVC\\wwwroot\\manifest\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest\\manifest.json"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChronosMVC.Microsoft.AspNetCore.StaticWebAssets.props",
