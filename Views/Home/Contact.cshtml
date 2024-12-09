@@ -21,8 +21,8 @@
             background: #ffffff;
             padding: 20px;
             border-radius: 10px;
-            border: 2px solid #007BFF;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid blue;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 600px;
             text-align: center;
@@ -51,13 +51,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
-            transition: box-shadow 0.3s ease;
         }
-
-            input:focus, textarea:focus {
-                outline: none;
-                box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-            }
 
         textarea {
             height: 100px;
@@ -65,6 +59,7 @@
         }
 
         .btn {
+            background-color: #007BFF;
             color: #ffffff;
             border: none;
             padding: 10px 15px;
@@ -74,6 +69,9 @@
             transition: background-color 0.3s ease;
         }
 
+            .btn:hover {
+                background-color: #0056b3;
+            }
     </style>
 </head>
 
