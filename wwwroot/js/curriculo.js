@@ -38,7 +38,7 @@
             doc.text("Email: " + document.getElementById("email").innerText, 20, 40);
             doc.text("Telefone: " + document.getElementById("telefone").innerText, 20, 50);
             doc.text("Habilidades: " + document.getElementById("habilidades").innerText, 20, 60);
-            doc.text("Descrição: " + document.getElementById("descricao").innerText, 20, 70);
+            doc.text("Objetivo: " + document.getElementById("descricao").innerText, 20, 70);
 
             // Adicionar uma linha separadora
             doc.line(20, 75, 190, 75); // Linha horizontal

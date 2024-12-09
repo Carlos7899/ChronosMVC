@@ -278,6 +278,35 @@ namespace ChronosMVC.Controllers
         }
         #endregion
 
+        //certo
+        #region Ação para exibir os detalhes do curso
+        [HttpGet]
+        public async Task<IActionResult> DetalhesCurso(int id)
+        {
+            try
+            {
+                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl + $"GetbyId/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    var curso = JsonConvert.DeserializeObject<CursoModel>(jsonResponse);
+                    return View(curso);  // Passa o curso para a view
+                }
+                else
+                {
+                    string errorResponse = await response.Content.ReadAsStringAsync();
+                    throw new Exception(errorResponse);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return RedirectToAction("ListaCursos");
+            }
+        }
+        #endregion
+
+
 
     }
 }

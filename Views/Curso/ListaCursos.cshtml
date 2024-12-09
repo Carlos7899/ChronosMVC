@@ -211,12 +211,12 @@
                             </h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">ID: @curso.idCurso</h6>
                             <p class="card-text"><strong>Descrição:</strong> @curso.descricaoCurso</p>
                             <p class="card-text"><strong>Carga Horária:</strong> @curso.cargaHorariaCurso horas</p>
                             <p class="card-text"><strong>Data Início:</strong> @curso.dataInicioCurso.ToString("dd/MM/yyyy")</p>
                             <p class="card-text"><strong>Data Fim:</strong> @curso.dataFimCurso.ToString("dd/MM/yyyy")</p>
                             <p class="card-text"><strong>Limite de Vagas:</strong> @(curso.limiteVagas.HasValue ? curso.limiteVagas.ToString() : "Sem limite")</p>
+                            <a href="@Url.Action("DetalhesCurso", "Curso", new { id = curso.idCurso })" class="btn btn-info btn-sm">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
